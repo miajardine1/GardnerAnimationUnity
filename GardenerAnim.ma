@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: GardenerAnim.ma
-//Last modified: Tue, Nov 01, 2022 12:20:41 PM
+//Last modified: Tue, Nov 01, 2022 03:12:11 PM
 //Codeset: 1252
 file -rdi 1 -ns "GardenerRig" -rfn "GardenerRigRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/Miriam/Documents/Github/Maya Models/GardenerRig.ma";
@@ -14,17 +14,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "7540366E-413A-8043-3DC9-BDB4A8007DAD";
+fileInfo "UUID" "E2880BFC-41CB-A881-4342-FFAB57E58058";
 createNode transform -s -n "persp";
 	rename -uid "5AD2D0CA-4071-7182-67E7-8D9BC16C4C70";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.4052252404233609 94.590214404508558 397.71635867191742 ;
-	setAttr ".r" -type "double3" -2.13835272963783 -0.60000000000642484 -1.553090372488901e-18 ;
+	setAttr ".t" -type "double3" -49.262257337448453 42.770633716980498 708.71878402512471 ;
+	setAttr ".r" -type "double3" -0.33835272963803809 -1.400000000006228 -1.0097548122428892e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A703FF8D-4DD8-7CA4-9395-FB947AFB859C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 454.63262316669005;
+	setAttr ".coi" 766.29778241892359;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -49,13 +49,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "81B31B2E-427D-FDB7-77EF-DEA1440F1BF7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 1000.1 ;
+	setAttr ".t" -type "double3" -23.234146286514118 42.766211932312331 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "F7E0DCE6-4693-1FC2-DDEB-4DB1E076BB89";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 558.71567435403131;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -80,25 +80,25 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DD16BF68-4768-43EB-3468-DCA5EF5EA9C3";
+	rename -uid "55D4D710-4EDF-03BB-5BDF-878A4A880064";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AF642B49-460C-9DE1-1668-209097C48338";
+	rename -uid "FE3242DB-426A-BF7B-B728-3ABBF3BC5E39";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E39DE6AD-495E-AF3A-5DFB-3593F144697D";
+	rename -uid "5137DF00-4850-D578-1130-BEACD1B7CE19";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D3EF0E04-4925-FD2A-8B5E-F68392084169";
+	rename -uid "E5FCD995-4FBB-38CD-A2DC-FDAF1813E78A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5DB85731-48D7-C76B-0782-3A9635F0A991";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "85D88939-4BA3-9CA7-9FBC-D09EA0E13FDB";
+	rename -uid "9575E215-4607-68ED-4AF8-4ABC21D68FDA";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BCF6ED1A-424A-9A04-71CF-C2BFF768A3E2";
 	setAttr ".g" yes;
 createNode reference -n "GardenerRigRN";
 	rename -uid "AC8A3D45-4E49-AE43-12B6-DC8E63E76C16";
-	setAttr -s 129 ".phl";
+	setAttr -s 105 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -204,296 +204,235 @@ createNode reference -n "GardenerRigRN";
 	setAttr ".phl[103]" 0;
 	setAttr ".phl[104]" 0;
 	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GardenerRigRN"
 		"GardenerRigRN" 0
-		"GardenerRigRN" 131
+		"GardenerRigRN" 114
+		2 "|GardenerRig:joint1" "translate" " -type \"double3\" -80.39726255064388738 -36.18860854939367755 0"
+		
+		2 "|GardenerRig:joint1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|GardenerRig:left" "translate" " -type \"double3\" -1000.10000000000002274 91.64097613837354572 3.15945323604273653"
+		
+		2 "|GardenerRig:left" "rotate" " -type \"double3\" 0 -90 0"
+		2 "|GardenerRig:group1" "translate" " -type \"double3\" 0 2.06554811227590562 0"
+		
+		2 "|GardenerRig:group1" "rotate" " -type \"double3\" 0 0 0"
+		2 "|GardenerRig:mixamorig:Hips_GRP" "translate" " -type \"double3\" 0 -42.37753152228840037 0"
+		
 		2 "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL|GardenerRig:mixamorig:LeftHand_GRP|GardenerRig:mixamorig:LeftHand_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.translateY" "GardenerRigRN.placeHolderList[1]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.translateX" "GardenerRigRN.placeHolderList[2]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.translateZ" "GardenerRigRN.placeHolderList[3]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.rotateX" "GardenerRigRN.placeHolderList[4]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.rotateY" "GardenerRigRN.placeHolderList[5]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.rotateZ" "GardenerRigRN.placeHolderList[6]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:left.translateY" "GardenerRigRN.placeHolderList[7]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:left.translateX" "GardenerRigRN.placeHolderList[8]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:left.translateZ" "GardenerRigRN.placeHolderList[9]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:left.rotateX" "GardenerRigRN.placeHolderList[10]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:left.rotateY" "GardenerRigRN.placeHolderList[11]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:left.rotateZ" "GardenerRigRN.placeHolderList[12]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:group1.translateY" "GardenerRigRN.placeHolderList[13]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:group1.translateX" "GardenerRigRN.placeHolderList[14]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:group1.translateZ" "GardenerRigRN.placeHolderList[15]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:group1.rotateX" "GardenerRigRN.placeHolderList[16]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:group1.rotateY" "GardenerRigRN.placeHolderList[17]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:group1.rotateZ" "GardenerRigRN.placeHolderList[18]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP.rotateX" "GardenerRigRN.placeHolderList[19]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP.rotateY" "GardenerRigRN.placeHolderList[20]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP.rotateZ" "GardenerRigRN.placeHolderList[21]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP.translateX" "GardenerRigRN.placeHolderList[22]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP.translateY" "GardenerRigRN.placeHolderList[23]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP.translateZ" "GardenerRigRN.placeHolderList[24]" 
-		""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[25]" ""
+		"GardenerRigRN.placeHolderList[1]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[26]" ""
+		"GardenerRigRN.placeHolderList[2]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[27]" ""
+		"GardenerRigRN.placeHolderList[3]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[28]" ""
+		"GardenerRigRN.placeHolderList[4]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[29]" ""
+		"GardenerRigRN.placeHolderList[5]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[30]" ""
+		"GardenerRigRN.placeHolderList[6]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[31]" ""
+		"GardenerRigRN.placeHolderList[7]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[32]" ""
+		"GardenerRigRN.placeHolderList[8]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[33]" ""
+		"GardenerRigRN.placeHolderList[9]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[34]" ""
+		"GardenerRigRN.placeHolderList[10]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[35]" ""
+		"GardenerRigRN.placeHolderList[11]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[36]" ""
+		"GardenerRigRN.placeHolderList[12]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.scaleX" 
-		"GardenerRigRN.placeHolderList[37]" ""
+		"GardenerRigRN.placeHolderList[13]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.scaleY" 
-		"GardenerRigRN.placeHolderList[38]" ""
+		"GardenerRigRN.placeHolderList[14]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.scaleZ" 
-		"GardenerRigRN.placeHolderList[39]" ""
+		"GardenerRigRN.placeHolderList[15]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[40]" ""
+		"GardenerRigRN.placeHolderList[16]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[41]" ""
+		"GardenerRigRN.placeHolderList[17]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[42]" ""
+		"GardenerRigRN.placeHolderList[18]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[43]" ""
+		"GardenerRigRN.placeHolderList[19]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[44]" ""
+		"GardenerRigRN.placeHolderList[20]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[45]" ""
+		"GardenerRigRN.placeHolderList[21]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[46]" ""
+		"GardenerRigRN.placeHolderList[22]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[47]" ""
+		"GardenerRigRN.placeHolderList[23]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[48]" ""
+		"GardenerRigRN.placeHolderList[24]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[49]" ""
+		"GardenerRigRN.placeHolderList[25]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[50]" ""
+		"GardenerRigRN.placeHolderList[26]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[51]" ""
+		"GardenerRigRN.placeHolderList[27]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[52]" ""
+		"GardenerRigRN.placeHolderList[28]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[53]" ""
+		"GardenerRigRN.placeHolderList[29]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[54]" ""
+		"GardenerRigRN.placeHolderList[30]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[55]" ""
+		"GardenerRigRN.placeHolderList[31]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[56]" ""
+		"GardenerRigRN.placeHolderList[32]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[57]" ""
+		"GardenerRigRN.placeHolderList[33]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL|GardenerRig:Hair_jnt_2_GRP|GardenerRig:Hair_jnt_2_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[58]" ""
+		"GardenerRigRN.placeHolderList[34]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL|GardenerRig:Hair_jnt_2_GRP|GardenerRig:Hair_jnt_2_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[59]" ""
+		"GardenerRigRN.placeHolderList[35]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL|GardenerRig:Hair_jnt_2_GRP|GardenerRig:Hair_jnt_2_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[60]" ""
+		"GardenerRigRN.placeHolderList[36]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL|GardenerRig:Hair_jnt_2_GRP|GardenerRig:Hair_jnt_2_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[61]" ""
+		"GardenerRigRN.placeHolderList[37]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL|GardenerRig:Hair_jnt_2_GRP|GardenerRig:Hair_jnt_2_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[62]" ""
+		"GardenerRigRN.placeHolderList[38]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL|GardenerRig:mixamorig:HeadTop_End_GRP|GardenerRig:mixamorig:HeadTop_End_CTRL|GardenerRig:Hair_jnt_1_GRP|GardenerRig:Hair_jnt_1_CTRL|GardenerRig:Hair_jnt_2_GRP|GardenerRig:Hair_jnt_2_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[63]" ""
+		"GardenerRigRN.placeHolderList[39]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[64]" ""
+		"GardenerRigRN.placeHolderList[40]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[65]" ""
+		"GardenerRigRN.placeHolderList[41]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[66]" ""
+		"GardenerRigRN.placeHolderList[42]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[67]" ""
+		"GardenerRigRN.placeHolderList[43]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[68]" ""
+		"GardenerRigRN.placeHolderList[44]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[69]" ""
+		"GardenerRigRN.placeHolderList[45]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[70]" ""
+		"GardenerRigRN.placeHolderList[46]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[71]" ""
+		"GardenerRigRN.placeHolderList[47]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[72]" ""
+		"GardenerRigRN.placeHolderList[48]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[73]" ""
+		"GardenerRigRN.placeHolderList[49]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[74]" ""
+		"GardenerRigRN.placeHolderList[50]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[75]" ""
+		"GardenerRigRN.placeHolderList[51]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[76]" ""
+		"GardenerRigRN.placeHolderList[52]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[77]" ""
+		"GardenerRigRN.placeHolderList[53]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[78]" ""
+		"GardenerRigRN.placeHolderList[54]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[79]" ""
+		"GardenerRigRN.placeHolderList[55]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[80]" ""
+		"GardenerRigRN.placeHolderList[56]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[81]" ""
+		"GardenerRigRN.placeHolderList[57]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[82]" ""
+		"GardenerRigRN.placeHolderList[58]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[83]" ""
+		"GardenerRigRN.placeHolderList[59]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[84]" ""
+		"GardenerRigRN.placeHolderList[60]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[85]" ""
+		"GardenerRigRN.placeHolderList[61]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[86]" ""
+		"GardenerRigRN.placeHolderList[62]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[87]" ""
+		"GardenerRigRN.placeHolderList[63]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[88]" ""
+		"GardenerRigRN.placeHolderList[64]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[89]" ""
+		"GardenerRigRN.placeHolderList[65]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[90]" ""
+		"GardenerRigRN.placeHolderList[66]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[91]" ""
+		"GardenerRigRN.placeHolderList[67]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[92]" ""
+		"GardenerRigRN.placeHolderList[68]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[93]" ""
+		"GardenerRigRN.placeHolderList[69]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateX" 
-		"GardenerRigRN.placeHolderList[94]" ""
+		"GardenerRigRN.placeHolderList[70]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateY" 
-		"GardenerRigRN.placeHolderList[95]" ""
+		"GardenerRigRN.placeHolderList[71]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateZ" 
-		"GardenerRigRN.placeHolderList[96]" ""
+		"GardenerRigRN.placeHolderList[72]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateX" 
-		"GardenerRigRN.placeHolderList[97]" ""
+		"GardenerRigRN.placeHolderList[73]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateY" 
-		"GardenerRigRN.placeHolderList[98]" ""
+		"GardenerRigRN.placeHolderList[74]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateZ" 
-		"GardenerRigRN.placeHolderList[99]" ""
+		"GardenerRigRN.placeHolderList[75]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[100]" ""
+		"GardenerRigRN.placeHolderList[76]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[101]" ""
+		"GardenerRigRN.placeHolderList[77]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[102]" ""
+		"GardenerRigRN.placeHolderList[78]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[103]" ""
+		"GardenerRigRN.placeHolderList[79]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[104]" ""
+		"GardenerRigRN.placeHolderList[80]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[105]" ""
+		"GardenerRigRN.placeHolderList[81]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[106]" ""
+		"GardenerRigRN.placeHolderList[82]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[107]" ""
+		"GardenerRigRN.placeHolderList[83]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[108]" ""
+		"GardenerRigRN.placeHolderList[84]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[109]" ""
+		"GardenerRigRN.placeHolderList[85]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[110]" ""
+		"GardenerRigRN.placeHolderList[86]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[111]" ""
+		"GardenerRigRN.placeHolderList[87]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[112]" ""
+		"GardenerRigRN.placeHolderList[88]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[113]" ""
+		"GardenerRigRN.placeHolderList[89]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[114]" ""
+		"GardenerRigRN.placeHolderList[90]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[115]" ""
+		"GardenerRigRN.placeHolderList[91]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[116]" ""
+		"GardenerRigRN.placeHolderList[92]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[117]" ""
+		"GardenerRigRN.placeHolderList[93]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[118]" ""
+		"GardenerRigRN.placeHolderList[94]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[119]" ""
+		"GardenerRigRN.placeHolderList[95]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[120]" ""
+		"GardenerRigRN.placeHolderList[96]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[121]" ""
+		"GardenerRigRN.placeHolderList[97]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[122]" ""
+		"GardenerRigRN.placeHolderList[98]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[123]" ""
+		"GardenerRigRN.placeHolderList[99]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[124]" ""
+		"GardenerRigRN.placeHolderList[100]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[125]" ""
+		"GardenerRigRN.placeHolderList[101]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[126]" ""
+		"GardenerRigRN.placeHolderList[102]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[127]" ""
+		"GardenerRigRN.placeHolderList[103]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[128]" ""
+		"GardenerRigRN.placeHolderList[104]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[129]" "";
+		"GardenerRigRN.placeHolderList[105]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode timeEditor -s -n "timeEditor";
@@ -508,14 +447,14 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 660\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1128\n            -height 661\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1187\n            -height 502\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -538,13 +477,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1128\\n    -height 661\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1128\\n    -height 661\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|front\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1187\\n    -height 502\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|front\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1187\\n    -height 502\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "697B9A45-4A47-5F5D-F2FA-7085FC456614";
-	setAttr ".b" -type "string" "playbackOptions -min 2 -max 358 -ast 2 -aet 360 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 360 -ast 1 -aet 360 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "LeftArm_CTRL_translateX";
 	rename -uid "E733B4C0-4FE3-1E43-A991-7DBA61A8873A";
@@ -580,7 +519,7 @@ createNode animCurveTA -n "LeftArm_CTRL_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 -0.94426439682546359 33 -0.94426439682547159
-		 37 -0.94426439682546881 46 -1.08056748948934 274.08333877551019 -1.0805674894893507
+		 37 -0.94426439682546881 46 -1.08056748948934 274.08333877551019 -1.0805674894893509
 		 286.25000442176872 -1.08056748948934 295.98333707482993 -1.0805674894893489 305.71666989795921 -1.080567489489356
 		 313.01666887755101 -1.0805674894893607 325.18333452380955 -1.0805674894893511 339.78333333333336 -1.0805674894893533;
 createNode animCurveTA -n "LeftArm_CTRL_rotateZ";
@@ -1103,174 +1042,6 @@ createNode animCurveTA -n "Hips_CTRL_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  287 0 290 2.6691537934171308 291 3.9110554543505662
 		 296 10.33622755783415 299 14.658192270378157 330 14.658192270378157 350 30.681499434216981;
-createNode animCurveTL -n "Hips_GRP_translateX";
-	rename -uid "A26303E6-4D30-9A0D-8FEC-FF870828A740";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTL -n "Hips_GRP_translateY";
-	rename -uid "99B74D74-43A3-16B0-74BA-7C933BBF0EDD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 3.0417365173249991 268.33332925170066 -4.6566700015548452
-		 270.86362397959186 -0.12660079865109708 273.72726819727893 -4.011619557298113 288.04545085034016 2.7678207619583608
-		 308.72727091836737 -2.7671997210782386 329.40909013605443 -37.034258875015865 351.04545442176868 -42.3775315222884;
-createNode animCurveTL -n "Hips_GRP_translateZ";
-	rename -uid "7BBCB313-44A8-6E30-017E-0EA414F54A5C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTL -n "group1_translateX";
-	rename -uid "87FAD85F-4450-64C0-2691-E78735F31E73";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTL -n "group1_translateY";
-	rename -uid "F5099DB8-4E41-49CD-2887-21925374C7F8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 3.0385550119341431 268.33332925170066 -4.6598515069457012
-		 270.86362397959186 -0.12978230404195301 273.72726819727893 -4.014801062688969 288.04545085034016 2.7646392565675049
-		 308.72727091836737 -2.7703812264690946 329.40909013605443 -37.037440380406721 351.04545442176868 -42.380713027679256;
-createNode animCurveTL -n "group1_translateZ";
-	rename -uid "4D2DB545-4321-DFE9-3834-388249344B5B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTL -n "left_translateX";
-	rename -uid "94BA3AB0-49C9-4AE7-5926-ACA37D859CAF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 -1000.1 263.33332925170066 -1000.1 270.86362397959186 -1000.1
-		 273.72726819727893 -1000.1 288.04545085034016 -1000.1 308.72727091836737 -1000.1
-		 329.40909013605443 -1000.1 351.04545442176868 -1000.1;
-createNode animCurveTL -n "left_translateY";
-	rename -uid "3DD616F8-4A0B-94ED-B0B4-F39A67E6DA0D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 137.06024417798687 263.33332925170066 129.36183765910698
-		 270.86362397959186 133.89190686201076 273.72726819727893 130.00688810336365 288.04545085034016 136.78632842262016
-		 308.72727091836737 131.25130793958363 329.40909013605443 96.984248785646088 351.04545442176868 91.640976138373546;
-createNode animCurveTL -n "left_translateZ";
-	rename -uid "994B9975-4760-BA38-56A3-9BA69A207B60";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 3.1594532360427365 263.33332925170066 3.1594532360427365
-		 270.86362397959186 3.1594532360427365 273.72726819727893 3.1594532360427365 288.04545085034016 3.1594532360427365
-		 308.72727091836737 3.1594532360427365 329.40909013605443 3.1594532360427365 351.04545442176868 3.1594532360427365;
-createNode animCurveTL -n "joint1_translateX";
-	rename -uid "D6BED58B-4027-D65F-E840-7790F8BB000D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 -80.397262550643887 268.33332925170066 -80.397262550643887
-		 270.86362397959186 -80.397262550643887 273.72726819727893 -80.397262550643887 288.04545085034016 -80.397262550643887
-		 308.72727091836737 -80.397262550643887 329.40909013605443 -80.397262550643887 351.04545442176868 -80.397262550643887;
-createNode animCurveTL -n "joint1_translateY";
-	rename -uid "E91B3802-458E-BB0B-E968-EDB9EA6B7DEA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 9.2306594902197361 268.33332925170066 1.5322529713398918
-		 270.86362397959186 6.0623221742436399 273.72726819727893 2.177303415596624 288.04545085034016 8.9567437348530969
-		 308.72727091836737 3.4217232518164984 329.40909013605443 -30.845335902121146 351.04545442176868 -36.188608549393678;
-createNode animCurveTL -n "joint1_translateZ";
-	rename -uid "8B5DF60D-496D-C052-5449-A4874076BEAB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "Hips_GRP_rotateX";
-	rename -uid "79E1D8BA-4669-58DA-6D6C-5EA230B2E93E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "Hips_GRP_rotateY";
-	rename -uid "41E6D81F-44CF-6D87-9290-B69D1A0DA120";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "Hips_GRP_rotateZ";
-	rename -uid "9914493B-4308-A7A3-43FB-EF83AE4FAF80";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "group1_rotateX";
-	rename -uid "8ED15AA4-4574-74AB-7272-959F6D89EBE7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "group1_rotateY";
-	rename -uid "B25D07EF-475C-829E-C79D-D68F4BF8A08D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "group1_rotateZ";
-	rename -uid "4D47C129-42B3-2710-A29F-FCB10D7A10EA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "left_rotateX";
-	rename -uid "3D8D7131-4C65-6DCB-B273-FC88ED5F03EB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 263.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "left_rotateY";
-	rename -uid "6B1DED9E-499B-20C2-18FE-E3B7B6948D7D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 -90 263.33332925170066 -90 270.86362397959186 -90
-		 273.72726819727893 -90 288.04545085034016 -90 308.72727091836737 -90 329.40909013605443 -90
-		 351.04545442176868 -90;
-createNode animCurveTA -n "left_rotateZ";
-	rename -uid "71C6B7D5-4347-DC90-CE13-BD92A84F432C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 263.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "joint1_rotateX";
-	rename -uid "FF5EB950-4351-20D8-4F0D-53B224499820";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "joint1_rotateY";
-	rename -uid "B3BFA685-49BC-D463-AAF3-6AB6A4ABD95E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
-createNode animCurveTA -n "joint1_rotateZ";
-	rename -uid "3FF0FFAA-4F18-A0D4-6D98-2DA8E2563130";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  208 0 268.33332925170066 0 270.86362397959186 0
-		 273.72726819727893 0 288.04545085034016 0 308.72727091836737 0 329.40909013605443 0
-		 351.04545442176868 0;
 createNode animCurveTL -n "Hair_jnt_2_CTRL_translateX";
 	rename -uid "F2C4B514-446B-9C1A-82B0-669F8C97C901";
 	setAttr ".tan" 18;
@@ -1340,8 +1111,8 @@ createNode animCurveTA -n "Hair_jnt_1_CTRL_rotateZ";
 	setAttr -s 8 ".ktv[0:7]"  192 0 215 0 254 0 269 0 307 0 317 1.3170656823920623
 		 333 0.95667013199707929 355 1.1668599643302828;
 select -ne :time1;
-	setAttr ".o" 154;
-	setAttr ".unw" 154;
+	setAttr ".o" 276;
+	setAttr ".unw" 276;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1380,135 +1151,111 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "joint1_translateY.o" "GardenerRigRN.phl[1]";
-connectAttr "joint1_translateX.o" "GardenerRigRN.phl[2]";
-connectAttr "joint1_translateZ.o" "GardenerRigRN.phl[3]";
-connectAttr "joint1_rotateX.o" "GardenerRigRN.phl[4]";
-connectAttr "joint1_rotateY.o" "GardenerRigRN.phl[5]";
-connectAttr "joint1_rotateZ.o" "GardenerRigRN.phl[6]";
-connectAttr "left_translateY.o" "GardenerRigRN.phl[7]";
-connectAttr "left_translateX.o" "GardenerRigRN.phl[8]";
-connectAttr "left_translateZ.o" "GardenerRigRN.phl[9]";
-connectAttr "left_rotateX.o" "GardenerRigRN.phl[10]";
-connectAttr "left_rotateY.o" "GardenerRigRN.phl[11]";
-connectAttr "left_rotateZ.o" "GardenerRigRN.phl[12]";
-connectAttr "group1_translateY.o" "GardenerRigRN.phl[13]";
-connectAttr "group1_translateX.o" "GardenerRigRN.phl[14]";
-connectAttr "group1_translateZ.o" "GardenerRigRN.phl[15]";
-connectAttr "group1_rotateX.o" "GardenerRigRN.phl[16]";
-connectAttr "group1_rotateY.o" "GardenerRigRN.phl[17]";
-connectAttr "group1_rotateZ.o" "GardenerRigRN.phl[18]";
-connectAttr "Hips_GRP_rotateX.o" "GardenerRigRN.phl[19]";
-connectAttr "Hips_GRP_rotateY.o" "GardenerRigRN.phl[20]";
-connectAttr "Hips_GRP_rotateZ.o" "GardenerRigRN.phl[21]";
-connectAttr "Hips_GRP_translateX.o" "GardenerRigRN.phl[22]";
-connectAttr "Hips_GRP_translateY.o" "GardenerRigRN.phl[23]";
-connectAttr "Hips_GRP_translateZ.o" "GardenerRigRN.phl[24]";
-connectAttr "Hips_CTRL_rotateX.o" "GardenerRigRN.phl[25]";
-connectAttr "Hips_CTRL_rotateY.o" "GardenerRigRN.phl[26]";
-connectAttr "Hips_CTRL_rotateZ.o" "GardenerRigRN.phl[27]";
-connectAttr "Hips_CTRL_translateX.o" "GardenerRigRN.phl[28]";
-connectAttr "Hips_CTRL_translateY.o" "GardenerRigRN.phl[29]";
-connectAttr "Hips_CTRL_translateZ.o" "GardenerRigRN.phl[30]";
-connectAttr "Spine_CTRL_rotateX.o" "GardenerRigRN.phl[31]";
-connectAttr "Spine_CTRL_rotateY.o" "GardenerRigRN.phl[32]";
-connectAttr "Spine_CTRL_rotateZ.o" "GardenerRigRN.phl[33]";
-connectAttr "Spine_CTRL_translateX.o" "GardenerRigRN.phl[34]";
-connectAttr "Spine_CTRL_translateY.o" "GardenerRigRN.phl[35]";
-connectAttr "Spine_CTRL_translateZ.o" "GardenerRigRN.phl[36]";
-connectAttr "Spine_CTRL_scaleX.o" "GardenerRigRN.phl[37]";
-connectAttr "Spine_CTRL_scaleY.o" "GardenerRigRN.phl[38]";
-connectAttr "Spine_CTRL_scaleZ.o" "GardenerRigRN.phl[39]";
-connectAttr "Spine1_CTRL_rotateX.o" "GardenerRigRN.phl[40]";
-connectAttr "Spine1_CTRL_rotateY.o" "GardenerRigRN.phl[41]";
-connectAttr "Spine1_CTRL_rotateZ.o" "GardenerRigRN.phl[42]";
-connectAttr "Spine1_CTRL_translateX.o" "GardenerRigRN.phl[43]";
-connectAttr "Spine1_CTRL_translateY.o" "GardenerRigRN.phl[44]";
-connectAttr "Spine1_CTRL_translateZ.o" "GardenerRigRN.phl[45]";
-connectAttr "Spine2_CTRL_rotateX.o" "GardenerRigRN.phl[46]";
-connectAttr "Spine2_CTRL_rotateY.o" "GardenerRigRN.phl[47]";
-connectAttr "Spine2_CTRL_rotateZ.o" "GardenerRigRN.phl[48]";
-connectAttr "Spine2_CTRL_translateX.o" "GardenerRigRN.phl[49]";
-connectAttr "Spine2_CTRL_translateY.o" "GardenerRigRN.phl[50]";
-connectAttr "Spine2_CTRL_translateZ.o" "GardenerRigRN.phl[51]";
-connectAttr "Hair_jnt_1_CTRL_rotateX.o" "GardenerRigRN.phl[52]";
-connectAttr "Hair_jnt_1_CTRL_rotateY.o" "GardenerRigRN.phl[53]";
-connectAttr "Hair_jnt_1_CTRL_rotateZ.o" "GardenerRigRN.phl[54]";
-connectAttr "Hair_jnt_1_CTRL_translateX.o" "GardenerRigRN.phl[55]";
-connectAttr "Hair_jnt_1_CTRL_translateY.o" "GardenerRigRN.phl[56]";
-connectAttr "Hair_jnt_1_CTRL_translateZ.o" "GardenerRigRN.phl[57]";
-connectAttr "Hair_jnt_2_CTRL_rotateY.o" "GardenerRigRN.phl[58]";
-connectAttr "Hair_jnt_2_CTRL_rotateX.o" "GardenerRigRN.phl[59]";
-connectAttr "Hair_jnt_2_CTRL_rotateZ.o" "GardenerRigRN.phl[60]";
-connectAttr "Hair_jnt_2_CTRL_translateX.o" "GardenerRigRN.phl[61]";
-connectAttr "Hair_jnt_2_CTRL_translateY.o" "GardenerRigRN.phl[62]";
-connectAttr "Hair_jnt_2_CTRL_translateZ.o" "GardenerRigRN.phl[63]";
-connectAttr "LeftShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[64]";
-connectAttr "LeftShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[65]";
-connectAttr "LeftShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[66]";
-connectAttr "LeftShoulder_CTRL_translateX.o" "GardenerRigRN.phl[67]";
-connectAttr "LeftShoulder_CTRL_translateY.o" "GardenerRigRN.phl[68]";
-connectAttr "LeftShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[69]";
-connectAttr "LeftArm_CTRL_rotateY.o" "GardenerRigRN.phl[70]";
-connectAttr "LeftArm_CTRL_rotateX.o" "GardenerRigRN.phl[71]";
-connectAttr "LeftArm_CTRL_rotateZ.o" "GardenerRigRN.phl[72]";
-connectAttr "LeftArm_CTRL_translateX.o" "GardenerRigRN.phl[73]";
-connectAttr "LeftArm_CTRL_translateY.o" "GardenerRigRN.phl[74]";
-connectAttr "LeftArm_CTRL_translateZ.o" "GardenerRigRN.phl[75]";
-connectAttr "LeftForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[76]";
-connectAttr "LeftForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[77]";
-connectAttr "LeftForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[78]";
-connectAttr "LeftForeArm_CTRL_translateX.o" "GardenerRigRN.phl[79]";
-connectAttr "LeftForeArm_CTRL_translateY.o" "GardenerRigRN.phl[80]";
-connectAttr "LeftForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[81]";
-connectAttr "RightShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[82]";
-connectAttr "RightShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[83]";
-connectAttr "RightShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[84]";
-connectAttr "RightShoulder_CTRL_translateX.o" "GardenerRigRN.phl[85]";
-connectAttr "RightShoulder_CTRL_translateY.o" "GardenerRigRN.phl[86]";
-connectAttr "RightShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[87]";
-connectAttr "RightArm_CTRL_rotateX.o" "GardenerRigRN.phl[88]";
-connectAttr "RightArm_CTRL_rotateY.o" "GardenerRigRN.phl[89]";
-connectAttr "RightArm_CTRL_rotateZ.o" "GardenerRigRN.phl[90]";
-connectAttr "RightArm_CTRL_translateX.o" "GardenerRigRN.phl[91]";
-connectAttr "RightArm_CTRL_translateY.o" "GardenerRigRN.phl[92]";
-connectAttr "RightArm_CTRL_translateZ.o" "GardenerRigRN.phl[93]";
-connectAttr "RightForeArm_GRP_rotateX.o" "GardenerRigRN.phl[94]";
-connectAttr "RightForeArm_GRP_rotateY.o" "GardenerRigRN.phl[95]";
-connectAttr "RightForeArm_GRP_rotateZ.o" "GardenerRigRN.phl[96]";
-connectAttr "RightForeArm_GRP_translateX.o" "GardenerRigRN.phl[97]";
-connectAttr "RightForeArm_GRP_translateY.o" "GardenerRigRN.phl[98]";
-connectAttr "RightForeArm_GRP_translateZ.o" "GardenerRigRN.phl[99]";
-connectAttr "RightForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[100]";
-connectAttr "RightForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[101]";
-connectAttr "RightForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[102]";
-connectAttr "RightForeArm_CTRL_translateX.o" "GardenerRigRN.phl[103]";
-connectAttr "RightForeArm_CTRL_translateY.o" "GardenerRigRN.phl[104]";
-connectAttr "RightForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[105]";
-connectAttr "LeftUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[106]";
-connectAttr "LeftUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[107]";
-connectAttr "LeftUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[108]";
-connectAttr "LeftUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[109]";
-connectAttr "LeftUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[110]";
-connectAttr "LeftUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[111]";
-connectAttr "LeftLeg_CTRL_rotateX.o" "GardenerRigRN.phl[112]";
-connectAttr "LeftLeg_CTRL_rotateY.o" "GardenerRigRN.phl[113]";
-connectAttr "LeftLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[114]";
-connectAttr "LeftLeg_CTRL_translateX.o" "GardenerRigRN.phl[115]";
-connectAttr "LeftLeg_CTRL_translateY.o" "GardenerRigRN.phl[116]";
-connectAttr "LeftLeg_CTRL_translateZ.o" "GardenerRigRN.phl[117]";
-connectAttr "RightUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[118]";
-connectAttr "RightUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[119]";
-connectAttr "RightUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[120]";
-connectAttr "RightUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[121]";
-connectAttr "RightUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[122]";
-connectAttr "RightUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[123]";
-connectAttr "RightLeg_CTRL_rotateX.o" "GardenerRigRN.phl[124]";
-connectAttr "RightLeg_CTRL_rotateY.o" "GardenerRigRN.phl[125]";
-connectAttr "RightLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[126]";
-connectAttr "RightLeg_CTRL_translateX.o" "GardenerRigRN.phl[127]";
-connectAttr "RightLeg_CTRL_translateY.o" "GardenerRigRN.phl[128]";
-connectAttr "RightLeg_CTRL_translateZ.o" "GardenerRigRN.phl[129]";
+connectAttr "Hips_CTRL_rotateX.o" "GardenerRigRN.phl[1]";
+connectAttr "Hips_CTRL_rotateY.o" "GardenerRigRN.phl[2]";
+connectAttr "Hips_CTRL_rotateZ.o" "GardenerRigRN.phl[3]";
+connectAttr "Hips_CTRL_translateX.o" "GardenerRigRN.phl[4]";
+connectAttr "Hips_CTRL_translateY.o" "GardenerRigRN.phl[5]";
+connectAttr "Hips_CTRL_translateZ.o" "GardenerRigRN.phl[6]";
+connectAttr "Spine_CTRL_rotateX.o" "GardenerRigRN.phl[7]";
+connectAttr "Spine_CTRL_rotateY.o" "GardenerRigRN.phl[8]";
+connectAttr "Spine_CTRL_rotateZ.o" "GardenerRigRN.phl[9]";
+connectAttr "Spine_CTRL_translateX.o" "GardenerRigRN.phl[10]";
+connectAttr "Spine_CTRL_translateY.o" "GardenerRigRN.phl[11]";
+connectAttr "Spine_CTRL_translateZ.o" "GardenerRigRN.phl[12]";
+connectAttr "Spine_CTRL_scaleX.o" "GardenerRigRN.phl[13]";
+connectAttr "Spine_CTRL_scaleY.o" "GardenerRigRN.phl[14]";
+connectAttr "Spine_CTRL_scaleZ.o" "GardenerRigRN.phl[15]";
+connectAttr "Spine1_CTRL_rotateX.o" "GardenerRigRN.phl[16]";
+connectAttr "Spine1_CTRL_rotateY.o" "GardenerRigRN.phl[17]";
+connectAttr "Spine1_CTRL_rotateZ.o" "GardenerRigRN.phl[18]";
+connectAttr "Spine1_CTRL_translateX.o" "GardenerRigRN.phl[19]";
+connectAttr "Spine1_CTRL_translateY.o" "GardenerRigRN.phl[20]";
+connectAttr "Spine1_CTRL_translateZ.o" "GardenerRigRN.phl[21]";
+connectAttr "Spine2_CTRL_rotateX.o" "GardenerRigRN.phl[22]";
+connectAttr "Spine2_CTRL_rotateY.o" "GardenerRigRN.phl[23]";
+connectAttr "Spine2_CTRL_rotateZ.o" "GardenerRigRN.phl[24]";
+connectAttr "Spine2_CTRL_translateX.o" "GardenerRigRN.phl[25]";
+connectAttr "Spine2_CTRL_translateY.o" "GardenerRigRN.phl[26]";
+connectAttr "Spine2_CTRL_translateZ.o" "GardenerRigRN.phl[27]";
+connectAttr "Hair_jnt_1_CTRL_rotateX.o" "GardenerRigRN.phl[28]";
+connectAttr "Hair_jnt_1_CTRL_rotateY.o" "GardenerRigRN.phl[29]";
+connectAttr "Hair_jnt_1_CTRL_rotateZ.o" "GardenerRigRN.phl[30]";
+connectAttr "Hair_jnt_1_CTRL_translateX.o" "GardenerRigRN.phl[31]";
+connectAttr "Hair_jnt_1_CTRL_translateY.o" "GardenerRigRN.phl[32]";
+connectAttr "Hair_jnt_1_CTRL_translateZ.o" "GardenerRigRN.phl[33]";
+connectAttr "Hair_jnt_2_CTRL_rotateY.o" "GardenerRigRN.phl[34]";
+connectAttr "Hair_jnt_2_CTRL_rotateX.o" "GardenerRigRN.phl[35]";
+connectAttr "Hair_jnt_2_CTRL_rotateZ.o" "GardenerRigRN.phl[36]";
+connectAttr "Hair_jnt_2_CTRL_translateX.o" "GardenerRigRN.phl[37]";
+connectAttr "Hair_jnt_2_CTRL_translateY.o" "GardenerRigRN.phl[38]";
+connectAttr "Hair_jnt_2_CTRL_translateZ.o" "GardenerRigRN.phl[39]";
+connectAttr "LeftShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[40]";
+connectAttr "LeftShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[41]";
+connectAttr "LeftShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[42]";
+connectAttr "LeftShoulder_CTRL_translateX.o" "GardenerRigRN.phl[43]";
+connectAttr "LeftShoulder_CTRL_translateY.o" "GardenerRigRN.phl[44]";
+connectAttr "LeftShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[45]";
+connectAttr "LeftArm_CTRL_rotateY.o" "GardenerRigRN.phl[46]";
+connectAttr "LeftArm_CTRL_rotateX.o" "GardenerRigRN.phl[47]";
+connectAttr "LeftArm_CTRL_rotateZ.o" "GardenerRigRN.phl[48]";
+connectAttr "LeftArm_CTRL_translateX.o" "GardenerRigRN.phl[49]";
+connectAttr "LeftArm_CTRL_translateY.o" "GardenerRigRN.phl[50]";
+connectAttr "LeftArm_CTRL_translateZ.o" "GardenerRigRN.phl[51]";
+connectAttr "LeftForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[52]";
+connectAttr "LeftForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[53]";
+connectAttr "LeftForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[54]";
+connectAttr "LeftForeArm_CTRL_translateX.o" "GardenerRigRN.phl[55]";
+connectAttr "LeftForeArm_CTRL_translateY.o" "GardenerRigRN.phl[56]";
+connectAttr "LeftForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[57]";
+connectAttr "RightShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[58]";
+connectAttr "RightShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[59]";
+connectAttr "RightShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[60]";
+connectAttr "RightShoulder_CTRL_translateX.o" "GardenerRigRN.phl[61]";
+connectAttr "RightShoulder_CTRL_translateY.o" "GardenerRigRN.phl[62]";
+connectAttr "RightShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[63]";
+connectAttr "RightArm_CTRL_rotateX.o" "GardenerRigRN.phl[64]";
+connectAttr "RightArm_CTRL_rotateY.o" "GardenerRigRN.phl[65]";
+connectAttr "RightArm_CTRL_rotateZ.o" "GardenerRigRN.phl[66]";
+connectAttr "RightArm_CTRL_translateX.o" "GardenerRigRN.phl[67]";
+connectAttr "RightArm_CTRL_translateY.o" "GardenerRigRN.phl[68]";
+connectAttr "RightArm_CTRL_translateZ.o" "GardenerRigRN.phl[69]";
+connectAttr "RightForeArm_GRP_rotateX.o" "GardenerRigRN.phl[70]";
+connectAttr "RightForeArm_GRP_rotateY.o" "GardenerRigRN.phl[71]";
+connectAttr "RightForeArm_GRP_rotateZ.o" "GardenerRigRN.phl[72]";
+connectAttr "RightForeArm_GRP_translateX.o" "GardenerRigRN.phl[73]";
+connectAttr "RightForeArm_GRP_translateY.o" "GardenerRigRN.phl[74]";
+connectAttr "RightForeArm_GRP_translateZ.o" "GardenerRigRN.phl[75]";
+connectAttr "RightForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[76]";
+connectAttr "RightForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[77]";
+connectAttr "RightForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[78]";
+connectAttr "RightForeArm_CTRL_translateX.o" "GardenerRigRN.phl[79]";
+connectAttr "RightForeArm_CTRL_translateY.o" "GardenerRigRN.phl[80]";
+connectAttr "RightForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[81]";
+connectAttr "LeftUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[82]";
+connectAttr "LeftUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[83]";
+connectAttr "LeftUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[84]";
+connectAttr "LeftUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[85]";
+connectAttr "LeftUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[86]";
+connectAttr "LeftUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[87]";
+connectAttr "LeftLeg_CTRL_rotateX.o" "GardenerRigRN.phl[88]";
+connectAttr "LeftLeg_CTRL_rotateY.o" "GardenerRigRN.phl[89]";
+connectAttr "LeftLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[90]";
+connectAttr "LeftLeg_CTRL_translateX.o" "GardenerRigRN.phl[91]";
+connectAttr "LeftLeg_CTRL_translateY.o" "GardenerRigRN.phl[92]";
+connectAttr "LeftLeg_CTRL_translateZ.o" "GardenerRigRN.phl[93]";
+connectAttr "RightUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[94]";
+connectAttr "RightUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[95]";
+connectAttr "RightUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[96]";
+connectAttr "RightUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[97]";
+connectAttr "RightUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[98]";
+connectAttr "RightUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[99]";
+connectAttr "RightLeg_CTRL_rotateX.o" "GardenerRigRN.phl[100]";
+connectAttr "RightLeg_CTRL_rotateY.o" "GardenerRigRN.phl[101]";
+connectAttr "RightLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[102]";
+connectAttr "RightLeg_CTRL_translateX.o" "GardenerRigRN.phl[103]";
+connectAttr "RightLeg_CTRL_translateY.o" "GardenerRigRN.phl[104]";
+connectAttr "RightLeg_CTRL_translateZ.o" "GardenerRigRN.phl[105]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
