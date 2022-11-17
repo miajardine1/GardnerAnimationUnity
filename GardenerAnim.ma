@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: GardenerAnim.ma
-//Last modified: Thu, Nov 17, 2022 01:49:30 PM
+//Last modified: Thu, Nov 17, 2022 02:27:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "GardenerRig" -rfn "GardenerRigRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/Miriam/Documents/Github/Maya Models/GardenerRig.ma";
@@ -14,17 +14,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "76602362-443D-EEC5-47EA-388547BB4AC4";
+fileInfo "UUID" "8B7447C4-4ECC-3D4B-0EC0-DC85D0ED3DBD";
 createNode transform -s -n "persp";
 	rename -uid "5AD2D0CA-4071-7182-67E7-8D9BC16C4C70";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 39.50273980945925 28.807352184569929 495.41910182350807 ;
-	setAttr ".r" -type "double3" -5.7383527296273273 0.99999999999575317 1.2425934254440165e-17 ;
+	setAttr ".t" -type "double3" 32.476816110223751 133.41765818740936 314.73431382942124 ;
+	setAttr ".r" -type "double3" -11.138352729629927 1.7999999999977192 -4.2262595903052921e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A703FF8D-4DD8-7CA4-9395-FB947AFB859C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 506.15206646663302;
+	setAttr ".coi" 375.52674288281202;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -147,7 +147,7 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "GardenerRigRN";
 	rename -uid "AC8A3D45-4E49-AE43-12B6-DC8E63E76C16";
-	setAttr -s 93 ".phl";
+	setAttr -s 105 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -241,10 +241,22 @@ createNode reference -n "GardenerRigRN";
 	setAttr ".phl[91]" 0;
 	setAttr ".phl[92]" 0;
 	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GardenerRigRN"
 		"GardenerRigRN" 0
-		"GardenerRigRN" 108
+		"GardenerRigRN" 120
 		2 "|GardenerRig:joint1" "translate" " -type \"double3\" -80.39726255064388738 -36.18860854939367755 0"
 		
 		2 "|GardenerRig:joint1" "rotate" " -type \"double3\" 0 0 0"
@@ -327,138 +339,162 @@ createNode reference -n "GardenerRigRN";
 		"GardenerRigRN.placeHolderList[26]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[27]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[28]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[29]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[30]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[31]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[32]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[33]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[34]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[35]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[36]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[37]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[38]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:Neck_GRP|GardenerRig:mixamorig:Neck_CTRL|GardenerRig:mixamorig:Head_GRP|GardenerRig:mixamorig:Head_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[39]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[40]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[41]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[42]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[43]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[44]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[45]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[46]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[47]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[48]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[49]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[50]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[51]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[52]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[53]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[54]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[55]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[56]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[57]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[58]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[59]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[60]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[61]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[62]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[63]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[64]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[65]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[66]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[67]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[68]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[69]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateX" 
 		"GardenerRigRN.placeHolderList[70]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateY" 
 		"GardenerRigRN.placeHolderList[71]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateZ" 
 		"GardenerRigRN.placeHolderList[72]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateX" 
 		"GardenerRigRN.placeHolderList[73]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateY" 
 		"GardenerRigRN.placeHolderList[74]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateZ" 
 		"GardenerRigRN.placeHolderList[75]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[76]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[77]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[78]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[79]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[80]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[81]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[82]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[83]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[84]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[85]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[86]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateZ" 
 		"GardenerRigRN.placeHolderList[87]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateX" 
 		"GardenerRigRN.placeHolderList[88]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateY" 
 		"GardenerRigRN.placeHolderList[89]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateZ" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateZ" 
 		"GardenerRigRN.placeHolderList[90]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateX" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateX" 
 		"GardenerRigRN.placeHolderList[91]" ""
-		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateY" 
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateY" 
 		"GardenerRigRN.placeHolderList[92]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateZ" 
+		"GardenerRigRN.placeHolderList[93]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateZ" 
+		"GardenerRigRN.placeHolderList[94]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateX" 
+		"GardenerRigRN.placeHolderList[95]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateY" 
+		"GardenerRigRN.placeHolderList[96]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateX" 
+		"GardenerRigRN.placeHolderList[97]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateY" 
+		"GardenerRigRN.placeHolderList[98]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateZ" 
+		"GardenerRigRN.placeHolderList[99]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateX" 
+		"GardenerRigRN.placeHolderList[100]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateY" 
+		"GardenerRigRN.placeHolderList[101]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateZ" 
+		"GardenerRigRN.placeHolderList[102]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateX" 
+		"GardenerRigRN.placeHolderList[103]" ""
+		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateY" 
+		"GardenerRigRN.placeHolderList[104]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[93]" "";
+		"GardenerRigRN.placeHolderList[105]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode timeEditor -s -n "timeEditor";
@@ -480,7 +516,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
 		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 804\n            -height 565\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
@@ -504,197 +540,250 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 804\\n    -height 565\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 804\\n    -height 565\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 804\\n    -height 565\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 804\\n    -height 565\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "697B9A45-4A47-5F5D-F2FA-7085FC456614";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 360 -ast 1 -aet 360 ";
+	setAttr ".b" -type "string" "playbackOptions -min 11 -max 342 -ast 1 -aet 360 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "LeftArm_CTRL_translateX";
 	rename -uid "E733B4C0-4FE3-1E43-A991-7DBA61A8873A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11.577775850340137 0 12.899999829931973 0
-		 15.874999659863946 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 11.577775850340137 0 12.899999829931973 0
+		 15.874999659863946 0 173 0 175 0 178 0 179 0 181 0 186 0 188 0 193 0 257 0 264 0
+		 268 0;
 createNode animCurveTL -n "LeftArm_CTRL_translateY";
 	rename -uid "E9DC4C24-4D09-B1E6-B81A-7BB5DCEC7D94";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11.577775850340137 0 12.899999829931973 0
-		 15.874999659863946 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 11.577775850340137 0 12.899999829931973 0
+		 15.874999659863946 0 173 0 175 0 178 0 179 0 181 0 186 0 188 0 193 0 257 0 264 0
+		 268 0;
 createNode animCurveTL -n "LeftArm_CTRL_translateZ";
 	rename -uid "7553EC37-455F-4AE8-D090-DCB0C267B21E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 11.577775850340137 0 12.899999829931973 0
-		 15.874999659863946 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 11.577775850340137 0 12.899999829931973 0
+		 15.874999659863946 0 173 0 175 0 178 0 179 0 181 0 186 0 188 0 193 0 257 0 264 0
+		 268 0;
 createNode animCurveTA -n "LeftArm_CTRL_rotateX";
 	rename -uid "91756CF3-4693-A0DD-6965-D1AB5562CDD0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 77.35710401745844 11.577775850340137 -14.944133920546745
-		 12.899999829931973 -21.794468032885476 15.874999659863946 -22.896511272763036;
+	setAttr -s 15 ".ktv[0:14]"  1 77.35710401745844 11.577775850340137 -14.944133920546745
+		 12.899999829931973 -21.794468032885476 15.874999659863946 -22.896511272763036 173 -22.896511272763036
+		 175 -37.653760310420424 178 -13.828020806155999 179 -5.5314376008515929 181 -22.878996518990988
+		 186 7.1234729362364 188 29.488490854757238 193 17.501722065540132 257 17.501722065540132
+		 264 29.85026301630328 268 79.70496007733648;
 createNode animCurveTA -n "LeftArm_CTRL_rotateY";
 	rename -uid "5F95EE0A-48BE-EC88-5E58-A4A3D2A4927B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -0.94426439682546359 11.577775850340137 -0.94426439682547159
-		 12.899999829931973 -0.94426439682546881 15.874999659863946 -1.08056748948934;
+	setAttr -s 15 ".ktv[0:14]"  1 -0.94426439682546359 11.577775850340137 -0.94426439682547159
+		 12.899999829931973 -0.94426439682546881 15.874999659863946 -1.08056748948934 173 -1.08056748948934
+		 175 -3.1062925881120398 178 -6.8354683378492087 179 -6.8354683378492167 181 -6.8354683378492185
+		 186 -6.8354683378492433 188 -6.8354683378492567 193 -6.8354683378492727 257 -6.8354683378492727
+		 264 -6.8354683378492789 268 -6.835468337849302;
 createNode animCurveTA -n "LeftArm_CTRL_rotateZ";
 	rename -uid "9FC065EA-4442-61AA-03E5-89AE0B9CF549";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -7.3996189391120657 11.577775850340137 -7.3996189391120657
-		 12.899999829931973 -7.3996189391120577 15.874999659863946 -7.2253806355113515;
+	setAttr -s 15 ".ktv[0:14]"  1 -7.3996189391120657 11.577775850340137 -7.3996189391120657
+		 12.899999829931973 -7.3996189391120577 15.874999659863946 -7.2253806355113515 173 -7.2253806355113515
+		 175 -6.7370251934496421 178 -5.8380072205632514 179 -5.8380072205632585 181 -5.8380072205632736
+		 186 -5.8380072205632834 188 -5.8380072205632709 193 -5.8380072205632683 257 -5.8380072205632683
+		 264 -5.8380072205632452 268 -5.8380072205632372;
 createNode animCurveTL -n "LeftForeArm_CTRL_translateX";
 	rename -uid "43059CBA-4DDE-4329-A7B6-0F856A44E86C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 15.87500731292517 0;
+	setAttr -s 12 ".ktv[0:11]"  1 0 15.87500731292517 0 282.15521020408164 0
+		 291 0 296.98646037414966 0 297 0 301 0 306.80000017006802 0 310.40000068027211 0
+		 316 0 321.00000136054422 0 324.20000340136056 0;
 createNode animCurveTL -n "LeftForeArm_CTRL_translateY";
 	rename -uid "EA80A3DC-49F2-3D85-5E52-F18A05969E0D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 15.87500731292517 0;
+	setAttr -s 12 ".ktv[0:11]"  1 0 15.87500731292517 0 282.15521020408164 0
+		 291 0 296.98646037414966 0 297 0 301 0 306.80000017006802 0 310.40000068027211 0
+		 316 0 321.00000136054422 0 324.20000340136056 0;
 createNode animCurveTL -n "LeftForeArm_CTRL_translateZ";
 	rename -uid "59A388CB-4C1C-A8FB-0763-C4AC48A339B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 15.87500731292517 0;
+	setAttr -s 12 ".ktv[0:11]"  1 0 15.87500731292517 0 282.15521020408164 0
+		 291 0 296.98646037414966 0 297 0 301 0 306.80000017006802 0 310.40000068027211 0
+		 316 0 321.00000136054422 0 324.20000340136056 0;
 createNode animCurveTA -n "LeftForeArm_CTRL_rotateX";
 	rename -uid "63228489-4383-3F1A-AA3A-498500DA949A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 15.87500731292517 -8.3004981045554445;
+	setAttr -s 12 ".ktv[0:11]"  1 0 15.87500731292517 -8.3004981045554445
+		 282.15521020408164 -8.3004981045554445 291 31.047880785083141 296.98646037414966 25.334909310644992
+		 297 40.267373678028726 301 39.385160302559122 306.80000017006802 30.253614617361578
+		 310.40000068027211 -12.970579151696695 316 28.17914158846564 321.00000136054422 38.707776098484011
+		 324.20000340136056 -6.4948019484386217;
 createNode animCurveTA -n "LeftForeArm_CTRL_rotateY";
 	rename -uid "9C671CB1-4465-1141-70D6-C28AD22B1F82";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 15.87500731292517 0;
+	setAttr -s 12 ".ktv[0:11]"  1 0 15.87500731292517 0 282.15521020408164 0
+		 291 14.106658049574227 296.98646037414966 6.5562588667052681 297 -0.24128830604935661
+		 301 -13.137586038387656 306.80000017006802 37.628074120129725 310.40000068027211 45.409372864878868
+		 316 28.110717315066267 321.00000136054422 28.75387720699797 324.20000340136056 46.485083053986465;
 createNode animCurveTA -n "LeftForeArm_CTRL_rotateZ";
 	rename -uid "C3C5B947-458A-E58A-50F8-C8B085BC8112";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -8.5055719775201215 15.87500731292517 -8.505571977520141;
+	setAttr -s 12 ".ktv[0:11]"  1 -8.5055719775201215 15.87500731292517 -8.505571977520141
+		 282.15521020408164 -8.505571977520141 291 73.923950023779682 296.98646037414966 43.47213021004081
+		 297 61.716381030514412 301 73.90841287292865 306.80000017006802 70.277375178310919
+		 310.40000068027211 8.6630244525096476 316 74.664200611866136 321.00000136054422 85.610245948761175
+		 324.20000340136056 17.6640810621019;
 createNode animCurveTL -n "LeftShoulder_CTRL_translateX";
 	rename -uid "05A4DDF6-48EB-88B9-441F-70A0CF0B1DC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 1.9916666666666667 0 9.9249991496598646 0
-		 12.238887585034014 0 14.552776700680273 0 124 0 126 0 128 0 132 0 137 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 1.9916666666666667 0 9.9249991496598646 0
+		 12.238887585034014 0 14.552776700680273 0 124 0 126 0 128 0 132 0 137 0 270 0 274 0
+		 279 0;
 createNode animCurveTL -n "LeftShoulder_CTRL_translateY";
 	rename -uid "501FD93B-40C7-F433-F96C-7293193DABDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 1.9916666666666667 0 9.9249991496598646 0
-		 12.238887585034014 0 14.552776700680273 0 124 0 126 0 128 0 132 0 137 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 1.9916666666666667 0 9.9249991496598646 0
+		 12.238887585034014 0 14.552776700680273 0 124 0 126 0 128 0 132 0 137 0 270 0 274 0
+		 279 0;
 createNode animCurveTL -n "LeftShoulder_CTRL_translateZ";
 	rename -uid "18AE0DA0-4B9E-657B-778F-87850633BB51";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 1.9916666666666667 0 9.9249991496598646 0
-		 12.238887585034014 0 14.552776700680273 0 124 0 126 0 128 0 132 0 137 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 1.9916666666666667 0 9.9249991496598646 0
+		 12.238887585034014 0 14.552776700680273 0 124 0 126 0 128 0 132 0 137 0 270 0 274 0
+		 279 0;
 createNode animCurveTA -n "LeftShoulder_CTRL_rotateX";
 	rename -uid "CE08AE67-4394-564B-AC69-F3AD56F29227";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -3.9561267995621696 1.9916666666666667 -16.787603542894384
+	setAttr -s 13 ".ktv[0:12]"  1 -3.9561267995621696 1.9916666666666667 -16.787603542894384
 		 9.9249991496598646 -34.016987206848214 12.238887585034014 -45.028833820300385 14.552776700680273 -57.788935885112672
 		 124 -57.788935885112672 126 -60.65180874793203 128 -29.932001274113357 132 -11.177346249918243
-		 137 -10.184844199344308;
+		 137 -10.184844199344308 270 -10.184844199344308 274 -24.458327981033367 279 2.4998847000736761;
 createNode animCurveTA -n "LeftShoulder_CTRL_rotateY";
 	rename -uid "04D506B5-4E23-14E2-4909-9CBE266B7A12";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0.93078828836206207 1.9916666666666667 0.93078828836206506
+	setAttr -s 13 ".ktv[0:12]"  1 0.93078828836206207 1.9916666666666667 0.93078828836206506
 		 9.9249991496598646 0.93078828836206784 12.238887585034014 0.93078828836207517 14.552776700680273 0.93078828836208161
 		 124 0.93078828836208161 126 0.93078828836207428 128 0.93078828836207461 132 5.4350327286443338
-		 137 10.495398172792633;
+		 137 10.495398172792633 270 10.495398172792633 274 10.495398172792614 279 10.495398172792594;
 createNode animCurveTA -n "LeftShoulder_CTRL_rotateZ";
 	rename -uid "52B3EFEE-40B3-386E-F7DF-D4A38D643A4C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 13.218758513823982 1.9916666666666667 13.218758513823992
+	setAttr -s 13 ".ktv[0:12]"  1 13.218758513823982 1.9916666666666667 13.218758513823992
 		 9.9249991496598646 13.218758513823992 12.238887585034014 13.218758513823989 14.552776700680273 13.218758513823987
 		 124 13.218758513823987 126 13.218758513823976 128 13.218758513823987 132 16.428313368462131
-		 137 16.818567002199579;
+		 137 16.818567002199579 270 16.818567002199579 274 16.818567002199615 279 16.818567002199654;
 createNode animCurveTL -n "RightArm_CTRL_translateX";
 	rename -uid "418B10DB-4F08-6F4B-58FA-49880A0D80DF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 11.577777551020407 0 12.900000340136055 0
-		 15.875001020408163 0 17.527777380952379 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 11.577777551020407 0 12.900000340136055 0
+		 15.875001020408163 0 17.527777380952379 0 217 0 221 0 232 0 236 0 248 0 257 0 264 0
+		 268 0;
 createNode animCurveTL -n "RightArm_CTRL_translateY";
 	rename -uid "468083C4-4E7B-2C44-6A32-70BBE995209A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 11.577777551020407 0 12.900000340136055 0
-		 15.875001020408163 0 17.527777380952379 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 11.577777551020407 0 12.900000340136055 0
+		 15.875001020408163 0 17.527777380952379 0 217 0 221 0 232 0 236 0 248 0 257 0 264 0
+		 268 0;
 createNode animCurveTL -n "RightArm_CTRL_translateZ";
 	rename -uid "BC7A9527-4A3E-2BCE-CE7F-B3A6BEBCABDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 11.577777551020407 0 12.900000340136055 0
-		 15.875001020408163 0 17.527777380952379 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 11.577777551020407 0 12.900000340136055 0
+		 15.875001020408163 0 17.527777380952379 0 217 0 221 0 232 0 236 0 248 0 257 0 264 0
+		 268 0;
 createNode animCurveTA -n "RightArm_CTRL_rotateX";
 	rename -uid "4FB2C532-4BCC-AAE1-83A0-BEAA08969C22";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 76.075356926499211 11.577777551020407 -20.807320653702941
-		 12.900000340136055 -36.114648599718514 15.875001020408163 -48.668292719150244 17.527777380952379 -38.733831888639052;
+	setAttr -s 13 ".ktv[0:12]"  1 76.075356926499211 11.577777551020407 -20.807320653702941
+		 12.900000340136055 -36.114648599718514 15.875001020408163 -48.668292719150244 17.527777380952379 -38.733831888639052
+		 217 -38.733831888639052 221 -38.733831888639052 232 -11.838696541936162 236 -11.838696541936162
+		 248 19.418165775025585 257 19.418165775025585 264 33.008246385429572 268 82.434656872581726;
 createNode animCurveTA -n "RightArm_CTRL_rotateY";
 	rename -uid "802923F4-4337-FF4B-22D4-B6BD5094AF05";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -1.1979827935026224 11.577777551020407 -14.076956539863314
-		 12.900000340136055 -14.076956539863334 15.875001020408163 -14.076956539863332 17.527777380952379 -4.7908160445113204;
+	setAttr -s 13 ".ktv[0:12]"  1 -1.1979827935026224 11.577777551020407 -14.076956539863314
+		 12.900000340136055 -14.076956539863334 15.875001020408163 -14.076956539863332 17.527777380952379 -4.7908160445113204
+		 217 -4.7908160445113204 221 -4.7908160445113204 232 -4.7908160445113106 236 -4.7908160445113106
+		 248 -4.7908160445112946 257 -4.7908160445112946 264 -4.7908160445112946 268 -4.7908160445112946;
 createNode animCurveTA -n "RightArm_CTRL_rotateZ";
 	rename -uid "6806C4F7-496E-941A-6A1D-DF9235F1A4D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.13304104987852725 11.577777551020407 9.6145678749652355
-		 12.900000340136055 9.6145678749652319 15.875001020408163 9.614567874965223 17.527777380952379 -2.7218610825183207;
+	setAttr -s 13 ".ktv[0:12]"  1 0.13304104987852725 11.577777551020407 9.6145678749652355
+		 12.900000340136055 9.6145678749652319 15.875001020408163 9.614567874965223 17.527777380952379 -2.7218610825183207
+		 217 -2.7218610825183207 221 -2.7218610825183207 232 -2.7218610825183416 236 -2.7218610825183416
+		 248 -2.721861082518354 257 -2.721861082518354 264 -2.721861082518354 268 -2.721861082518354;
 createNode animCurveTL -n "RightShoulder_CTRL_translateX";
 	rename -uid "41655545-4561-963B-4863-15B0A349ABD6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 1.9916666666666667 0 9.9250008503401368 0
-		 12.238889795918368 0 124 0 125 0 132 0;
+	setAttr -s 21 ".ktv[0:20]"  1 0 1.9916666666666667 0 9.9250008503401368 0
+		 12.238889795918368 0 124 0 125 0 132 0 171 0 174 0 179 0 184 0 187 0 190 0 196 0
+		 213 0 217 0 224 0 226 0 268 0 272 0 277 0;
 createNode animCurveTL -n "RightShoulder_CTRL_translateY";
 	rename -uid "D46AF7EB-4BC4-6C79-CFDE-339E3F0E0233";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 1.9916666666666667 0 9.9250008503401368 0
-		 12.238889795918368 0 124 0 125 0 132 0;
+	setAttr -s 21 ".ktv[0:20]"  1 0 1.9916666666666667 0 9.9250008503401368 0
+		 12.238889795918368 0 124 0 125 0 132 0 171 0 174 0 179 0 184 0 187 0 190 0 196 0
+		 213 0 217 0 224 0 226 0 268 0 272 0 277 0;
 createNode animCurveTL -n "RightShoulder_CTRL_translateZ";
 	rename -uid "9438EBC0-49BA-5BD3-5268-31940C00A0F6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 1.9916666666666667 0 9.9250008503401368 0
-		 12.238889795918368 0 124 0 125 0 132 0;
+	setAttr -s 21 ".ktv[0:20]"  1 0 1.9916666666666667 0 9.9250008503401368 0
+		 12.238889795918368 0 124 0 125 0 132 0 171 0 174 0 179 0 184 0 187 0 190 0 196 0
+		 213 0 217 0 224 0 226 0 268 0 272 0 277 0;
 createNode animCurveTA -n "RightShoulder_CTRL_rotateX";
 	rename -uid "887754E3-48EC-6E85-A2CD-B3AA5BD420FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 1.9916666666666667 -17.015378837241304
+	setAttr -s 21 ".ktv[0:20]"  1 0 1.9916666666666667 -17.015378837241304
 		 9.9250008503401368 -34.675811822380211 12.238889795918368 -39.507106148137169 124 -39.507106148137169
-		 125 -42.762257227395054 132 -41.172702133871496;
+		 125 -42.762257227395054 132 -41.172702133871496 171 -41.172702133871496 174 -43.141316256887897
+		 179 -32.195908226309797 184 -23.310968388907362 187 -40.391117072771024 190 -46.089324782079821
+		 196 -33.699571216816437 213 -33.699571216816437 217 -33.699571216816437 224 -19.2885333366109
+		 226 -12.616063709906259 268 -12.616063709906259 272 -24.851165853739673 277 -5.1379502956978742;
 createNode animCurveTA -n "RightShoulder_CTRL_rotateY";
 	rename -uid "EBF83D50-46C8-2DC7-1F54-0F820DDD5A2D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 1.9916666666666667 -3.4938211530278194
+	setAttr -s 21 ".ktv[0:20]"  1 0 1.9916666666666667 -3.4938211530278194
 		 9.9250008503401368 -10.423802550695983 12.238889795918368 9.8542966227233499 124 9.8542966227233499
-		 125 8.4098396707852139 132 4.3441543395340698;
+		 125 8.4098396707852139 132 4.3441543395340698 171 4.3441543395340698 174 -16.262764891175824
+		 179 -8.4023832742263203 184 -8.4023832742263327 187 -8.4023832742263451 190 -8.402383274226354
+		 196 -8.4023832742263664 213 -8.4023832742263664 217 -8.4023832742263664 224 -8.4023832742263735
+		 226 -8.4023832742263789 268 -8.4023832742263789 272 -8.4023832742263842 277 -8.4023832742263753;
 createNode animCurveTA -n "RightShoulder_CTRL_rotateZ";
 	rename -uid "C0A9FD0D-4D66-FD5E-A3B7-D59A5AC6DB75";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -8.3661805291709612 1.9916666666666667 -8.1429022353856357
+	setAttr -s 21 ".ktv[0:20]"  1 -8.3661805291709612 1.9916666666666667 -8.1429022353856357
 		 9.9250008503401368 -4.4675800035977771 12.238889795918368 -21.883506135396093 124 -21.883506135396093
-		 125 -22.378668167086211 132 -19.683998884995415;
+		 125 -22.378668167086211 132 -19.683998884995415 171 -19.683998884995415 174 -1.1888016134680437
+		 179 -8.508989468989105 184 -8.5089894689891068 187 -8.5089894689890944 190 -8.508989468989089
+		 196 -8.5089894689890748 213 -8.5089894689890748 217 -8.5089894689890748 224 -8.5089894689890624
+		 226 -8.5089894689890428 268 -8.5089894689890428 272 -8.5089894689890411 277 -8.5089894689890393;
 createNode animCurveTL -n "LeftUpLeg_CTRL_translateX";
 	rename -uid "8B8F08BB-429B-A31C-FCA7-65ACB5A93B1A";
 	setAttr ".tan" 18;
@@ -742,200 +831,210 @@ createNode animCurveTL -n "RightUpLeg_CTRL_translateX";
 	rename -uid "2609BE3B-464C-4E36-008E-90A4924EE42B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 0 30.088899149659863 0 32.997789115646256 0
+	setAttr -s 27 ".ktv[0:26]"  1 0 30.088899149659863 0 32.997789115646256 0
 		 37.228902721088438 0 40.931127891156464 0 43.575574149659865 0 44.633352721088436 0
 		 46.748909353741496 0 49.393355272108842 0 76.697249489795922 0 154 0 157 0 160 0
-		 163 0 168 0 172 0 174 0 176 0 178 0 180 0 182 0 185 0 187 0;
+		 163 0 168 0 172 0 174 0 176 0 178 0 180 0 182 0 185 0 187 0 190 0 195 0 196 0 198 0;
 createNode animCurveTL -n "RightUpLeg_CTRL_translateY";
 	rename -uid "470AEA32-4649-3D63-0434-5086F012DDB6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 0 30.088899149659863 0 32.997789115646256 0
+	setAttr -s 27 ".ktv[0:26]"  1 0 30.088899149659863 0 32.997789115646256 0
 		 37.228902721088438 0 40.931127891156464 0 43.575574149659865 0 44.633352721088436 0
 		 46.748909353741496 0 49.393355272108842 0 76.697249489795922 0 154 0 157 0 160 0
-		 163 0 168 0 172 0 174 0 176 0 178 0 180 0 182 0 185 0 187 0;
+		 163 0 168 0 172 0 174 0 176 0 178 0 180 0 182 0 185 0 187 0 190 0 195 0 196 0 198 0;
 createNode animCurveTL -n "RightUpLeg_CTRL_translateZ";
 	rename -uid "66595812-45C8-A8F1-C742-9CA0F41CE1FB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 0 30.088899149659863 0 32.997789115646256 0
+	setAttr -s 27 ".ktv[0:26]"  1 0 30.088899149659863 0 32.997789115646256 0
 		 37.228902721088438 0 40.931127891156464 0 43.575574149659865 0 44.633352721088436 0
 		 46.748909353741496 0 49.393355272108842 0 76.697249489795922 0 154 0 157 0 160 0
-		 163 0 168 0 172 0 174 0 176 0 178 0 180 0 182 0 185 0 187 0;
+		 163 0 168 0 172 0 174 0 176 0 178 0 180 0 182 0 185 0 187 0 190 0 195 0 196 0 198 0;
 createNode animCurveTA -n "RightUpLeg_CTRL_rotateX";
 	rename -uid "2ECE8D17-4C53-8806-7B95-55B846E2CC94";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 0 30.088899149659863 0 32.997789115646256 0
+	setAttr -s 27 ".ktv[0:26]"  1 0 30.088899149659863 0 32.997789115646256 0
 		 37.228902721088438 0 40.931127891156464 0 43.575574149659865 0 44.633352721088436 0
 		 46.748909353741496 0 49.393355272108842 0 76.697249489795922 0 154 0 157 0 160 0
 		 163 0 168 0 172 0 174 0 176 0 178 0 180 -0.22469367980858335 182 -0.22469367980858335
-		 185 0.0048273856812090128 187 -0.33893882221444194;
+		 185 0.0048273856812090128 187 -0.33893882221444194 190 -0.33893882221444194 195 1.3040183192554156
+		 196 1.6645836114499513 198 1.759778588080386;
 createNode animCurveTA -n "RightUpLeg_CTRL_rotateY";
 	rename -uid "76F68A07-41A8-DC85-E4D6-82A83FB981B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 0 30.088899149659863 0 32.997789115646256 0
+	setAttr -s 27 ".ktv[0:26]"  1 0 30.088899149659863 0 32.997789115646256 0
 		 37.228902721088438 0 40.931127891156464 0 43.575574149659865 0 44.633352721088436 0
 		 46.748909353741496 0 49.393355272108842 0 76.697249489795922 0 154 0 157 0 160 0
 		 163 0 168 0 172 0 174 0 176 0 178 0 180 1.8704091422584648 182 1.8704091422584648
-		 185 -0.31286547406068121 187 2.3528748103513872;
+		 185 -0.31286547406068121 187 2.3528748103513872 190 2.3528748103513872 195 1.6956441619997704
+		 196 1.4996764906709632 198 1.5983796752668973;
 createNode animCurveTA -n "RightUpLeg_CTRL_rotateZ";
 	rename -uid "ECDC4276-442D-C54C-292F-8583357C004B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  1 2.6615532203604735 30.088899149659863 2.6615532203604735
+	setAttr -s 27 ".ktv[0:26]"  1 2.6615532203604735 30.088899149659863 2.6615532203604735
 		 32.997789115646256 2.6615532203604735 37.228902721088438 -0.97768352953858939 40.931127891156464 -3.4271921369530371
 		 43.575574149659865 -5.2744508825073311 44.633352721088436 -2.8956842812428025 46.748909353741496 -2.8956842812428025
 		 49.393355272108842 2.2561724170964395 76.697249489795922 2.2561724170964395 154 2.2561724170964395
 		 157 -20.040097110863677 160 -35.100996864388463 163 -46.3441495614804 168 -50.120996502961567
 		 172 -37.841007399098629 174 -51.060826299252639 176 -55.605423258872577 178 -43.38199421789011
-		 180 -53.616252192443106 182 -53.616252192443106 185 -41.685077556127084 187 -56.309379664953546;
+		 180 -53.616252192443106 182 -53.616252192443106 185 -41.685077556127084 187 -56.309379664953546
+		 190 -56.309379664953546 195 -11.303364878154671 196 -0.74658338916278544 198 -0.34548598930583491;
 createNode animCurveTL -n "RightForeArm_CTRL_translateX";
 	rename -uid "DBD67BC5-4156-591C-5DE9-EF8D9B7B47EE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  11.577780272108843 0;
+	setAttr -s 2 ".ktv[0:1]"  11.577780272108843 0 291 0;
 createNode animCurveTL -n "RightForeArm_CTRL_translateY";
 	rename -uid "93051753-4F37-0298-5373-A7BB9B36BE99";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  11.577780272108843 0;
+	setAttr -s 2 ".ktv[0:1]"  11.577780272108843 0 291 0;
 createNode animCurveTL -n "RightForeArm_CTRL_translateZ";
 	rename -uid "7645A223-4884-BEF5-0B2B-24AEEA8EAE97";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  11.577780272108843 0;
+	setAttr -s 2 ".ktv[0:1]"  11.577780272108843 0 291 0;
 createNode animCurveTA -n "RightForeArm_CTRL_rotateX";
 	rename -uid "B42F25FF-4E51-C6C9-C8A5-65813F8A4B76";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  11.577780272108843 0;
+	setAttr -s 2 ".ktv[0:1]"  11.577780272108843 0 291 -10.070874813179467;
 createNode animCurveTA -n "RightForeArm_CTRL_rotateY";
 	rename -uid "6FCB8F85-48EA-FFC4-5930-FB862B91C253";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  11.577780272108843 37.329197854046157;
+	setAttr -s 2 ".ktv[0:1]"  11.577780272108843 37.329197854046157 291 39.136633742803774;
 createNode animCurveTA -n "RightForeArm_CTRL_rotateZ";
 	rename -uid "5B8245DF-4650-A79B-BDDD-FF8BCB22CBDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  11.577780272108843 0;
+	setAttr -s 2 ".ktv[0:1]"  11.577780272108843 0 291 -15.715841057055128;
 createNode animCurveTL -n "Spine2_CTRL_translateX";
 	rename -uid "A90EB6D7-4F82-789D-EE8D-758853D9CBEA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 11 ".ktv[0:10]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0 225 0;
 createNode animCurveTL -n "Spine2_CTRL_translateY";
 	rename -uid "8C18CD3F-4413-7FEB-87B2-FDB712634D6D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 11 ".ktv[0:10]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0 225 0;
 createNode animCurveTL -n "Spine2_CTRL_translateZ";
 	rename -uid "A9DC00E9-4302-7F49-D1D0-DBAF41D411AB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 11 ".ktv[0:10]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0 225 0;
 createNode animCurveTA -n "Spine2_CTRL_rotateX";
 	rename -uid "7277AE76-41F8-408C-CC3A-1E81283F7F27";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 -13.331228467948069
+	setAttr -s 11 ".ktv[0:10]"  1 0 7.2805568027210885 -13.331228467948069
 		 11.908335204081633 -15.626963021716525 15.544446768707482 -17.862246896820764 18.850001870748301 -23.671711045867003
 		 21.163891666666668 -7.1202067087159238 23.14722551020408 4.7671942654810158 27.444448469387755 -2.5527082010111712
-		 141.13333401360543 -2.5527082010111712 147.33333520408164 -5.1348442827828915;
+		 141.13333401360543 -2.5527082010111712 147.33333520408164 -5.1348442827828915 225 0;
 createNode animCurveTA -n "Spine2_CTRL_rotateY";
 	rename -uid "D4283301-40ED-1545-2B7F-179835AC6D01";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 11 ".ktv[0:10]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -2.2697852543696908;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -2.2697852543696908
+		 225 0;
 createNode animCurveTA -n "Spine2_CTRL_rotateZ";
 	rename -uid "7B0AD61F-4AF9-62D5-3D37-F39E85890B89";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 11 ".ktv[0:10]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -14.918630304208392;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -14.918630304208392
+		 225 0;
 createNode animCurveTL -n "Spine1_CTRL_translateX";
 	rename -uid "68765391-4193-8E06-D291-2ABDC03FBC98";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 0 23.147225680272108 0 25.461114115646257 0
-		 26.452780952380952 0 29.42778112244898 0 137 0 141 0 147 0 151 0 169 0 179 0 187 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 23.147225680272108 0 25.461114115646257 0
+		 26.452780952380952 0 29.42778112244898 0 137 0 141 0 147 0 151 0 169 0 179 0 187 0
+		 222 0 227 0;
 createNode animCurveTL -n "Spine1_CTRL_translateY";
 	rename -uid "083656AB-47B6-826C-8E18-A38D2EA5C28F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 0 23.147225680272108 0 25.461114115646257 0
-		 26.452780952380952 0 29.42778112244898 0 137 0 141 0 147 0 151 0 169 0 179 0 187 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 23.147225680272108 0 25.461114115646257 0
+		 26.452780952380952 0 29.42778112244898 0 137 0 141 0 147 0 151 0 169 0 179 0 187 0
+		 222 0 227 0;
 createNode animCurveTL -n "Spine1_CTRL_translateZ";
 	rename -uid "6D1B4DDD-44A1-94BD-6CA8-7C85DC2F9DA2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 0 23.147225680272108 0 25.461114115646257 0
-		 26.452780952380952 0 29.42778112244898 0 137 0 141 0 147 0 151 0 169 0 179 0 187 0;
+	setAttr -s 14 ".ktv[0:13]"  1 0 23.147225680272108 0 25.461114115646257 0
+		 26.452780952380952 0 29.42778112244898 0 137 0 141 0 147 0 151 0 169 0 179 0 187 0
+		 222 0 227 0;
 createNode animCurveTA -n "Spine1_CTRL_rotateX";
 	rename -uid "1E79C429-4E8D-55F5-7A9A-A8B6EF9CA44E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -3.7308845881634816 23.147225680272108 -3.7308845881634816
+	setAttr -s 13 ".ktv[0:12]"  1 -3.7308845881634816 23.147225680272108 -3.7308845881634816
 		 26.452780952380952 7.3440364318302098 29.42778112244898 -2.1880178823180558 137 -2.1880178823180558
 		 141 -1.9821773069322584 147 -1.6781382393038982 151 -0.087253503832691287 169 -0.087253503832691287
-		 179 9.4978125844898162 187 8.0807120335890357;
+		 179 9.4978125844898162 187 8.0807120335890357 222 8.0807120335890357 227 0;
 createNode animCurveTA -n "Spine1_CTRL_rotateY";
 	rename -uid "1FC40B5C-4CA3-89F9-D7AE-A9926AAB6A83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 23.147225680272108 0 26.452780952380952 0
+	setAttr -s 13 ".ktv[0:12]"  1 0 23.147225680272108 0 26.452780952380952 0
 		 29.42778112244898 0 137 0 141 -1.3037564788447502 147 -2.3289859055677793 151 -5.0795350172617306
-		 169 -5.0795350172617306 179 -1.7407868758862723 187 -1.5144548484150138;
+		 169 -5.0795350172617306 179 -1.7407868758862723 187 -1.5144548484150138 222 -1.5144548484150138
+		 227 0;
 createNode animCurveTA -n "Spine1_CTRL_rotateZ";
 	rename -uid "17FCD250-4808-AE7C-5CA2-28B30682837D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 23.147225680272108 0 26.452780952380952 0
+	setAttr -s 13 ".ktv[0:12]"  1 0 23.147225680272108 0 26.452780952380952 0
 		 29.42778112244898 0 137 0 141 -8.326515665488742 147 -15.077826219589978 151 -35.298816948391355
-		 169 -35.298816948391355 179 30.00748992382869 187 21.240391495917841;
+		 169 -35.298816948391355 179 30.00748992382869 187 21.240391495917841 222 21.240391495917841
+		 227 0;
 createNode animCurveTL -n "Spine_CTRL_translateX";
 	rename -uid "9BC03093-4E4B-8CA0-E763-8EA403938C6D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 31 ".ktv[0:30]"  1 0 30.750005952380953 0 32.402784183673468 0
+	setAttr -s 35 ".ktv[0:34]"  1 0 30.750005952380953 0 32.402784183673468 0
 		 40.666675680272107 0 49.922232482993195 0 51.905566836734693 0 54.550012414965984 0
 		 58.186122448979589 0 64.136124829931973 0 68.102792687074825 0 68.763903741496605 0
 		 74.713905272108846 0 78.350018197278914 0 80 0 91 0 93 0 98 0 100 0 103 0 108 0 110 0
-		 114 0 118 0 135 0 140 0 145 0 150 0 175 0 180 0 183 0 192 0;
+		 114 0 118 0 135 0 140 0 145 0 150 0 175 0 180 0 183 0 192 0 210 0 224 0 235 0 244 0;
 createNode animCurveTL -n "Spine_CTRL_translateY";
 	rename -uid "1B067354-4BFD-5017-D2E7-01BFC3F479A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 31 ".ktv[0:30]"  1 0 30.750005952380953 0 32.402784183673468 0
+	setAttr -s 35 ".ktv[0:34]"  1 0 30.750005952380953 0 32.402784183673468 0
 		 40.666675680272107 0 49.922232482993195 0 51.905566836734693 0 54.550012414965984 0
 		 58.186122448979589 0 64.136124829931973 0 68.102792687074825 0 68.763903741496605 0
 		 74.713905272108846 0 78.350018197278914 0 80 0 91 0 93 0 98 0 100 0 103 0 108 0 110 0
-		 114 0 118 0 135 0 140 0 145 0 150 0 175 0 180 0 183 0 192 0;
+		 114 0 118 0 135 0 140 0 145 0 150 0 175 0 180 0 183 0 192 0 210 0 224 0 235 0 244 0;
 createNode animCurveTL -n "Spine_CTRL_translateZ";
 	rename -uid "7E4D0C6E-4452-B7C2-A0A4-AD829818BAB5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 31 ".ktv[0:30]"  1 0 30.750005952380953 0 32.402784183673468 0
+	setAttr -s 35 ".ktv[0:34]"  1 0 30.750005952380953 0 32.402784183673468 0
 		 40.666675680272107 0 49.922232482993195 0 51.905566836734693 0 54.550012414965984 0
 		 58.186122448979589 0 64.136124829931973 0 68.102792687074825 0 68.763903741496605 0
 		 74.713905272108846 0 78.350018197278914 0 80 0 91 0 93 0 98 0 100 0 103 0 108 0 110 0
-		 114 0 118 0 135 0 140 0 145 0 150 0 175 0 180 0 183 0 192 0;
+		 114 0 118 0 135 0 140 0 145 0 150 0 175 0 180 0 183 0 192 0 210 0 224 0 235 0 244 0;
 createNode animCurveTA -n "Spine_CTRL_rotateX";
 	rename -uid "5874542D-4825-1000-D122-41983A10FEE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 32 ".ktv[0:31]"  1 0 28.436117176870749 0 30.750005952380953 0
+	setAttr -s 36 ".ktv[0:35]"  1 0 28.436117176870749 0 30.750005952380953 0
 		 32.402784183673468 0 40.666675680272107 -6.2520397622391286 49.922232482993195 -6.4979239439911813
 		 51.905566836734693 -3.238520919949845 54.550012414965984 -1.41893202560414 58.186122448979589 -2.8950518435494415
 		 64.136124829931973 -4.1264966411114132 68.102792687074825 -3.2787294536762905 68.763903741496605 -5.7244836817486604
@@ -944,12 +1043,13 @@ createNode animCurveTA -n "Spine_CTRL_rotateX";
 		 103 45.036837804297448 108 87.304060209395132 110 69.244621956564671 114 36.869906787808695
 		 118 -2.8622622238112445 135 -2.8622622238112445 140 -3.7789951882834014 145 -3.7815368085732461
 		 150 -2.7282782487254917 175 -2.7282782487254917 180 -0.97554622348101239 183 4.1127898358401973
-		 192 0.19654862792654385;
+		 192 0.19654862792654385 210 0.094917517513497751 224 0.094917517513497751 235 0.094917517513497751
+		 244 0;
 createNode animCurveTA -n "Spine_CTRL_rotateY";
 	rename -uid "3FBE6424-4C32-D730-81BC-CEBBF684E9AC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 32 ".ktv[0:31]"  1 0 28.436117176870749 0 30.750005952380953 0
+	setAttr -s 36 ".ktv[0:35]"  1 0 28.436117176870749 0 30.750005952380953 0
 		 32.402784183673468 0 40.666675680272107 0 49.922232482993195 0 51.905566836734693 0.80451107815109957
 		 54.550012414965984 1.2075665925625039 58.186122448979589 1.653167611342212 64.136124829931973 2.2585920107312387
 		 68.102792687074825 3.3738334267309922 68.763903741496605 3.5275438496138767 74.713905272108846 4.2662663214912033
@@ -957,12 +1057,13 @@ createNode animCurveTA -n "Spine_CTRL_rotateY";
 		 93 5.6129432210201564 98 5.6129432210201564 100 5.6129432210201564 103 5.6129432210201626
 		 108 5.61294322102016 110 5.6129432210201582 114 5.6129432210201582 118 5.6129432210201502
 		 135 5.6129432210201502 140 1.5296642385263637 145 0.059023361026073404 150 -4.3940498108058508
-		 175 -4.3940498108058508 180 -2.9048346509600651 183 -2.0480356375440762 192 -2.3402526550831833;
+		 175 -4.3940498108058508 180 -2.9048346509600651 183 -2.0480356375440762 192 -2.3402526550831833
+		 210 -2.3465694257433101 224 -2.3465694257433101 235 -2.3465694257433101 244 0;
 createNode animCurveTA -n "Spine_CTRL_rotateZ";
 	rename -uid "9F0329E2-4110-BF7B-9BB9-5ABF5BE0C4F6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 32 ".ktv[0:31]"  1 0 28.436117176870749 0 30.750005952380953 -9.5290348849666575
+	setAttr -s 36 ".ktv[0:35]"  1 0 28.436117176870749 0 30.750005952380953 -9.5290348849666575
 		 32.402784183673468 -21.895903523386156 40.666675680272107 -41.895395855668184 49.922232482993195 -27.874301302328512
 		 51.905566836734693 -17.870312314301465 54.550012414965984 -14.048732223762491 58.186122448979589 0.094914883679975429
 		 64.136124829931973 13.011969109087364 68.102792687074825 30.137566883786935 68.763903741496605 32.895028975288724
@@ -971,7 +1072,8 @@ createNode animCurveTA -n "Spine_CTRL_rotateZ";
 		 103 -2.1304772207183889 108 -2.1304772207183866 110 -2.1304772207183884 114 -2.1304772207183902
 		 118 -2.130477220718392 135 -2.130477220718392 140 -20.7140236245747 145 -27.197788750894382
 		 150 -47.515407014265016 175 -47.515407014265016 180 -28.768402415892609 183 14.178227852032927
-		 192 -18.184762140355684;
+		 192 -18.184762140355684 210 -15.699604513288339 224 -15.699604513288339 235 -15.699604513288339
+		 244 0;
 createNode animCurveTU -n "Spine_CTRL_scaleX";
 	rename -uid "45DC8D97-419B-A7BA-61B1-E09F28F4C635";
 	setAttr ".tan" 18;
@@ -1051,39 +1153,39 @@ createNode animCurveTL -n "RightLeg_CTRL_translateX";
 	rename -uid "1C03AFA7-4CA3-CFA6-3029-F2B9216B0977";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
-		 183 0 186 0;
+	setAttr -s 8 ".ktv[0:7]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
+		 183 0 186 0 198 0;
 createNode animCurveTL -n "RightLeg_CTRL_translateY";
 	rename -uid "3A8B442F-4468-8914-C0AF-38B6E2C5A3B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
-		 183 0 186 0;
+	setAttr -s 8 ".ktv[0:7]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
+		 183 0 186 0 198 0;
 createNode animCurveTL -n "RightLeg_CTRL_translateZ";
 	rename -uid "25C506D9-46CF-3C84-42E4-0280DA71E52F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
-		 183 0 186 0;
+	setAttr -s 8 ".ktv[0:7]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
+		 183 0 186 0 198 0;
 createNode animCurveTA -n "RightLeg_CTRL_rotateX";
 	rename -uid "F79F0108-44BE-A56E-5C66-D4B6FC7FC622";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305574829931972 0 157 -13.298252322432349
+	setAttr -s 8 ".ktv[0:7]"  1.3305574829931972 0 157 -13.298252322432349
 		 169 -24.904103406234292 172 -13.684227315508243 177 -44.004480349870249 183 -50.650327430184369
-		 186 -39.63273403317784;
+		 186 -39.63273403317784 198 0;
 createNode animCurveTA -n "RightLeg_CTRL_rotateY";
 	rename -uid "5F1043C2-4DD4-5C61-776C-5FAFDA5428CF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
-		 183 0 186 0;
+	setAttr -s 8 ".ktv[0:7]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
+		 183 0 186 0 198 0;
 createNode animCurveTA -n "RightLeg_CTRL_rotateZ";
 	rename -uid "4FDEF953-4845-C8DE-B281-2382FAF00CC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
-		 183 0 186 0;
+	setAttr -s 8 ".ktv[0:7]"  1.3305574829931972 0 157 0 169 0 172 0 177 0
+		 183 0 186 0 198 0;
 createNode animCurveTL -n "Hips_CTRL_translateX";
 	rename -uid "0374B79A-434D-C5D6-8C45-E7BDD9FC8349";
 	setAttr ".tan" 18;
@@ -1833,9 +1935,75 @@ createNode animCurveTA -n "pasted__RightLeg_CTRL_rotateZ";
 createNode polyCube -n "polyCube1";
 	rename -uid "89A31A0C-4841-4672-D970-A09A21662814";
 	setAttr ".cuv" 4;
+createNode animCurveTL -n "Head_CTRL_translateZ";
+	rename -uid "06A8EE7D-43B9-880D-D717-18BE40316CF0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "Head_CTRL_translateY";
+	rename -uid "18015FE3-4733-067E-B0C7-25B9ACA80DA3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "Head_CTRL_translateX";
+	rename -uid "D2B145EF-4E97-2CA8-856A-CF9A5911B480";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Head_CTRL_rotateY";
+	rename -uid "91B21085-4082-1C39-A80E-75822727C584";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Head_CTRL_rotateX";
+	rename -uid "651D9507-42F5-5D1B-1A5D-E0B0B50A10EE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "Head_CTRL_rotateZ";
+	rename -uid "E7E01B9B-48F9-C18B-C7E4-3CAEA38D0B5E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTL -n "Neck_CTRL_translateX";
+	rename -uid "639CE42A-455B-461D-C822-D8B7748786F2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 0 332.75000170068029 0 339.39706122448979 0
+		 343.58823588435376 0 351.41176598639458 0 355 0 360 0;
+createNode animCurveTL -n "Neck_CTRL_translateY";
+	rename -uid "9D9C7783-4355-A193-12C2-E59AC70B95CA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 0 332.75000170068029 0 339.39706122448979 0
+		 343.58823588435376 0 351.41176598639458 0 355 0 360 0;
+createNode animCurveTL -n "Neck_CTRL_translateZ";
+	rename -uid "15B19F84-474A-8992-4A38-DAAC6F92F126";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 0 332.75000170068029 0 339.39706122448979 0
+		 343.58823588435376 0 351.41176598639458 0 355 0 360 0;
+createNode animCurveTA -n "Neck_CTRL_rotateX";
+	rename -uid "5E665F25-4018-4B96-BF18-34BE2DF3C9FE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 332.75000170068029 0 339.39706122448979 0
+		 343.58823588435376 0 355 0 360 0;
+createNode animCurveTA -n "Neck_CTRL_rotateY";
+	rename -uid "5CA5AE7F-44A1-7D50-FAAE-F19ACFAEE007";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 332.75000170068029 0 339.39706122448979 -32.137282912557453
+		 343.58823588435376 -22.78647993382771 355 3.3968801950887184 360 0;
+createNode animCurveTA -n "Neck_CTRL_rotateZ";
+	rename -uid "90677C5C-401D-A7BB-9702-C2B76A12442A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 332.75000170068029 0 339.39706122448979 0
+		 343.58823588435376 0 355 0 360 0;
 select -ne :time1;
-	setAttr ".o" 198;
-	setAttr ".unw" 198;
+	setAttr ".o" 49;
+	setAttr ".unw" 49;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1901,72 +2069,84 @@ connectAttr "Spine2_CTRL_rotateZ.o" "GardenerRigRN.phl[24]";
 connectAttr "Spine2_CTRL_translateX.o" "GardenerRigRN.phl[25]";
 connectAttr "Spine2_CTRL_translateY.o" "GardenerRigRN.phl[26]";
 connectAttr "Spine2_CTRL_translateZ.o" "GardenerRigRN.phl[27]";
-connectAttr "LeftShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[28]";
-connectAttr "LeftShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[29]";
-connectAttr "LeftShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[30]";
-connectAttr "LeftShoulder_CTRL_translateX.o" "GardenerRigRN.phl[31]";
-connectAttr "LeftShoulder_CTRL_translateY.o" "GardenerRigRN.phl[32]";
-connectAttr "LeftShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[33]";
-connectAttr "LeftArm_CTRL_rotateY.o" "GardenerRigRN.phl[34]";
-connectAttr "LeftArm_CTRL_rotateX.o" "GardenerRigRN.phl[35]";
-connectAttr "LeftArm_CTRL_rotateZ.o" "GardenerRigRN.phl[36]";
-connectAttr "LeftArm_CTRL_translateX.o" "GardenerRigRN.phl[37]";
-connectAttr "LeftArm_CTRL_translateY.o" "GardenerRigRN.phl[38]";
-connectAttr "LeftArm_CTRL_translateZ.o" "GardenerRigRN.phl[39]";
-connectAttr "LeftForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[40]";
-connectAttr "LeftForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[41]";
-connectAttr "LeftForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[42]";
-connectAttr "LeftForeArm_CTRL_translateX.o" "GardenerRigRN.phl[43]";
-connectAttr "LeftForeArm_CTRL_translateY.o" "GardenerRigRN.phl[44]";
-connectAttr "LeftForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[45]";
-connectAttr "RightShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[46]";
-connectAttr "RightShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[47]";
-connectAttr "RightShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[48]";
-connectAttr "RightShoulder_CTRL_translateX.o" "GardenerRigRN.phl[49]";
-connectAttr "RightShoulder_CTRL_translateY.o" "GardenerRigRN.phl[50]";
-connectAttr "RightShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[51]";
-connectAttr "RightArm_CTRL_rotateX.o" "GardenerRigRN.phl[52]";
-connectAttr "RightArm_CTRL_rotateY.o" "GardenerRigRN.phl[53]";
-connectAttr "RightArm_CTRL_rotateZ.o" "GardenerRigRN.phl[54]";
-connectAttr "RightArm_CTRL_translateX.o" "GardenerRigRN.phl[55]";
-connectAttr "RightArm_CTRL_translateY.o" "GardenerRigRN.phl[56]";
-connectAttr "RightArm_CTRL_translateZ.o" "GardenerRigRN.phl[57]";
-connectAttr "RightForeArm_GRP_rotateX.o" "GardenerRigRN.phl[58]";
-connectAttr "RightForeArm_GRP_rotateY.o" "GardenerRigRN.phl[59]";
-connectAttr "RightForeArm_GRP_rotateZ.o" "GardenerRigRN.phl[60]";
-connectAttr "RightForeArm_GRP_translateX.o" "GardenerRigRN.phl[61]";
-connectAttr "RightForeArm_GRP_translateY.o" "GardenerRigRN.phl[62]";
-connectAttr "RightForeArm_GRP_translateZ.o" "GardenerRigRN.phl[63]";
-connectAttr "RightForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[64]";
-connectAttr "RightForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[65]";
-connectAttr "RightForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[66]";
-connectAttr "RightForeArm_CTRL_translateX.o" "GardenerRigRN.phl[67]";
-connectAttr "RightForeArm_CTRL_translateY.o" "GardenerRigRN.phl[68]";
-connectAttr "RightForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[69]";
-connectAttr "LeftUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[70]";
-connectAttr "LeftUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[71]";
-connectAttr "LeftUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[72]";
-connectAttr "LeftUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[73]";
-connectAttr "LeftUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[74]";
-connectAttr "LeftUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[75]";
-connectAttr "LeftLeg_CTRL_rotateX.o" "GardenerRigRN.phl[76]";
-connectAttr "LeftLeg_CTRL_rotateY.o" "GardenerRigRN.phl[77]";
-connectAttr "LeftLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[78]";
-connectAttr "LeftLeg_CTRL_translateX.o" "GardenerRigRN.phl[79]";
-connectAttr "LeftLeg_CTRL_translateY.o" "GardenerRigRN.phl[80]";
-connectAttr "LeftLeg_CTRL_translateZ.o" "GardenerRigRN.phl[81]";
-connectAttr "RightUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[82]";
-connectAttr "RightUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[83]";
-connectAttr "RightUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[84]";
-connectAttr "RightUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[85]";
-connectAttr "RightUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[86]";
-connectAttr "RightUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[87]";
-connectAttr "RightLeg_CTRL_rotateX.o" "GardenerRigRN.phl[88]";
-connectAttr "RightLeg_CTRL_rotateY.o" "GardenerRigRN.phl[89]";
-connectAttr "RightLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[90]";
-connectAttr "RightLeg_CTRL_translateX.o" "GardenerRigRN.phl[91]";
-connectAttr "RightLeg_CTRL_translateY.o" "GardenerRigRN.phl[92]";
-connectAttr "RightLeg_CTRL_translateZ.o" "GardenerRigRN.phl[93]";
+connectAttr "Neck_CTRL_rotateX.o" "GardenerRigRN.phl[28]";
+connectAttr "Neck_CTRL_rotateY.o" "GardenerRigRN.phl[29]";
+connectAttr "Neck_CTRL_rotateZ.o" "GardenerRigRN.phl[30]";
+connectAttr "Neck_CTRL_translateX.o" "GardenerRigRN.phl[31]";
+connectAttr "Neck_CTRL_translateY.o" "GardenerRigRN.phl[32]";
+connectAttr "Neck_CTRL_translateZ.o" "GardenerRigRN.phl[33]";
+connectAttr "Head_CTRL_rotateZ.o" "GardenerRigRN.phl[34]";
+connectAttr "Head_CTRL_rotateX.o" "GardenerRigRN.phl[35]";
+connectAttr "Head_CTRL_rotateY.o" "GardenerRigRN.phl[36]";
+connectAttr "Head_CTRL_translateX.o" "GardenerRigRN.phl[37]";
+connectAttr "Head_CTRL_translateY.o" "GardenerRigRN.phl[38]";
+connectAttr "Head_CTRL_translateZ.o" "GardenerRigRN.phl[39]";
+connectAttr "LeftShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[40]";
+connectAttr "LeftShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[41]";
+connectAttr "LeftShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[42]";
+connectAttr "LeftShoulder_CTRL_translateX.o" "GardenerRigRN.phl[43]";
+connectAttr "LeftShoulder_CTRL_translateY.o" "GardenerRigRN.phl[44]";
+connectAttr "LeftShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[45]";
+connectAttr "LeftArm_CTRL_rotateY.o" "GardenerRigRN.phl[46]";
+connectAttr "LeftArm_CTRL_rotateX.o" "GardenerRigRN.phl[47]";
+connectAttr "LeftArm_CTRL_rotateZ.o" "GardenerRigRN.phl[48]";
+connectAttr "LeftArm_CTRL_translateX.o" "GardenerRigRN.phl[49]";
+connectAttr "LeftArm_CTRL_translateY.o" "GardenerRigRN.phl[50]";
+connectAttr "LeftArm_CTRL_translateZ.o" "GardenerRigRN.phl[51]";
+connectAttr "LeftForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[52]";
+connectAttr "LeftForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[53]";
+connectAttr "LeftForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[54]";
+connectAttr "LeftForeArm_CTRL_translateX.o" "GardenerRigRN.phl[55]";
+connectAttr "LeftForeArm_CTRL_translateY.o" "GardenerRigRN.phl[56]";
+connectAttr "LeftForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[57]";
+connectAttr "RightShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[58]";
+connectAttr "RightShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[59]";
+connectAttr "RightShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[60]";
+connectAttr "RightShoulder_CTRL_translateX.o" "GardenerRigRN.phl[61]";
+connectAttr "RightShoulder_CTRL_translateY.o" "GardenerRigRN.phl[62]";
+connectAttr "RightShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[63]";
+connectAttr "RightArm_CTRL_rotateX.o" "GardenerRigRN.phl[64]";
+connectAttr "RightArm_CTRL_rotateY.o" "GardenerRigRN.phl[65]";
+connectAttr "RightArm_CTRL_rotateZ.o" "GardenerRigRN.phl[66]";
+connectAttr "RightArm_CTRL_translateX.o" "GardenerRigRN.phl[67]";
+connectAttr "RightArm_CTRL_translateY.o" "GardenerRigRN.phl[68]";
+connectAttr "RightArm_CTRL_translateZ.o" "GardenerRigRN.phl[69]";
+connectAttr "RightForeArm_GRP_rotateX.o" "GardenerRigRN.phl[70]";
+connectAttr "RightForeArm_GRP_rotateY.o" "GardenerRigRN.phl[71]";
+connectAttr "RightForeArm_GRP_rotateZ.o" "GardenerRigRN.phl[72]";
+connectAttr "RightForeArm_GRP_translateX.o" "GardenerRigRN.phl[73]";
+connectAttr "RightForeArm_GRP_translateY.o" "GardenerRigRN.phl[74]";
+connectAttr "RightForeArm_GRP_translateZ.o" "GardenerRigRN.phl[75]";
+connectAttr "RightForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[76]";
+connectAttr "RightForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[77]";
+connectAttr "RightForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[78]";
+connectAttr "RightForeArm_CTRL_translateX.o" "GardenerRigRN.phl[79]";
+connectAttr "RightForeArm_CTRL_translateY.o" "GardenerRigRN.phl[80]";
+connectAttr "RightForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[81]";
+connectAttr "LeftUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[82]";
+connectAttr "LeftUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[83]";
+connectAttr "LeftUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[84]";
+connectAttr "LeftUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[85]";
+connectAttr "LeftUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[86]";
+connectAttr "LeftUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[87]";
+connectAttr "LeftLeg_CTRL_rotateX.o" "GardenerRigRN.phl[88]";
+connectAttr "LeftLeg_CTRL_rotateY.o" "GardenerRigRN.phl[89]";
+connectAttr "LeftLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[90]";
+connectAttr "LeftLeg_CTRL_translateX.o" "GardenerRigRN.phl[91]";
+connectAttr "LeftLeg_CTRL_translateY.o" "GardenerRigRN.phl[92]";
+connectAttr "LeftLeg_CTRL_translateZ.o" "GardenerRigRN.phl[93]";
+connectAttr "RightUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[94]";
+connectAttr "RightUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[95]";
+connectAttr "RightUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[96]";
+connectAttr "RightUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[97]";
+connectAttr "RightUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[98]";
+connectAttr "RightUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[99]";
+connectAttr "RightLeg_CTRL_rotateX.o" "GardenerRigRN.phl[100]";
+connectAttr "RightLeg_CTRL_rotateY.o" "GardenerRigRN.phl[101]";
+connectAttr "RightLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[102]";
+connectAttr "RightLeg_CTRL_translateX.o" "GardenerRigRN.phl[103]";
+connectAttr "RightLeg_CTRL_translateY.o" "GardenerRigRN.phl[104]";
+connectAttr "RightLeg_CTRL_translateZ.o" "GardenerRigRN.phl[105]";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
