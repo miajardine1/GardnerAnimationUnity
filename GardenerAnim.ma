@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: GardenerAnim.ma
-//Last modified: Tue, Nov 15, 2022 03:36:10 PM
+//Last modified: Thu, Nov 17, 2022 01:49:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "GardenerRig" -rfn "GardenerRigRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "C:/Users/Miriam/Documents/Github/Maya Models/GardenerRig.ma";
@@ -14,17 +14,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22621)";
-fileInfo "UUID" "FE8AE36C-4C65-F586-00AF-7FAEAFA01975";
+fileInfo "UUID" "76602362-443D-EEC5-47EA-388547BB4AC4";
 createNode transform -s -n "persp";
 	rename -uid "5AD2D0CA-4071-7182-67E7-8D9BC16C4C70";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 48.320582183333734 90.853244140931267 489.60894106175596 ;
-	setAttr ".r" -type "double3" -5.138352729632965 6.9999999999961311 -1.0013875287448764e-16 ;
+	setAttr ".t" -type "double3" 39.50273980945925 28.807352184569929 495.41910182350807 ;
+	setAttr ".r" -type "double3" -5.7383527296273273 0.99999999999575317 1.2425934254440165e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A703FF8D-4DD8-7CA4-9395-FB947AFB859C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 506.15206646573392;
+	setAttr ".coi" 506.15206646663302;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -97,26 +97,57 @@ createNode camera -n "GardenerRig:leftShape" -p "GardenerRig:left1";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "pCube1";
+	rename -uid "C4F15F20-4115-D5FD-BF57-0CB839B4B998";
+	setAttr ".t" -type "double3" 0 -37.363667030755643 0 ;
+	setAttr ".s" -type "double3" 1000 1 1000 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "138A3324-4E36-50CE-A856-B1AB6240E9F7";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "left";
+	rename -uid "E29AB937-412F-3932-9D30-AC837C66725B";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" -1000.1 0 0 ;
+	setAttr ".r" -type "double3" 0 -90 0 ;
+createNode camera -n "leftShape" -p "left";
+	rename -uid "3E98458E-417E-0F80-8470-278F051443E9";
+	setAttr -k off ".v";
+	setAttr ".rnd" no;
+	setAttr ".coi" 1000.1;
+	setAttr ".ow" 505.82048671159305;
+	setAttr ".imn" -type "string" "left1";
+	setAttr ".den" -type "string" "left1_depth";
+	setAttr ".man" -type "string" "left1_mask";
+	setAttr ".hc" -type "string" "viewSet -ls %camera";
+	setAttr ".o" yes;
+	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9970005D-46E5-5A10-550C-65B607240203";
+	rename -uid "57403138-4655-129A-8428-92A281CECEFF";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4889D1FA-4F01-FB9E-DF4E-3EBAD496486B";
+	rename -uid "95A81E89-42A5-7ADA-2858-2C9D70074BF2";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E5630D04-4EC9-58D1-5DAD-51B448808411";
+	rename -uid "09551ED6-4441-3596-1749-A4AC43BB10FE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C4D0CB6A-4D00-CAFC-58AA-FF8BFAD73F27";
+	rename -uid "AADC831C-4AEA-1002-623A-36ABEE738359";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5DB85731-48D7-C76B-0782-3A9635F0A991";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C319FAB9-460A-DFEB-8FCD-F5AC91907C53";
+	rename -uid "1A63B657-4D1E-7681-FB11-458604C1FD35";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BCF6ED1A-424A-9A04-71CF-C2BFF768A3E2";
 	setAttr ".g" yes;
 createNode reference -n "GardenerRigRN";
 	rename -uid "AC8A3D45-4E49-AE43-12B6-DC8E63E76C16";
-	setAttr -s 99 ".phl";
+	setAttr -s 93 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -210,16 +241,13 @@ createNode reference -n "GardenerRigRN";
 	setAttr ".phl[91]" 0;
 	setAttr ".phl[92]" 0;
 	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"GardenerRigRN"
 		"GardenerRigRN" 0
-		"GardenerRigRN" 112
+		"GardenerRigRN" 108
+		2 "|GardenerRig:joint1" "translate" " -type \"double3\" -80.39726255064388738 -36.18860854939367755 0"
+		
+		2 "|GardenerRig:joint1" "rotate" " -type \"double3\" 0 0 0"
 		2 "|GardenerRig:joint1|GardenerRig:mixamorig:Hips|GardenerRig:mixamorig:LeftUpLeg" 
 		"translate" " -type \"double3\" 7.63669300079346058 -4.22515106201170454 -1.83735620975494252"
 		
@@ -245,204 +273,192 @@ createNode reference -n "GardenerRigRN";
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP" 
 		"translate" " -type \"double3\" 0 0 0"
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.translateX" "GardenerRigRN.placeHolderList[1]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.translateY" "GardenerRigRN.placeHolderList[2]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.translateZ" "GardenerRigRN.placeHolderList[3]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.rotateX" "GardenerRigRN.placeHolderList[4]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.rotateY" "GardenerRigRN.placeHolderList[5]" 
-		""
-		5 4 "GardenerRigRN" "|GardenerRig:joint1.rotateZ" "GardenerRigRN.placeHolderList[6]" 
-		""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[7]" ""
+		"GardenerRigRN.placeHolderList[1]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[8]" ""
+		"GardenerRigRN.placeHolderList[2]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[9]" ""
+		"GardenerRigRN.placeHolderList[3]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[10]" ""
+		"GardenerRigRN.placeHolderList[4]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[11]" ""
+		"GardenerRigRN.placeHolderList[5]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[12]" ""
+		"GardenerRigRN.placeHolderList[6]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[13]" ""
+		"GardenerRigRN.placeHolderList[7]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[14]" ""
+		"GardenerRigRN.placeHolderList[8]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[15]" ""
+		"GardenerRigRN.placeHolderList[9]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[16]" ""
+		"GardenerRigRN.placeHolderList[10]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[17]" ""
+		"GardenerRigRN.placeHolderList[11]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[18]" ""
+		"GardenerRigRN.placeHolderList[12]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.scaleX" 
-		"GardenerRigRN.placeHolderList[19]" ""
+		"GardenerRigRN.placeHolderList[13]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.scaleY" 
-		"GardenerRigRN.placeHolderList[20]" ""
+		"GardenerRigRN.placeHolderList[14]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL.scaleZ" 
-		"GardenerRigRN.placeHolderList[21]" ""
+		"GardenerRigRN.placeHolderList[15]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[22]" ""
+		"GardenerRigRN.placeHolderList[16]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[23]" ""
+		"GardenerRigRN.placeHolderList[17]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[24]" ""
+		"GardenerRigRN.placeHolderList[18]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[25]" ""
+		"GardenerRigRN.placeHolderList[19]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[26]" ""
+		"GardenerRigRN.placeHolderList[20]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[27]" ""
+		"GardenerRigRN.placeHolderList[21]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[28]" ""
+		"GardenerRigRN.placeHolderList[22]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[29]" ""
+		"GardenerRigRN.placeHolderList[23]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[30]" ""
+		"GardenerRigRN.placeHolderList[24]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[31]" ""
+		"GardenerRigRN.placeHolderList[25]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[32]" ""
+		"GardenerRigRN.placeHolderList[26]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[33]" ""
+		"GardenerRigRN.placeHolderList[27]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[34]" ""
+		"GardenerRigRN.placeHolderList[28]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[35]" ""
+		"GardenerRigRN.placeHolderList[29]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[36]" ""
+		"GardenerRigRN.placeHolderList[30]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[37]" ""
+		"GardenerRigRN.placeHolderList[31]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[38]" ""
+		"GardenerRigRN.placeHolderList[32]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[39]" ""
+		"GardenerRigRN.placeHolderList[33]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[40]" ""
+		"GardenerRigRN.placeHolderList[34]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[41]" ""
+		"GardenerRigRN.placeHolderList[35]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[42]" ""
+		"GardenerRigRN.placeHolderList[36]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[43]" ""
+		"GardenerRigRN.placeHolderList[37]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[44]" ""
+		"GardenerRigRN.placeHolderList[38]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[45]" ""
+		"GardenerRigRN.placeHolderList[39]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[46]" ""
+		"GardenerRigRN.placeHolderList[40]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[47]" ""
+		"GardenerRigRN.placeHolderList[41]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[48]" ""
+		"GardenerRigRN.placeHolderList[42]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[49]" ""
+		"GardenerRigRN.placeHolderList[43]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[50]" ""
+		"GardenerRigRN.placeHolderList[44]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:LeftShoulder_GRP|GardenerRig:mixamorig:LeftShoulder_CTRL|GardenerRig:mixamorig:LeftArm_GRP|GardenerRig:mixamorig:LeftArm_CTRL|GardenerRig:mixamorig:LeftForeArm_GRP|GardenerRig:mixamorig:LeftForeArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[51]" ""
+		"GardenerRigRN.placeHolderList[45]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[52]" ""
+		"GardenerRigRN.placeHolderList[46]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[53]" ""
+		"GardenerRigRN.placeHolderList[47]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[54]" ""
+		"GardenerRigRN.placeHolderList[48]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[55]" ""
+		"GardenerRigRN.placeHolderList[49]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[56]" ""
+		"GardenerRigRN.placeHolderList[50]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[57]" ""
+		"GardenerRigRN.placeHolderList[51]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[58]" ""
+		"GardenerRigRN.placeHolderList[52]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[59]" ""
+		"GardenerRigRN.placeHolderList[53]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[60]" ""
+		"GardenerRigRN.placeHolderList[54]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[61]" ""
+		"GardenerRigRN.placeHolderList[55]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[62]" ""
+		"GardenerRigRN.placeHolderList[56]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[63]" ""
+		"GardenerRigRN.placeHolderList[57]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateX" 
-		"GardenerRigRN.placeHolderList[64]" ""
+		"GardenerRigRN.placeHolderList[58]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateY" 
-		"GardenerRigRN.placeHolderList[65]" ""
+		"GardenerRigRN.placeHolderList[59]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.rotateZ" 
-		"GardenerRigRN.placeHolderList[66]" ""
+		"GardenerRigRN.placeHolderList[60]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateX" 
-		"GardenerRigRN.placeHolderList[67]" ""
+		"GardenerRigRN.placeHolderList[61]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateY" 
-		"GardenerRigRN.placeHolderList[68]" ""
+		"GardenerRigRN.placeHolderList[62]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP.translateZ" 
-		"GardenerRigRN.placeHolderList[69]" ""
+		"GardenerRigRN.placeHolderList[63]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[70]" ""
+		"GardenerRigRN.placeHolderList[64]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[71]" ""
+		"GardenerRigRN.placeHolderList[65]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[72]" ""
+		"GardenerRigRN.placeHolderList[66]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[73]" ""
+		"GardenerRigRN.placeHolderList[67]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[74]" ""
+		"GardenerRigRN.placeHolderList[68]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:Spine_GRP|GardenerRig:mixamorig:Spine_CTRL|GardenerRig:mixamorig:Spine1_GRP|GardenerRig:mixamorig:Spine1_CTRL|GardenerRig:mixamorig:Spine2_GRP|GardenerRig:mixamorig:Spine2_CTRL|GardenerRig:mixamorig:RightShoulder_GRP|GardenerRig:mixamorig:RightShoulder_CTRL|GardenerRig:mixamorig:RightArm_GRP|GardenerRig:mixamorig:RightArm_CTRL|GardenerRig:mixamorig:RightForeArm_GRP|GardenerRig:mixamorig:RightForeArm_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[75]" ""
+		"GardenerRigRN.placeHolderList[69]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[76]" ""
+		"GardenerRigRN.placeHolderList[70]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[77]" ""
+		"GardenerRigRN.placeHolderList[71]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[78]" ""
+		"GardenerRigRN.placeHolderList[72]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[79]" ""
+		"GardenerRigRN.placeHolderList[73]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[80]" ""
+		"GardenerRigRN.placeHolderList[74]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[81]" ""
+		"GardenerRigRN.placeHolderList[75]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[82]" ""
+		"GardenerRigRN.placeHolderList[76]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[83]" ""
+		"GardenerRigRN.placeHolderList[77]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[84]" ""
+		"GardenerRigRN.placeHolderList[78]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[85]" ""
+		"GardenerRigRN.placeHolderList[79]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[86]" ""
+		"GardenerRigRN.placeHolderList[80]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:LeftUpLeg_GRP|GardenerRig:mixamorig:LeftUpLeg_CTRL|GardenerRig:mixamorig:LeftLeg_GRP|GardenerRig:mixamorig:LeftLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[87]" ""
+		"GardenerRigRN.placeHolderList[81]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[88]" ""
+		"GardenerRigRN.placeHolderList[82]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[89]" ""
+		"GardenerRigRN.placeHolderList[83]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[90]" ""
+		"GardenerRigRN.placeHolderList[84]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[91]" ""
+		"GardenerRigRN.placeHolderList[85]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[92]" ""
+		"GardenerRigRN.placeHolderList[86]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[93]" ""
+		"GardenerRigRN.placeHolderList[87]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateX" 
-		"GardenerRigRN.placeHolderList[94]" ""
+		"GardenerRigRN.placeHolderList[88]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateY" 
-		"GardenerRigRN.placeHolderList[95]" ""
+		"GardenerRigRN.placeHolderList[89]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.rotateZ" 
-		"GardenerRigRN.placeHolderList[96]" ""
+		"GardenerRigRN.placeHolderList[90]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateX" 
-		"GardenerRigRN.placeHolderList[97]" ""
+		"GardenerRigRN.placeHolderList[91]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateY" 
-		"GardenerRigRN.placeHolderList[98]" ""
+		"GardenerRigRN.placeHolderList[92]" ""
 		5 4 "GardenerRigRN" "|GardenerRig:mixamorig:Hips_GRP|GardenerRig:mixamorig:Hips_CTRL|GardenerRig:mixamorig:RightUpLeg_GRP|GardenerRig:mixamorig:RightUpLeg_CTRL|GardenerRig:mixamorig:RightLeg_GRP|GardenerRig:mixamorig:RightLeg_CTRL.translateZ" 
-		"GardenerRigRN.placeHolderList[99]" "";
+		"GardenerRigRN.placeHolderList[93]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode timeEditor -s -n "timeEditor";
@@ -465,7 +481,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1174\n            -height 703\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 804\n            -height 565\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -488,13 +504,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1174\\n    -height 703\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1174\\n    -height 703\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 804\\n    -height 565\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 804\\n    -height 565\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "697B9A45-4A47-5F5D-F2FA-7085FC456614";
-	setAttr ".b" -type "string" "playbackOptions -min 123 -max 284 -ast 1 -aet 360 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 360 -ast 1 -aet 360 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "LeftArm_CTRL_translateX";
 	rename -uid "E733B4C0-4FE3-1E43-A991-7DBA61A8873A";
@@ -664,7 +680,7 @@ createNode animCurveTA -n "RightShoulder_CTRL_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 0 1.9916666666666667 -17.015378837241304
 		 9.9250008503401368 -34.675811822380211 12.238889795918368 -39.507106148137169 124 -39.507106148137169
-		 125 -42.762257227395054 132 -41.172702133871489;
+		 125 -42.762257227395054 132 -41.172702133871496;
 createNode animCurveTA -n "RightShoulder_CTRL_rotateY";
 	rename -uid "EBF83D50-46C8-2DC7-1F54-0F820DDD5A2D";
 	setAttr ".tan" 18;
@@ -683,48 +699,45 @@ createNode animCurveTL -n "LeftUpLeg_CTRL_translateX";
 	rename -uid "8B8F08BB-429B-A31C-FCA7-65ACB5A93B1A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 51.575009183673473 0 58.567534353741493 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 51.575009183673473 0 58.567534353741493 0
 		 60.805141836734691 0 61.923946088435372 0 75.044459523809522 0 78.019459863945585 0
-		 85 0 88 0 90 0 191 0 194 0 196 0 201 0;
+		 85 0 88 0 90 0;
 createNode animCurveTL -n "LeftUpLeg_CTRL_translateY";
 	rename -uid "49D56A4A-4470-28D9-631D-D0A1DCFBD34A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 51.575009183673473 0 58.567534353741493 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 51.575009183673473 0 58.567534353741493 0
 		 60.805141836734691 0 61.923946088435372 0 75.044459523809522 0 78.019459863945585 0
-		 85 0 88 0 90 0 191 0 194 0 196 0 201 0;
+		 85 0 88 0 90 0;
 createNode animCurveTL -n "LeftUpLeg_CTRL_translateZ";
 	rename -uid "60EE2D31-457D-4A06-36FE-C9B8F3D05FAF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 51.575009183673473 0 58.567534353741493 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 51.575009183673473 0 58.567534353741493 0
 		 60.805141836734691 0 61.923946088435372 0 75.044459523809522 0 78.019459863945585 0
-		 85 0 88 0 90 0 191 0 194 0 196 0 201 0;
+		 85 0 88 0 90 0;
 createNode animCurveTA -n "LeftUpLeg_CTRL_rotateX";
 	rename -uid "E1C4E235-4ADA-7F5F-F3F6-ED8B4160DF2E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 51.575009183673473 0 58.567534353741493 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 51.575009183673473 0 58.567534353741493 0
 		 60.805141836734691 0 61.923946088435372 0 75.044459523809522 0 78.019459863945585 2.8443217882955052
-		 85 2.8443217882955052 88 3.1522594185496176 90 3.0323049285156092 191 3.0323049285156092
-		 194 3.0323049285156092 196 4.2175213312214943 201 4.5493254220915125;
+		 85 2.8443217882955052 88 3.1522594185496176 90 3.0323049285156092;
 createNode animCurveTA -n "LeftUpLeg_CTRL_rotateY";
 	rename -uid "AFA15FC0-4FCB-6EF5-344B-F5AEAF19C095";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 0 51.575009183673473 0 58.567534353741493 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 51.575009183673473 0 58.567534353741493 0
 		 60.805141836734691 0 61.923946088435372 0 75.044459523809522 0 78.019459863945585 1.3080848402625909
-		 85 1.3080848402625909 88 3.6482015000418895 90 4.3896315966367156 191 4.3896315966367156
-		 194 4.3896315966367156 196 5.8178261872520558 201 6.328206124809415;
+		 85 1.3080848402625909 88 3.6482015000418895 90 4.3896315966367156;
 createNode animCurveTA -n "LeftUpLeg_CTRL_rotateZ";
 	rename -uid "A294EC94-45E9-CE7D-02F1-4D9642455544";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 -3.3190983753193519 51.575009183673473 -3.3190983753193519
+	setAttr -s 10 ".ktv[0:9]"  1 -3.3190983753193519 51.575009183673473 -3.3190983753193519
 		 58.567534353741493 -1.7432373399046768 60.805141836734691 1.9327048373861302 61.923946088435372 3.1038225892298899
 		 75.044459523809522 27.486876399498495 78.019459863945585 34.897298643287918 85 34.897298643287918
-		 88 9.5873252434116161 90 1.5810788679967105 191 1.5810788679967105 194 1.5810788679967105
-		 196 -8.5081385981612208 201 -11.812606849498112;
+		 88 9.5873252434116161 90 1.5810788679967105;
 createNode animCurveTL -n "RightUpLeg_CTRL_translateX";
 	rename -uid "2609BE3B-464C-4E36-008E-90A4924EE42B";
 	setAttr ".tan" 18;
@@ -775,7 +788,7 @@ createNode animCurveTA -n "RightUpLeg_CTRL_rotateZ";
 		 32.997789115646256 2.6615532203604735 37.228902721088438 -0.97768352953858939 40.931127891156464 -3.4271921369530371
 		 43.575574149659865 -5.2744508825073311 44.633352721088436 -2.8956842812428025 46.748909353741496 -2.8956842812428025
 		 49.393355272108842 2.2561724170964395 76.697249489795922 2.2561724170964395 154 2.2561724170964395
-		 157 -20.040097110863677 160 -35.100996864388463 163 -46.344149561480393 168 -50.120996502961567
+		 157 -20.040097110863677 160 -35.100996864388463 163 -46.3441495614804 168 -50.120996502961567
 		 172 -37.841007399098629 174 -51.060826299252639 176 -55.605423258872577 178 -43.38199421789011
 		 180 -53.616252192443106 182 -53.616252192443106 185 -41.685077556127084 187 -56.309379664953546;
 createNode animCurveTL -n "RightForeArm_CTRL_translateX";
@@ -812,51 +825,45 @@ createNode animCurveTL -n "Spine2_CTRL_translateX";
 	rename -uid "A90EB6D7-4F82-789D-EE8D-758853D9CBEA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0 194.66666972789116 0
-		 217 0 228 0;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0;
 createNode animCurveTL -n "Spine2_CTRL_translateY";
 	rename -uid "8C18CD3F-4413-7FEB-87B2-FDB712634D6D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0 194.66666972789116 0
-		 217 0 228 0;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0;
 createNode animCurveTL -n "Spine2_CTRL_translateZ";
 	rename -uid "A9DC00E9-4302-7F49-D1D0-DBAF41D411AB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0 194.66666972789116 0
-		 217 0 228 0;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 0;
 createNode animCurveTA -n "Spine2_CTRL_rotateX";
 	rename -uid "7277AE76-41F8-408C-CC3A-1E81283F7F27";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 7.2805568027210885 -13.331228467948069
+	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 -13.331228467948069
 		 11.908335204081633 -15.626963021716525 15.544446768707482 -17.862246896820764 18.850001870748301 -23.671711045867003
 		 21.163891666666668 -7.1202067087159238 23.14722551020408 4.7671942654810158 27.444448469387755 -2.5527082010111712
-		 141.13333401360543 -2.5527082010111712 147.33333520408164 -5.1348442827828915 194.66666972789116 -6.0366474437727611
-		 217 -6.0366474437727611 228 2.6536882324119411;
+		 141.13333401360543 -2.5527082010111712 147.33333520408164 -5.1348442827828915;
 createNode animCurveTA -n "Spine2_CTRL_rotateY";
 	rename -uid "D4283301-40ED-1545-2B7F-179835AC6D01";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -2.2697852543696908
-		 194.66666972789116 -3.4195343759488384 217 -3.4195343759488384 228 2.0580061705469408;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -2.2697852543696908;
 createNode animCurveTA -n "Spine2_CTRL_rotateZ";
 	rename -uid "7B0AD61F-4AF9-62D5-3D37-F39E85890B89";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 7.2805568027210885 0 11.908335204081633 0
+	setAttr -s 10 ".ktv[0:9]"  1 0 7.2805568027210885 0 11.908335204081633 0
 		 15.544446768707482 0 18.850001870748301 0 21.163891666666668 0 23.14722551020408 0
-		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -14.918630304208392
-		 194.66666972789116 -21.218001136872353 217 -21.218001136872353 228 24.598864260282404;
+		 27.444448469387755 0 141.13333401360543 0 147.33333520408164 -14.918630304208392;
 createNode animCurveTL -n "Spine1_CTRL_translateX";
 	rename -uid "68765391-4193-8E06-D291-2ABDC03FBC98";
 	setAttr ".tan" 18;
@@ -882,7 +889,7 @@ createNode animCurveTA -n "Spine1_CTRL_rotateX";
 	setAttr -s 11 ".ktv[0:10]"  1 -3.7308845881634816 23.147225680272108 -3.7308845881634816
 		 26.452780952380952 7.3440364318302098 29.42778112244898 -2.1880178823180558 137 -2.1880178823180558
 		 141 -1.9821773069322584 147 -1.6781382393038982 151 -0.087253503832691287 169 -0.087253503832691287
-		 179 9.4978125844898145 187 8.0807120335890357;
+		 179 9.4978125844898162 187 8.0807120335890357;
 createNode animCurveTA -n "Spine1_CTRL_rotateY";
 	rename -uid "1FC40B5C-4CA3-89F9-D7AE-A9926AAB6A83";
 	setAttr ".tan" 18;
@@ -934,10 +941,10 @@ createNode animCurveTA -n "Spine_CTRL_rotateX";
 		 64.136124829931973 -4.1264966411114132 68.102792687074825 -3.2787294536762905 68.763903741496605 -5.7244836817486604
 		 74.713905272108846 -5.198152680929371 78.350018197278914 -5.0546239775354413 80 -5.0546239775354413
 		 91 -3.7580172935109113 93 -3.4793223542967291 98 -3.4793223542967291 100 9.8444294003592301
-		 103 45.036837804297448 108 87.304060209395118 110 69.244621956564671 114 36.869906787808695
+		 103 45.036837804297448 108 87.304060209395132 110 69.244621956564671 114 36.869906787808695
 		 118 -2.8622622238112445 135 -2.8622622238112445 140 -3.7789951882834014 145 -3.7815368085732461
 		 150 -2.7282782487254917 175 -2.7282782487254917 180 -0.97554622348101239 183 4.1127898358401973
-		 192 0.19654862792654382;
+		 192 0.19654862792654385;
 createNode animCurveTA -n "Spine_CTRL_rotateY";
 	rename -uid "3FBE6424-4C32-D730-81BC-CEBBF684E9AC";
 	setAttr ".tan" 18;
@@ -946,7 +953,7 @@ createNode animCurveTA -n "Spine_CTRL_rotateY";
 		 32.402784183673468 0 40.666675680272107 0 49.922232482993195 0 51.905566836734693 0.80451107815109957
 		 54.550012414965984 1.2075665925625039 58.186122448979589 1.653167611342212 64.136124829931973 2.2585920107312387
 		 68.102792687074825 3.3738334267309922 68.763903741496605 3.5275438496138767 74.713905272108846 4.2662663214912033
-		 78.350018197278914 4.4355042458748191 80 4.4355042458748191 91 5.2315802491972132
+		 78.350018197278914 4.4355042458748191 80 4.4355042458748191 91 5.2315802491972141
 		 93 5.6129432210201564 98 5.6129432210201564 100 5.6129432210201564 103 5.6129432210201626
 		 108 5.61294322102016 110 5.6129432210201582 114 5.6129432210201582 118 5.6129432210201502
 		 135 5.6129432210201502 140 1.5296642385263637 145 0.059023361026073404 150 -4.3940498108058508
@@ -984,38 +991,32 @@ createNode animCurveTL -n "LeftLeg_CTRL_translateX";
 	rename -uid "145679AB-466B-CB6F-8F4E-0F8B39A3590E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305591836734694 0 74.052811054421767 0
-		 160 0 183 0 186 0 189 0 193 0;
+	setAttr -s 2 ".ktv[0:1]"  1.3305591836734694 0 74.052811054421767 0;
 createNode animCurveTL -n "LeftLeg_CTRL_translateY";
 	rename -uid "16F984D2-4B5C-61F3-A99A-E085CE56E2BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305591836734694 0 74.052811054421767 0
-		 160 0 183 0 186 0 189 0 193 0;
+	setAttr -s 2 ".ktv[0:1]"  1.3305591836734694 0 74.052811054421767 0;
 createNode animCurveTL -n "LeftLeg_CTRL_translateZ";
 	rename -uid "876A4690-40AA-ABEE-DF35-32ACE5E591BF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305591836734694 0 74.052811054421767 0
-		 160 0 183 0 186 0 189 0 193 0;
+	setAttr -s 2 ".ktv[0:1]"  1.3305591836734694 0 74.052811054421767 0;
 createNode animCurveTA -n "LeftLeg_CTRL_rotateX";
 	rename -uid "7A646926-4FFB-E229-F304-FC97FEFE267D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305591836734694 0 74.052811224489801 0
-		 160 0 183 0 186 -8.8640849523302112 189 19.881135076746908 193 21.416240775758514;
+	setAttr -s 2 ".ktv[0:1]"  1.3305591836734694 0 74.052811224489801 0;
 createNode animCurveTA -n "LeftLeg_CTRL_rotateY";
 	rename -uid "14B79502-4494-B8D1-C31E-78BA69A685DC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305591836734694 0 74.052811224489801 0
-		 160 0 183 0 186 0 189 0 193 0.45637146623130759;
+	setAttr -s 2 ".ktv[0:1]"  1.3305591836734694 0 74.052811224489801 0;
 createNode animCurveTA -n "LeftLeg_CTRL_rotateZ";
 	rename -uid "6824E034-4BF1-5CD0-E5B2-E3BCD02EFE9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1.3305591836734694 0 74.052811224489801 0
-		 160 0 183 0 186 0 189 0 193 -7.6483343088154676;
+	setAttr -s 2 ".ktv[0:1]"  1.3305591836734694 0 74.052811224489801 0;
 createNode animCurveTL -n "RightForeArm_GRP_translateX";
 	rename -uid "48656611-4220-2120-FD64-A2ACE0E94B04";
 	setAttr ".tan" 18;
@@ -1087,32 +1088,32 @@ createNode animCurveTL -n "Hips_CTRL_translateX";
 	rename -uid "0374B79A-434D-C5D6-8C45-E7BDD9FC8349";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 193 0 195 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTL -n "Hips_CTRL_translateY";
 	rename -uid "15C32AC7-46CA-986A-2236-0C9ABD577410";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 193 0 195 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTL -n "Hips_CTRL_translateZ";
 	rename -uid "C3C94DC0-43C9-9DDD-7324-DE83A2BCC664";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 193 0 195 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Hips_CTRL_rotateX";
 	rename -uid "CC105ED1-479C-6BE9-F55D-F7AC4D860230";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 193 0 195 -0.87546802827236481;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Hips_CTRL_rotateY";
 	rename -uid "74EC66BB-4A1C-2983-2770-FE95F3F22266";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 193 0 195 -0.73921795624949216;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Hips_CTRL_rotateZ";
 	rename -uid "B902E0B6-487B-09F3-6113-8DBCAA9EC27C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 193 0 195 -7.5089168815148861;
+	setAttr ".ktv[0]"  1 0;
 createNode shapeEditorManager -n "GardenerRig:shapeEditorManager1";
 	rename -uid "6330B872-4657-10D0-E00A-4BBC2251A474";
 createNode poseInterpolatorManager -n "GardenerRig:poseInterpolatorManager1";
@@ -1124,1081 +1125,6 @@ createNode renderLayer -n "GardenerRig:defaultRenderLayer1";
 	setAttr ".g" yes;
 createNode timeEditorTracks -n "GardenerRig:Composition2";
 	rename -uid "6464758C-4D67-CFAF-78DE-BCA0B8850FCB";
-createNode nodeGraphEditorInfo -n "GardenerRig:MayaNodeEditorSavedTabsInfo1";
-	rename -uid "5D4D78A5-418B-0036-FEAE-56900F912E11";
-	setAttr ".def" no;
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -316.03640200766796 -71.428568590255125 ;
-	setAttr ".tgi[0].vh" -type "double2" 1011.2744696194844 67.857140160742361 ;
-	setAttr -s 356 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[0].y" -16004.2861328125;
-	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[1].y" 6225.71435546875;
-	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[2].y" 5424.28564453125;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[3].y" 5424.28564453125;
-	setAttr ".tgi[0].ni[3].nvs" 18304;
-	setAttr ".tgi[0].ni[4].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[4].y" 5424.28564453125;
-	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[5].y" -14422.857421875;
-	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[6].y" 6377.14306640625;
-	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[7].y" 6528.5712890625;
-	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[8].y" 6225.71435546875;
-	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[9].y" 6225.71435546875;
-	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[10].y" 6680;
-	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[11].y" 6680;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[12].y" -14271.4287109375;
-	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[13].y" -14120;
-	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[14].y" 6528.5712890625;
-	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[15].y" -13968.5712890625;
-	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[16].y" -13817.142578125;
-	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[17].y" 6528.5712890625;
-	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[18].y" 6831.4287109375;
-	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[19].y" 6831.4287109375;
-	setAttr ".tgi[0].ni[19].nvs" 18304;
-	setAttr ".tgi[0].ni[20].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[20].y" 6680;
-	setAttr ".tgi[0].ni[20].nvs" 18304;
-	setAttr ".tgi[0].ni[21].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[21].y" 6831.4287109375;
-	setAttr ".tgi[0].ni[21].nvs" 18304;
-	setAttr ".tgi[0].ni[22].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[22].y" -13665.7138671875;
-	setAttr ".tgi[0].ni[22].nvs" 18304;
-	setAttr ".tgi[0].ni[23].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[23].y" 6377.14306640625;
-	setAttr ".tgi[0].ni[23].nvs" 18304;
-	setAttr ".tgi[0].ni[24].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[24].y" -13514.2861328125;
-	setAttr ".tgi[0].ni[24].nvs" 18304;
-	setAttr ".tgi[0].ni[25].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[25].y" -13362.857421875;
-	setAttr ".tgi[0].ni[25].nvs" 18304;
-	setAttr ".tgi[0].ni[26].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[26].y" 6982.85693359375;
-	setAttr ".tgi[0].ni[26].nvs" 18304;
-	setAttr ".tgi[0].ni[27].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[27].y" 6982.85693359375;
-	setAttr ".tgi[0].ni[27].nvs" 18304;
-	setAttr ".tgi[0].ni[28].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[28].y" 6982.85693359375;
-	setAttr ".tgi[0].ni[28].nvs" 18304;
-	setAttr ".tgi[0].ni[29].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[29].y" -13211.4287109375;
-	setAttr ".tgi[0].ni[29].nvs" 18304;
-	setAttr ".tgi[0].ni[30].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[30].y" -13060;
-	setAttr ".tgi[0].ni[30].nvs" 18304;
-	setAttr ".tgi[0].ni[31].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[31].y" 6377.14306640625;
-	setAttr ".tgi[0].ni[31].nvs" 18304;
-	setAttr ".tgi[0].ni[32].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[32].y" 7134.28564453125;
-	setAttr ".tgi[0].ni[32].nvs" 18304;
-	setAttr ".tgi[0].ni[33].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[33].y" 7134.28564453125;
-	setAttr ".tgi[0].ni[33].nvs" 18304;
-	setAttr ".tgi[0].ni[34].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[34].y" 7134.28564453125;
-	setAttr ".tgi[0].ni[34].nvs" 18304;
-	setAttr ".tgi[0].ni[35].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[35].y" -12908.5712890625;
-	setAttr ".tgi[0].ni[35].nvs" 18304;
-	setAttr ".tgi[0].ni[36].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[36].y" 5554.28564453125;
-	setAttr ".tgi[0].ni[36].nvs" 18304;
-	setAttr ".tgi[0].ni[37].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[37].y" 5554.28564453125;
-	setAttr ".tgi[0].ni[37].nvs" 18304;
-	setAttr ".tgi[0].ni[38].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[38].y" -12757.142578125;
-	setAttr ".tgi[0].ni[38].nvs" 18304;
-	setAttr ".tgi[0].ni[39].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[39].y" -15874.2861328125;
-	setAttr ".tgi[0].ni[39].nvs" 18304;
-	setAttr ".tgi[0].ni[40].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[40].y" -15744.2861328125;
-	setAttr ".tgi[0].ni[40].nvs" 18304;
-	setAttr ".tgi[0].ni[41].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[41].y" 7285.71435546875;
-	setAttr ".tgi[0].ni[41].nvs" 18304;
-	setAttr ".tgi[0].ni[42].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[42].y" 7285.71435546875;
-	setAttr ".tgi[0].ni[42].nvs" 18304;
-	setAttr ".tgi[0].ni[43].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[43].y" 7285.71435546875;
-	setAttr ".tgi[0].ni[43].nvs" 18304;
-	setAttr ".tgi[0].ni[44].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[44].y" -15614.2861328125;
-	setAttr ".tgi[0].ni[44].nvs" 18304;
-	setAttr ".tgi[0].ni[45].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[45].y" -15484.2861328125;
-	setAttr ".tgi[0].ni[45].nvs" 18304;
-	setAttr ".tgi[0].ni[46].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[46].y" 5554.28564453125;
-	setAttr ".tgi[0].ni[46].nvs" 18304;
-	setAttr ".tgi[0].ni[47].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[47].y" -12605.7138671875;
-	setAttr ".tgi[0].ni[47].nvs" 18304;
-	setAttr ".tgi[0].ni[48].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[48].y" -15354.2861328125;
-	setAttr ".tgi[0].ni[48].nvs" 18304;
-	setAttr ".tgi[0].ni[49].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[49].y" 13191.4287109375;
-	setAttr ".tgi[0].ni[49].nvs" 18304;
-	setAttr ".tgi[0].ni[50].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[50].y" 13342.857421875;
-	setAttr ".tgi[0].ni[50].nvs" 18304;
-	setAttr ".tgi[0].ni[51].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[51].y" 5684.28564453125;
-	setAttr ".tgi[0].ni[51].nvs" 18304;
-	setAttr ".tgi[0].ni[52].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[52].y" 5814.28564453125;
-	setAttr ".tgi[0].ni[52].nvs" 18304;
-	setAttr ".tgi[0].ni[53].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[53].y" 5814.28564453125;
-	setAttr ".tgi[0].ni[53].nvs" 18304;
-	setAttr ".tgi[0].ni[54].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[54].y" 7437.14306640625;
-	setAttr ".tgi[0].ni[54].nvs" 18304;
-	setAttr ".tgi[0].ni[55].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[55].y" 7588.5712890625;
-	setAttr ".tgi[0].ni[55].nvs" 18304;
-	setAttr ".tgi[0].ni[56].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[56].y" 7740;
-	setAttr ".tgi[0].ni[56].nvs" 18304;
-	setAttr ".tgi[0].ni[57].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[57].y" 5041.4287109375;
-	setAttr ".tgi[0].ni[57].nvs" 18304;
-	setAttr ".tgi[0].ni[58].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[58].y" 7588.5712890625;
-	setAttr ".tgi[0].ni[58].nvs" 18304;
-	setAttr ".tgi[0].ni[59].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[59].y" 5944.28564453125;
-	setAttr ".tgi[0].ni[59].nvs" 18304;
-	setAttr ".tgi[0].ni[60].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[60].y" -12454.2861328125;
-	setAttr ".tgi[0].ni[60].nvs" 18304;
-	setAttr ".tgi[0].ni[61].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[61].y" 7891.4287109375;
-	setAttr ".tgi[0].ni[61].nvs" 18304;
-	setAttr ".tgi[0].ni[62].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[62].y" 5684.28564453125;
-	setAttr ".tgi[0].ni[62].nvs" 18304;
-	setAttr ".tgi[0].ni[63].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[63].y" -15224.2861328125;
-	setAttr ".tgi[0].ni[63].nvs" 18304;
-	setAttr ".tgi[0].ni[64].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[64].y" 6074.28564453125;
-	setAttr ".tgi[0].ni[64].nvs" 18304;
-	setAttr ".tgi[0].ni[65].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[65].y" -12302.857421875;
-	setAttr ".tgi[0].ni[65].nvs" 18304;
-	setAttr ".tgi[0].ni[66].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[66].y" -15094.2861328125;
-	setAttr ".tgi[0].ni[66].nvs" 18304;
-	setAttr ".tgi[0].ni[67].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[67].y" -12151.4287109375;
-	setAttr ".tgi[0].ni[67].nvs" 18304;
-	setAttr ".tgi[0].ni[68].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[68].y" 5814.28564453125;
-	setAttr ".tgi[0].ni[68].nvs" 18304;
-	setAttr ".tgi[0].ni[69].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[69].y" 6074.28564453125;
-	setAttr ".tgi[0].ni[69].nvs" 18304;
-	setAttr ".tgi[0].ni[70].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[70].y" -12000;
-	setAttr ".tgi[0].ni[70].nvs" 18304;
-	setAttr ".tgi[0].ni[71].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[71].y" -11848.5712890625;
-	setAttr ".tgi[0].ni[71].nvs" 18304;
-	setAttr ".tgi[0].ni[72].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[72].y" 7740;
-	setAttr ".tgi[0].ni[72].nvs" 18304;
-	setAttr ".tgi[0].ni[73].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[73].y" -11697.142578125;
-	setAttr ".tgi[0].ni[73].nvs" 18304;
-	setAttr ".tgi[0].ni[74].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[74].y" -14964.2861328125;
-	setAttr ".tgi[0].ni[74].nvs" 18304;
-	setAttr ".tgi[0].ni[75].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[75].y" 5944.28564453125;
-	setAttr ".tgi[0].ni[75].nvs" 18304;
-	setAttr ".tgi[0].ni[76].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[76].y" 7437.14306640625;
-	setAttr ".tgi[0].ni[76].nvs" 18304;
-	setAttr ".tgi[0].ni[77].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[77].y" 7740;
-	setAttr ".tgi[0].ni[77].nvs" 18304;
-	setAttr ".tgi[0].ni[78].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[78].y" 5684.28564453125;
-	setAttr ".tgi[0].ni[78].nvs" 18304;
-	setAttr ".tgi[0].ni[79].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[79].y" -11545.7138671875;
-	setAttr ".tgi[0].ni[79].nvs" 18304;
-	setAttr ".tgi[0].ni[80].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[80].y" -11394.2861328125;
-	setAttr ".tgi[0].ni[80].nvs" 18304;
-	setAttr ".tgi[0].ni[81].x" 560;
-	setAttr ".tgi[0].ni[81].y" 13342.857421875;
-	setAttr ".tgi[0].ni[81].nvs" 18304;
-	setAttr ".tgi[0].ni[82].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[82].y" -14834.2861328125;
-	setAttr ".tgi[0].ni[82].nvs" 18304;
-	setAttr ".tgi[0].ni[83].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[83].y" -14704.2861328125;
-	setAttr ".tgi[0].ni[83].nvs" 18304;
-	setAttr ".tgi[0].ni[84].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[84].y" -14574.2861328125;
-	setAttr ".tgi[0].ni[84].nvs" 18304;
-	setAttr ".tgi[0].ni[85].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[85].y" 7437.14306640625;
-	setAttr ".tgi[0].ni[85].nvs" 18304;
-	setAttr ".tgi[0].ni[86].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[86].y" -11242.857421875;
-	setAttr ".tgi[0].ni[86].nvs" 18304;
-	setAttr ".tgi[0].ni[87].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[87].y" 5944.28564453125;
-	setAttr ".tgi[0].ni[87].nvs" 18304;
-	setAttr ".tgi[0].ni[88].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[88].y" 7891.4287109375;
-	setAttr ".tgi[0].ni[88].nvs" 18304;
-	setAttr ".tgi[0].ni[89].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[89].y" 7588.5712890625;
-	setAttr ".tgi[0].ni[89].nvs" 18304;
-	setAttr ".tgi[0].ni[90].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[90].y" -11091.4287109375;
-	setAttr ".tgi[0].ni[90].nvs" 18304;
-	setAttr ".tgi[0].ni[91].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[91].y" 6074.28564453125;
-	setAttr ".tgi[0].ni[91].nvs" 18304;
-	setAttr ".tgi[0].ni[92].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[92].y" 7891.4287109375;
-	setAttr ".tgi[0].ni[92].nvs" 18304;
-	setAttr ".tgi[0].ni[93].x" 560;
-	setAttr ".tgi[0].ni[93].y" 13191.4287109375;
-	setAttr ".tgi[0].ni[93].nvs" 18304;
-	setAttr ".tgi[0].ni[94].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[94].y" 13191.4287109375;
-	setAttr ".tgi[0].ni[94].nvs" 18304;
-	setAttr ".tgi[0].ni[95].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[95].y" 13342.857421875;
-	setAttr ".tgi[0].ni[95].nvs" 18304;
-	setAttr ".tgi[0].ni[96].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[96].y" -10940;
-	setAttr ".tgi[0].ni[96].nvs" 18304;
-	setAttr ".tgi[0].ni[97].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[97].y" -10788.5712890625;
-	setAttr ".tgi[0].ni[97].nvs" 18304;
-	setAttr ".tgi[0].ni[98].x" 560;
-	setAttr ".tgi[0].ni[98].y" 13494.2861328125;
-	setAttr ".tgi[0].ni[98].nvs" 18304;
-	setAttr ".tgi[0].ni[99].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[99].y" 13494.2861328125;
-	setAttr ".tgi[0].ni[99].nvs" 18304;
-	setAttr ".tgi[0].ni[100].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[100].y" 13494.2861328125;
-	setAttr ".tgi[0].ni[100].nvs" 18304;
-	setAttr ".tgi[0].ni[101].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[101].y" -10637.142578125;
-	setAttr ".tgi[0].ni[101].nvs" 18304;
-	setAttr ".tgi[0].ni[102].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[102].y" -10485.7138671875;
-	setAttr ".tgi[0].ni[102].nvs" 18304;
-	setAttr ".tgi[0].ni[103].x" 560;
-	setAttr ".tgi[0].ni[103].y" 13645.7138671875;
-	setAttr ".tgi[0].ni[103].nvs" 18304;
-	setAttr ".tgi[0].ni[104].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[104].y" 13645.7138671875;
-	setAttr ".tgi[0].ni[104].nvs" 18304;
-	setAttr ".tgi[0].ni[105].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[105].y" 13797.142578125;
-	setAttr ".tgi[0].ni[105].nvs" 18304;
-	setAttr ".tgi[0].ni[106].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[106].y" 8042.85693359375;
-	setAttr ".tgi[0].ni[106].nvs" 18304;
-	setAttr ".tgi[0].ni[107].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[107].y" 13948.5712890625;
-	setAttr ".tgi[0].ni[107].nvs" 18304;
-	setAttr ".tgi[0].ni[108].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[108].y" -10334.2861328125;
-	setAttr ".tgi[0].ni[108].nvs" 18304;
-	setAttr ".tgi[0].ni[109].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[109].y" -10182.857421875;
-	setAttr ".tgi[0].ni[109].nvs" 18304;
-	setAttr ".tgi[0].ni[110].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[110].y" -10031.4287109375;
-	setAttr ".tgi[0].ni[110].nvs" 18304;
-	setAttr ".tgi[0].ni[111].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[111].y" 8194.2861328125;
-	setAttr ".tgi[0].ni[111].nvs" 18304;
-	setAttr ".tgi[0].ni[112].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[112].y" 8345.7138671875;
-	setAttr ".tgi[0].ni[112].nvs" 18304;
-	setAttr ".tgi[0].ni[113].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[113].y" 8497.142578125;
-	setAttr ".tgi[0].ni[113].nvs" 18304;
-	setAttr ".tgi[0].ni[114].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[114].y" 8497.142578125;
-	setAttr ".tgi[0].ni[114].nvs" 18304;
-	setAttr ".tgi[0].ni[115].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[115].y" 13948.5712890625;
-	setAttr ".tgi[0].ni[115].nvs" 18304;
-	setAttr ".tgi[0].ni[116].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[116].y" -9880;
-	setAttr ".tgi[0].ni[116].nvs" 18304;
-	setAttr ".tgi[0].ni[117].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[117].y" 8648.5712890625;
-	setAttr ".tgi[0].ni[117].nvs" 18304;
-	setAttr ".tgi[0].ni[118].x" 560;
-	setAttr ".tgi[0].ni[118].y" 13948.5712890625;
-	setAttr ".tgi[0].ni[118].nvs" 18304;
-	setAttr ".tgi[0].ni[119].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[119].y" -9728.5712890625;
-	setAttr ".tgi[0].ni[119].nvs" 18304;
-	setAttr ".tgi[0].ni[120].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[120].y" 8800;
-	setAttr ".tgi[0].ni[120].nvs" 18304;
-	setAttr ".tgi[0].ni[121].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[121].y" -9577.142578125;
-	setAttr ".tgi[0].ni[121].nvs" 18304;
-	setAttr ".tgi[0].ni[122].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[122].y" 8345.7138671875;
-	setAttr ".tgi[0].ni[122].nvs" 18304;
-	setAttr ".tgi[0].ni[123].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[123].y" 14100;
-	setAttr ".tgi[0].ni[123].nvs" 18304;
-	setAttr ".tgi[0].ni[124].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[124].y" 8951.4287109375;
-	setAttr ".tgi[0].ni[124].nvs" 18304;
-	setAttr ".tgi[0].ni[125].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[125].y" 13645.7138671875;
-	setAttr ".tgi[0].ni[125].nvs" 18304;
-	setAttr ".tgi[0].ni[126].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[126].y" -9425.7138671875;
-	setAttr ".tgi[0].ni[126].nvs" 18304;
-	setAttr ".tgi[0].ni[127].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[127].y" -9274.2861328125;
-	setAttr ".tgi[0].ni[127].nvs" 18304;
-	setAttr ".tgi[0].ni[128].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[128].y" -9122.857421875;
-	setAttr ".tgi[0].ni[128].nvs" 18304;
-	setAttr ".tgi[0].ni[129].x" 560;
-	setAttr ".tgi[0].ni[129].y" 13797.142578125;
-	setAttr ".tgi[0].ni[129].nvs" 18304;
-	setAttr ".tgi[0].ni[130].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[130].y" 13797.142578125;
-	setAttr ".tgi[0].ni[130].nvs" 18304;
-	setAttr ".tgi[0].ni[131].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[131].y" 9102.857421875;
-	setAttr ".tgi[0].ni[131].nvs" 18304;
-	setAttr ".tgi[0].ni[132].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[132].y" -8971.4287109375;
-	setAttr ".tgi[0].ni[132].nvs" 18304;
-	setAttr ".tgi[0].ni[133].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[133].y" -8820;
-	setAttr ".tgi[0].ni[133].nvs" 18304;
-	setAttr ".tgi[0].ni[134].x" 560;
-	setAttr ".tgi[0].ni[134].y" 14251.4287109375;
-	setAttr ".tgi[0].ni[134].nvs" 18304;
-	setAttr ".tgi[0].ni[135].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[135].y" 8800;
-	setAttr ".tgi[0].ni[135].nvs" 18304;
-	setAttr ".tgi[0].ni[136].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[136].y" -8668.5712890625;
-	setAttr ".tgi[0].ni[136].nvs" 18304;
-	setAttr ".tgi[0].ni[137].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[137].y" -8517.142578125;
-	setAttr ".tgi[0].ni[137].nvs" 18304;
-	setAttr ".tgi[0].ni[138].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[138].y" -8365.7138671875;
-	setAttr ".tgi[0].ni[138].nvs" 18304;
-	setAttr ".tgi[0].ni[139].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[139].y" -8214.2861328125;
-	setAttr ".tgi[0].ni[139].nvs" 18304;
-	setAttr ".tgi[0].ni[140].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[140].y" -8062.85693359375;
-	setAttr ".tgi[0].ni[140].nvs" 18304;
-	setAttr ".tgi[0].ni[141].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[141].y" 8194.2861328125;
-	setAttr ".tgi[0].ni[141].nvs" 18304;
-	setAttr ".tgi[0].ni[142].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[142].y" -7911.4287109375;
-	setAttr ".tgi[0].ni[142].nvs" 18304;
-	setAttr ".tgi[0].ni[143].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[143].y" 8951.4287109375;
-	setAttr ".tgi[0].ni[143].nvs" 18304;
-	setAttr ".tgi[0].ni[144].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[144].y" 9102.857421875;
-	setAttr ".tgi[0].ni[144].nvs" 18304;
-	setAttr ".tgi[0].ni[145].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[145].y" 8042.85693359375;
-	setAttr ".tgi[0].ni[145].nvs" 18304;
-	setAttr ".tgi[0].ni[146].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[146].y" 9102.857421875;
-	setAttr ".tgi[0].ni[146].nvs" 18304;
-	setAttr ".tgi[0].ni[147].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[147].y" -7760;
-	setAttr ".tgi[0].ni[147].nvs" 18304;
-	setAttr ".tgi[0].ni[148].x" 560;
-	setAttr ".tgi[0].ni[148].y" 14100;
-	setAttr ".tgi[0].ni[148].nvs" 18304;
-	setAttr ".tgi[0].ni[149].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[149].y" -7608.5712890625;
-	setAttr ".tgi[0].ni[149].nvs" 18304;
-	setAttr ".tgi[0].ni[150].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[150].y" 8194.2861328125;
-	setAttr ".tgi[0].ni[150].nvs" 18304;
-	setAttr ".tgi[0].ni[151].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[151].y" 8951.4287109375;
-	setAttr ".tgi[0].ni[151].nvs" 18304;
-	setAttr ".tgi[0].ni[152].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[152].y" 8800;
-	setAttr ".tgi[0].ni[152].nvs" 18304;
-	setAttr ".tgi[0].ni[153].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[153].y" 14251.4287109375;
-	setAttr ".tgi[0].ni[153].nvs" 18304;
-	setAttr ".tgi[0].ni[154].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[154].y" -7457.14306640625;
-	setAttr ".tgi[0].ni[154].nvs" 18304;
-	setAttr ".tgi[0].ni[155].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[155].y" 14251.4287109375;
-	setAttr ".tgi[0].ni[155].nvs" 18304;
-	setAttr ".tgi[0].ni[156].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[156].y" -7305.71435546875;
-	setAttr ".tgi[0].ni[156].nvs" 18304;
-	setAttr ".tgi[0].ni[157].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[157].y" 14100;
-	setAttr ".tgi[0].ni[157].nvs" 18304;
-	setAttr ".tgi[0].ni[158].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[158].y" 8042.85693359375;
-	setAttr ".tgi[0].ni[158].nvs" 18304;
-	setAttr ".tgi[0].ni[159].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[159].y" 8648.5712890625;
-	setAttr ".tgi[0].ni[159].nvs" 18304;
-	setAttr ".tgi[0].ni[160].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[160].y" 8648.5712890625;
-	setAttr ".tgi[0].ni[160].nvs" 18304;
-	setAttr ".tgi[0].ni[161].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[161].y" -7154.28564453125;
-	setAttr ".tgi[0].ni[161].nvs" 18304;
-	setAttr ".tgi[0].ni[162].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[162].y" -7002.85693359375;
-	setAttr ".tgi[0].ni[162].nvs" 18304;
-	setAttr ".tgi[0].ni[163].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[163].y" 8345.7138671875;
-	setAttr ".tgi[0].ni[163].nvs" 18304;
-	setAttr ".tgi[0].ni[164].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[164].y" -6851.4287109375;
-	setAttr ".tgi[0].ni[164].nvs" 18304;
-	setAttr ".tgi[0].ni[165].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[165].y" 8497.142578125;
-	setAttr ".tgi[0].ni[165].nvs" 18304;
-	setAttr ".tgi[0].ni[166].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[166].y" -6700;
-	setAttr ".tgi[0].ni[166].nvs" 18304;
-	setAttr ".tgi[0].ni[167].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[167].y" -6548.5712890625;
-	setAttr ".tgi[0].ni[167].nvs" 18304;
-	setAttr ".tgi[0].ni[168].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[168].y" 9254.2861328125;
-	setAttr ".tgi[0].ni[168].nvs" 18304;
-	setAttr ".tgi[0].ni[169].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[169].y" 9254.2861328125;
-	setAttr ".tgi[0].ni[169].nvs" 18304;
-	setAttr ".tgi[0].ni[170].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[170].y" 15008.5712890625;
-	setAttr ".tgi[0].ni[170].nvs" 18304;
-	setAttr ".tgi[0].ni[171].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[171].y" 15160;
-	setAttr ".tgi[0].ni[171].nvs" 18304;
-	setAttr ".tgi[0].ni[172].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[172].y" 9405.7138671875;
-	setAttr ".tgi[0].ni[172].nvs" 18304;
-	setAttr ".tgi[0].ni[173].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[173].y" 9557.142578125;
-	setAttr ".tgi[0].ni[173].nvs" 18304;
-	setAttr ".tgi[0].ni[174].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[174].y" 9254.2861328125;
-	setAttr ".tgi[0].ni[174].nvs" 18304;
-	setAttr ".tgi[0].ni[175].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[175].y" 15311.4287109375;
-	setAttr ".tgi[0].ni[175].nvs" 18304;
-	setAttr ".tgi[0].ni[176].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[176].y" 9708.5712890625;
-	setAttr ".tgi[0].ni[176].nvs" 18304;
-	setAttr ".tgi[0].ni[177].x" 560;
-	setAttr ".tgi[0].ni[177].y" 14402.857421875;
-	setAttr ".tgi[0].ni[177].nvs" 18304;
-	setAttr ".tgi[0].ni[178].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[178].y" 9708.5712890625;
-	setAttr ".tgi[0].ni[178].nvs" 18304;
-	setAttr ".tgi[0].ni[179].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[179].y" 15008.5712890625;
-	setAttr ".tgi[0].ni[179].nvs" 18304;
-	setAttr ".tgi[0].ni[180].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[180].y" -6397.14306640625;
-	setAttr ".tgi[0].ni[180].nvs" 18304;
-	setAttr ".tgi[0].ni[181].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[181].y" 9405.7138671875;
-	setAttr ".tgi[0].ni[181].nvs" 18304;
-	setAttr ".tgi[0].ni[182].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[182].y" 9860;
-	setAttr ".tgi[0].ni[182].nvs" 18304;
-	setAttr ".tgi[0].ni[183].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[183].y" 9860;
-	setAttr ".tgi[0].ni[183].nvs" 18304;
-	setAttr ".tgi[0].ni[184].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[184].y" -6245.71435546875;
-	setAttr ".tgi[0].ni[184].nvs" 18304;
-	setAttr ".tgi[0].ni[185].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[185].y" -6094.28564453125;
-	setAttr ".tgi[0].ni[185].nvs" 18304;
-	setAttr ".tgi[0].ni[186].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[186].y" 10011.4287109375;
-	setAttr ".tgi[0].ni[186].nvs" 18304;
-	setAttr ".tgi[0].ni[187].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[187].y" 9557.142578125;
-	setAttr ".tgi[0].ni[187].nvs" 18304;
-	setAttr ".tgi[0].ni[188].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[188].y" -5942.85693359375;
-	setAttr ".tgi[0].ni[188].nvs" 18304;
-	setAttr ".tgi[0].ni[189].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[189].y" 9557.142578125;
-	setAttr ".tgi[0].ni[189].nvs" 18304;
-	setAttr ".tgi[0].ni[190].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[190].y" -5791.4287109375;
-	setAttr ".tgi[0].ni[190].nvs" 18304;
-	setAttr ".tgi[0].ni[191].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[191].y" -5640;
-	setAttr ".tgi[0].ni[191].nvs" 18304;
-	setAttr ".tgi[0].ni[192].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[192].y" 10011.4287109375;
-	setAttr ".tgi[0].ni[192].nvs" 18304;
-	setAttr ".tgi[0].ni[193].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[193].y" 10162.857421875;
-	setAttr ".tgi[0].ni[193].nvs" 18304;
-	setAttr ".tgi[0].ni[194].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[194].y" -5488.5712890625;
-	setAttr ".tgi[0].ni[194].nvs" 18304;
-	setAttr ".tgi[0].ni[195].x" 550;
-	setAttr ".tgi[0].ni[195].y" 15462.857421875;
-	setAttr ".tgi[0].ni[195].nvs" 18304;
-	setAttr ".tgi[0].ni[196].x" 550;
-	setAttr ".tgi[0].ni[196].y" 15160;
-	setAttr ".tgi[0].ni[196].nvs" 18304;
-	setAttr ".tgi[0].ni[197].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[197].y" -5337.14306640625;
-	setAttr ".tgi[0].ni[197].nvs" 18304;
-	setAttr ".tgi[0].ni[198].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[198].y" 15160;
-	setAttr ".tgi[0].ni[198].nvs" 18304;
-	setAttr ".tgi[0].ni[199].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[199].y" -5185.71435546875;
-	setAttr ".tgi[0].ni[199].nvs" 18304;
-	setAttr ".tgi[0].ni[200].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[200].y" 9708.5712890625;
-	setAttr ".tgi[0].ni[200].nvs" 18304;
-	setAttr ".tgi[0].ni[201].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[201].y" 10314.2861328125;
-	setAttr ".tgi[0].ni[201].nvs" 18304;
-	setAttr ".tgi[0].ni[202].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[202].y" 10011.4287109375;
-	setAttr ".tgi[0].ni[202].nvs" 18304;
-	setAttr ".tgi[0].ni[203].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[203].y" 10162.857421875;
-	setAttr ".tgi[0].ni[203].nvs" 18304;
-	setAttr ".tgi[0].ni[204].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[204].y" 10314.2861328125;
-	setAttr ".tgi[0].ni[204].nvs" 18304;
-	setAttr ".tgi[0].ni[205].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[205].y" -5034.28564453125;
-	setAttr ".tgi[0].ni[205].nvs" 18304;
-	setAttr ".tgi[0].ni[206].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[206].y" 10162.857421875;
-	setAttr ".tgi[0].ni[206].nvs" 18304;
-	setAttr ".tgi[0].ni[207].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[207].y" -4882.85693359375;
-	setAttr ".tgi[0].ni[207].nvs" 18304;
-	setAttr ".tgi[0].ni[208].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[208].y" -4731.4287109375;
-	setAttr ".tgi[0].ni[208].nvs" 18304;
-	setAttr ".tgi[0].ni[209].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[209].y" 9405.7138671875;
-	setAttr ".tgi[0].ni[209].nvs" 18304;
-	setAttr ".tgi[0].ni[210].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[210].y" 10314.2861328125;
-	setAttr ".tgi[0].ni[210].nvs" 18304;
-	setAttr ".tgi[0].ni[211].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[211].y" -4580;
-	setAttr ".tgi[0].ni[211].nvs" 18304;
-	setAttr ".tgi[0].ni[212].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[212].y" 15462.857421875;
-	setAttr ".tgi[0].ni[212].nvs" 18304;
-	setAttr ".tgi[0].ni[213].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[213].y" -4428.5712890625;
-	setAttr ".tgi[0].ni[213].nvs" 18304;
-	setAttr ".tgi[0].ni[214].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[214].y" 15462.857421875;
-	setAttr ".tgi[0].ni[214].nvs" 18304;
-	setAttr ".tgi[0].ni[215].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[215].y" 9860;
-	setAttr ".tgi[0].ni[215].nvs" 18304;
-	setAttr ".tgi[0].ni[216].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[216].y" -4277.14306640625;
-	setAttr ".tgi[0].ni[216].nvs" 18304;
-	setAttr ".tgi[0].ni[217].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[217].y" -4125.71435546875;
-	setAttr ".tgi[0].ni[217].nvs" 18304;
-	setAttr ".tgi[0].ni[218].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[218].y" -3974.28564453125;
-	setAttr ".tgi[0].ni[218].nvs" 18304;
-	setAttr ".tgi[0].ni[219].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[219].y" -3822.857177734375;
-	setAttr ".tgi[0].ni[219].nvs" 18304;
-	setAttr ".tgi[0].ni[220].x" 550;
-	setAttr ".tgi[0].ni[220].y" 15008.5712890625;
-	setAttr ".tgi[0].ni[220].nvs" 18304;
-	setAttr ".tgi[0].ni[221].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[221].y" -3671.428466796875;
-	setAttr ".tgi[0].ni[221].nvs" 18304;
-	setAttr ".tgi[0].ni[222].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[222].y" -3520;
-	setAttr ".tgi[0].ni[222].nvs" 18304;
-	setAttr ".tgi[0].ni[223].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[223].y" -3368.571533203125;
-	setAttr ".tgi[0].ni[223].nvs" 18304;
-	setAttr ".tgi[0].ni[224].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[224].y" -3217.142822265625;
-	setAttr ".tgi[0].ni[224].nvs" 18304;
-	setAttr ".tgi[0].ni[225].x" 550;
-	setAttr ".tgi[0].ni[225].y" 15311.4287109375;
-	setAttr ".tgi[0].ni[225].nvs" 18304;
-	setAttr ".tgi[0].ni[226].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[226].y" 15311.4287109375;
-	setAttr ".tgi[0].ni[226].nvs" 18304;
-	setAttr ".tgi[0].ni[227].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[227].y" -3065.71435546875;
-	setAttr ".tgi[0].ni[227].nvs" 18304;
-	setAttr ".tgi[0].ni[228].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[228].y" -2914.28564453125;
-	setAttr ".tgi[0].ni[228].nvs" 18304;
-	setAttr ".tgi[0].ni[229].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[229].y" 14402.857421875;
-	setAttr ".tgi[0].ni[229].nvs" 18304;
-	setAttr ".tgi[0].ni[230].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[230].y" 14402.857421875;
-	setAttr ".tgi[0].ni[230].nvs" 18304;
-	setAttr ".tgi[0].ni[231].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[231].y" -2762.857177734375;
-	setAttr ".tgi[0].ni[231].nvs" 18304;
-	setAttr ".tgi[0].ni[232].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[232].y" -2611.428466796875;
-	setAttr ".tgi[0].ni[232].nvs" 18304;
-	setAttr ".tgi[0].ni[233].x" 560;
-	setAttr ".tgi[0].ni[233].y" 14554.2861328125;
-	setAttr ".tgi[0].ni[233].nvs" 18304;
-	setAttr ".tgi[0].ni[234].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[234].y" -2460;
-	setAttr ".tgi[0].ni[234].nvs" 18304;
-	setAttr ".tgi[0].ni[235].x" 567.14288330078125;
-	setAttr ".tgi[0].ni[235].y" 11980;
-	setAttr ".tgi[0].ni[235].nvs" 18304;
-	setAttr ".tgi[0].ni[236].x" 260;
-	setAttr ".tgi[0].ni[236].y" 12131.4287109375;
-	setAttr ".tgi[0].ni[236].nvs" 18304;
-	setAttr ".tgi[0].ni[237].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[237].y" -2308.571533203125;
-	setAttr ".tgi[0].ni[237].nvs" 18304;
-	setAttr ".tgi[0].ni[238].x" 254.28572082519531;
-	setAttr ".tgi[0].ni[238].y" 12585.7138671875;
-	setAttr ".tgi[0].ni[238].nvs" 18304;
-	setAttr ".tgi[0].ni[239].x" 567.14288330078125;
-	setAttr ".tgi[0].ni[239].y" 12282.857421875;
-	setAttr ".tgi[0].ni[239].nvs" 18304;
-	setAttr ".tgi[0].ni[240].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[240].y" 15614.2861328125;
-	setAttr ".tgi[0].ni[240].nvs" 18304;
-	setAttr ".tgi[0].ni[241].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[241].y" -2157.142822265625;
-	setAttr ".tgi[0].ni[241].nvs" 18304;
-	setAttr ".tgi[0].ni[242].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[242].y" 14705.7138671875;
-	setAttr ".tgi[0].ni[242].nvs" 18304;
-	setAttr ".tgi[0].ni[243].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[243].y" 14705.7138671875;
-	setAttr ".tgi[0].ni[243].nvs" 18304;
-	setAttr ".tgi[0].ni[244].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[244].y" -2005.7142333984375;
-	setAttr ".tgi[0].ni[244].nvs" 18304;
-	setAttr ".tgi[0].ni[245].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[245].y" -1854.2857666015625;
-	setAttr ".tgi[0].ni[245].nvs" 18304;
-	setAttr ".tgi[0].ni[246].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[246].y" 15765.7138671875;
-	setAttr ".tgi[0].ni[246].nvs" 18304;
-	setAttr ".tgi[0].ni[247].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[247].y" -1702.857177734375;
-	setAttr ".tgi[0].ni[247].nvs" 18304;
-	setAttr ".tgi[0].ni[248].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[248].y" 15917.142578125;
-	setAttr ".tgi[0].ni[248].nvs" 18304;
-	setAttr ".tgi[0].ni[249].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[249].y" -1551.4285888671875;
-	setAttr ".tgi[0].ni[249].nvs" 18304;
-	setAttr ".tgi[0].ni[250].x" 550;
-	setAttr ".tgi[0].ni[250].y" 16068.5712890625;
-	setAttr ".tgi[0].ni[250].nvs" 18304;
-	setAttr ".tgi[0].ni[251].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[251].y" 16068.5712890625;
-	setAttr ".tgi[0].ni[251].nvs" 18304;
-	setAttr ".tgi[0].ni[252].x" 550;
-	setAttr ".tgi[0].ni[252].y" 15917.142578125;
-	setAttr ".tgi[0].ni[252].nvs" 18304;
-	setAttr ".tgi[0].ni[253].x" 260;
-	setAttr ".tgi[0].ni[253].y" 12282.857421875;
-	setAttr ".tgi[0].ni[253].nvs" 18304;
-	setAttr ".tgi[0].ni[254].x" 567.14288330078125;
-	setAttr ".tgi[0].ni[254].y" 12434.2861328125;
-	setAttr ".tgi[0].ni[254].nvs" 18304;
-	setAttr ".tgi[0].ni[255].x" 260;
-	setAttr ".tgi[0].ni[255].y" 12434.2861328125;
-	setAttr ".tgi[0].ni[255].nvs" 18304;
-	setAttr ".tgi[0].ni[256].x" 260;
-	setAttr ".tgi[0].ni[256].y" 11980;
-	setAttr ".tgi[0].ni[256].nvs" 18304;
-	setAttr ".tgi[0].ni[257].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[257].y" 14554.2861328125;
-	setAttr ".tgi[0].ni[257].nvs" 18304;
-	setAttr ".tgi[0].ni[258].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[258].y" 14857.142578125;
-	setAttr ".tgi[0].ni[258].nvs" 18304;
-	setAttr ".tgi[0].ni[259].x" -47.142856597900391;
-	setAttr ".tgi[0].ni[259].y" 11980;
-	setAttr ".tgi[0].ni[259].nvs" 18304;
-	setAttr ".tgi[0].ni[260].x" 550;
-	setAttr ".tgi[0].ni[260].y" 15765.7138671875;
-	setAttr ".tgi[0].ni[260].nvs" 18304;
-	setAttr ".tgi[0].ni[261].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[261].y" -1400;
-	setAttr ".tgi[0].ni[261].nvs" 18304;
-	setAttr ".tgi[0].ni[262].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[262].y" 16068.5712890625;
-	setAttr ".tgi[0].ni[262].nvs" 18304;
-	setAttr ".tgi[0].ni[263].x" -64.285713195800781;
-	setAttr ".tgi[0].ni[263].y" 15765.7138671875;
-	setAttr ".tgi[0].ni[263].nvs" 18304;
-	setAttr ".tgi[0].ni[264].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[264].y" 15917.142578125;
-	setAttr ".tgi[0].ni[264].nvs" 18304;
-	setAttr ".tgi[0].ni[265].x" 567.14288330078125;
-	setAttr ".tgi[0].ni[265].y" 12131.4287109375;
-	setAttr ".tgi[0].ni[265].nvs" 18304;
-	setAttr ".tgi[0].ni[266].x" -47.142856597900391;
-	setAttr ".tgi[0].ni[266].y" 12131.4287109375;
-	setAttr ".tgi[0].ni[266].nvs" 18304;
-	setAttr ".tgi[0].ni[267].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[267].y" -1248.5714111328125;
-	setAttr ".tgi[0].ni[267].nvs" 18304;
-	setAttr ".tgi[0].ni[268].x" 560;
-	setAttr ".tgi[0].ni[268].y" 14705.7138671875;
-	setAttr ".tgi[0].ni[268].nvs" 18304;
-	setAttr ".tgi[0].ni[269].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[269].y" -1097.142822265625;
-	setAttr ".tgi[0].ni[269].nvs" 18304;
-	setAttr ".tgi[0].ni[270].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[270].y" -945.71429443359375;
-	setAttr ".tgi[0].ni[270].nvs" 18304;
-	setAttr ".tgi[0].ni[271].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[271].y" -794.28570556640625;
-	setAttr ".tgi[0].ni[271].nvs" 18304;
-	setAttr ".tgi[0].ni[272].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[272].y" -642.85711669921875;
-	setAttr ".tgi[0].ni[272].nvs" 18304;
-	setAttr ".tgi[0].ni[273].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[273].y" -491.42855834960938;
-	setAttr ".tgi[0].ni[273].nvs" 18304;
-	setAttr ".tgi[0].ni[274].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[274].y" -340;
-	setAttr ".tgi[0].ni[274].nvs" 18304;
-	setAttr ".tgi[0].ni[275].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[275].y" -188.57142639160156;
-	setAttr ".tgi[0].ni[275].nvs" 18304;
-	setAttr ".tgi[0].ni[276].x" 550;
-	setAttr ".tgi[0].ni[276].y" 15614.2861328125;
-	setAttr ".tgi[0].ni[276].nvs" 18304;
-	setAttr ".tgi[0].ni[277].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[277].y" -37.142856597900391;
-	setAttr ".tgi[0].ni[277].nvs" 18304;
-	setAttr ".tgi[0].ni[278].x" 560;
-	setAttr ".tgi[0].ni[278].y" 14857.142578125;
-	setAttr ".tgi[0].ni[278].nvs" 18304;
-	setAttr ".tgi[0].ni[279].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[279].y" 114.28571319580078;
-	setAttr ".tgi[0].ni[279].nvs" 18304;
-	setAttr ".tgi[0].ni[280].x" 252.85714721679688;
-	setAttr ".tgi[0].ni[280].y" 14857.142578125;
-	setAttr ".tgi[0].ni[280].nvs" 18304;
-	setAttr ".tgi[0].ni[281].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[281].y" 265.71429443359375;
-	setAttr ".tgi[0].ni[281].nvs" 18304;
-	setAttr ".tgi[0].ni[282].x" 242.85714721679688;
-	setAttr ".tgi[0].ni[282].y" 15614.2861328125;
-	setAttr ".tgi[0].ni[282].nvs" 18304;
-	setAttr ".tgi[0].ni[283].x" -47.142856597900391;
-	setAttr ".tgi[0].ni[283].y" 12282.857421875;
-	setAttr ".tgi[0].ni[283].nvs" 18304;
-	setAttr ".tgi[0].ni[284].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[284].y" 417.14285278320312;
-	setAttr ".tgi[0].ni[284].nvs" 18304;
-	setAttr ".tgi[0].ni[285].x" -54.285713195800781;
-	setAttr ".tgi[0].ni[285].y" 14554.2861328125;
-	setAttr ".tgi[0].ni[285].nvs" 18304;
-	setAttr ".tgi[0].ni[286].x" -47.142856597900391;
-	setAttr ".tgi[0].ni[286].y" 12434.2861328125;
-	setAttr ".tgi[0].ni[286].nvs" 18304;
-	setAttr ".tgi[0].ni[287].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[287].y" 568.5714111328125;
-	setAttr ".tgi[0].ni[287].nvs" 18304;
-	setAttr ".tgi[0].ni[288].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[288].y" 720;
-	setAttr ".tgi[0].ni[288].nvs" 18304;
-	setAttr ".tgi[0].ni[289].x" 561.4285888671875;
-	setAttr ".tgi[0].ni[289].y" 12585.7138671875;
-	setAttr ".tgi[0].ni[289].nvs" 18304;
-	setAttr ".tgi[0].ni[290].x" -52.857143402099609;
-	setAttr ".tgi[0].ni[290].y" 12585.7138671875;
-	setAttr ".tgi[0].ni[290].nvs" 18304;
-	setAttr ".tgi[0].ni[291].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[291].y" 871.4285888671875;
-	setAttr ".tgi[0].ni[291].nvs" 18304;
-	setAttr ".tgi[0].ni[292].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[292].y" 1022.8571166992188;
-	setAttr ".tgi[0].ni[292].nvs" 18304;
-	setAttr ".tgi[0].ni[293].x" 561.4285888671875;
-	setAttr ".tgi[0].ni[293].y" 12737.142578125;
-	setAttr ".tgi[0].ni[293].nvs" 18304;
-	setAttr ".tgi[0].ni[294].x" 254.28572082519531;
-	setAttr ".tgi[0].ni[294].y" 12737.142578125;
-	setAttr ".tgi[0].ni[294].nvs" 18304;
-	setAttr ".tgi[0].ni[295].x" -52.857143402099609;
-	setAttr ".tgi[0].ni[295].y" 12737.142578125;
-	setAttr ".tgi[0].ni[295].nvs" 18304;
-	setAttr ".tgi[0].ni[296].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[296].y" 1174.2857666015625;
-	setAttr ".tgi[0].ni[296].nvs" 18304;
-	setAttr ".tgi[0].ni[297].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[297].y" 10465.7138671875;
-	setAttr ".tgi[0].ni[297].nvs" 18304;
-	setAttr ".tgi[0].ni[298].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[298].y" 10617.142578125;
-	setAttr ".tgi[0].ni[298].nvs" 18304;
-	setAttr ".tgi[0].ni[299].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[299].y" 1325.7142333984375;
-	setAttr ".tgi[0].ni[299].nvs" 18304;
-	setAttr ".tgi[0].ni[300].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[300].y" 1477.142822265625;
-	setAttr ".tgi[0].ni[300].nvs" 18304;
-	setAttr ".tgi[0].ni[301].x" 254.28572082519531;
-	setAttr ".tgi[0].ni[301].y" 12888.5712890625;
-	setAttr ".tgi[0].ni[301].nvs" 18304;
-	setAttr ".tgi[0].ni[302].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[302].y" 10465.7138671875;
-	setAttr ".tgi[0].ni[302].nvs" 18304;
-	setAttr ".tgi[0].ni[303].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[303].y" 10768.5712890625;
-	setAttr ".tgi[0].ni[303].nvs" 18304;
-	setAttr ".tgi[0].ni[304].x" 561.4285888671875;
-	setAttr ".tgi[0].ni[304].y" 12888.5712890625;
-	setAttr ".tgi[0].ni[304].nvs" 18304;
-	setAttr ".tgi[0].ni[305].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[305].y" 10920;
-	setAttr ".tgi[0].ni[305].nvs" 18304;
-	setAttr ".tgi[0].ni[306].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[306].y" 1628.5714111328125;
-	setAttr ".tgi[0].ni[306].nvs" 18304;
-	setAttr ".tgi[0].ni[307].x" -52.857143402099609;
-	setAttr ".tgi[0].ni[307].y" 13040;
-	setAttr ".tgi[0].ni[307].nvs" 18304;
-	setAttr ".tgi[0].ni[308].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[308].y" 1780;
-	setAttr ".tgi[0].ni[308].nvs" 18304;
-	setAttr ".tgi[0].ni[309].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[309].y" 1931.4285888671875;
-	setAttr ".tgi[0].ni[309].nvs" 18304;
-	setAttr ".tgi[0].ni[310].x" 561.4285888671875;
-	setAttr ".tgi[0].ni[310].y" 13040;
-	setAttr ".tgi[0].ni[310].nvs" 18304;
-	setAttr ".tgi[0].ni[311].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[311].y" 2082.857177734375;
-	setAttr ".tgi[0].ni[311].nvs" 18304;
-	setAttr ".tgi[0].ni[312].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[312].y" 10768.5712890625;
-	setAttr ".tgi[0].ni[312].nvs" 18304;
-	setAttr ".tgi[0].ni[313].x" -52.857143402099609;
-	setAttr ".tgi[0].ni[313].y" 12888.5712890625;
-	setAttr ".tgi[0].ni[313].nvs" 18304;
-	setAttr ".tgi[0].ni[314].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[314].y" 2234.28564453125;
-	setAttr ".tgi[0].ni[314].nvs" 18304;
-	setAttr ".tgi[0].ni[315].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[315].y" 11071.4287109375;
-	setAttr ".tgi[0].ni[315].nvs" 18304;
-	setAttr ".tgi[0].ni[316].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[316].y" 11222.857421875;
-	setAttr ".tgi[0].ni[316].nvs" 18304;
-	setAttr ".tgi[0].ni[317].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[317].y" 11374.2861328125;
-	setAttr ".tgi[0].ni[317].nvs" 18304;
-	setAttr ".tgi[0].ni[318].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[318].y" 10920;
-	setAttr ".tgi[0].ni[318].nvs" 18304;
-	setAttr ".tgi[0].ni[319].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[319].y" 11525.7138671875;
-	setAttr ".tgi[0].ni[319].nvs" 18304;
-	setAttr ".tgi[0].ni[320].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[320].y" 11071.4287109375;
-	setAttr ".tgi[0].ni[320].nvs" 18304;
-	setAttr ".tgi[0].ni[321].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[321].y" 11071.4287109375;
-	setAttr ".tgi[0].ni[321].nvs" 18304;
-	setAttr ".tgi[0].ni[322].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[322].y" 11525.7138671875;
-	setAttr ".tgi[0].ni[322].nvs" 18304;
-	setAttr ".tgi[0].ni[323].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[323].y" 2385.71435546875;
-	setAttr ".tgi[0].ni[323].nvs" 18304;
-	setAttr ".tgi[0].ni[324].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[324].y" 2537.142822265625;
-	setAttr ".tgi[0].ni[324].nvs" 18304;
-	setAttr ".tgi[0].ni[325].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[325].y" 10920;
-	setAttr ".tgi[0].ni[325].nvs" 18304;
-	setAttr ".tgi[0].ni[326].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[326].y" 2688.571533203125;
-	setAttr ".tgi[0].ni[326].nvs" 18304;
-	setAttr ".tgi[0].ni[327].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[327].y" 2840;
-	setAttr ".tgi[0].ni[327].nvs" 18304;
-	setAttr ".tgi[0].ni[328].x" 254.28572082519531;
-	setAttr ".tgi[0].ni[328].y" 13040;
-	setAttr ".tgi[0].ni[328].nvs" 18304;
-	setAttr ".tgi[0].ni[329].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[329].y" 2991.428466796875;
-	setAttr ".tgi[0].ni[329].nvs" 18304;
-	setAttr ".tgi[0].ni[330].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[330].y" 10768.5712890625;
-	setAttr ".tgi[0].ni[330].nvs" 18304;
-	setAttr ".tgi[0].ni[331].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[331].y" 3142.857177734375;
-	setAttr ".tgi[0].ni[331].nvs" 18304;
-	setAttr ".tgi[0].ni[332].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[332].y" 11677.142578125;
-	setAttr ".tgi[0].ni[332].nvs" 18304;
-	setAttr ".tgi[0].ni[333].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[333].y" 10617.142578125;
-	setAttr ".tgi[0].ni[333].nvs" 18304;
-	setAttr ".tgi[0].ni[334].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[334].y" 3294.28564453125;
-	setAttr ".tgi[0].ni[334].nvs" 18304;
-	setAttr ".tgi[0].ni[335].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[335].y" 3445.71435546875;
-	setAttr ".tgi[0].ni[335].nvs" 18304;
-	setAttr ".tgi[0].ni[336].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[336].y" 10617.142578125;
-	setAttr ".tgi[0].ni[336].nvs" 18304;
-	setAttr ".tgi[0].ni[337].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[337].y" 3597.142822265625;
-	setAttr ".tgi[0].ni[337].nvs" 18304;
-	setAttr ".tgi[0].ni[338].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[338].y" 3748.571533203125;
-	setAttr ".tgi[0].ni[338].nvs" 18304;
-	setAttr ".tgi[0].ni[339].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[339].y" 3900;
-	setAttr ".tgi[0].ni[339].nvs" 18304;
-	setAttr ".tgi[0].ni[340].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[340].y" 11525.7138671875;
-	setAttr ".tgi[0].ni[340].nvs" 18304;
-	setAttr ".tgi[0].ni[341].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[341].y" 4051.428466796875;
-	setAttr ".tgi[0].ni[341].nvs" 18304;
-	setAttr ".tgi[0].ni[342].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[342].y" 4202.85693359375;
-	setAttr ".tgi[0].ni[342].nvs" 18304;
-	setAttr ".tgi[0].ni[343].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[343].y" 11222.857421875;
-	setAttr ".tgi[0].ni[343].nvs" 18304;
-	setAttr ".tgi[0].ni[344].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[344].y" 4354.28564453125;
-	setAttr ".tgi[0].ni[344].nvs" 18304;
-	setAttr ".tgi[0].ni[345].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[345].y" 11374.2861328125;
-	setAttr ".tgi[0].ni[345].nvs" 18304;
-	setAttr ".tgi[0].ni[346].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[346].y" 4505.71435546875;
-	setAttr ".tgi[0].ni[346].nvs" 18304;
-	setAttr ".tgi[0].ni[347].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[347].y" 10465.7138671875;
-	setAttr ".tgi[0].ni[347].nvs" 18304;
-	setAttr ".tgi[0].ni[348].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[348].y" 11222.857421875;
-	setAttr ".tgi[0].ni[348].nvs" 18304;
-	setAttr ".tgi[0].ni[349].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[349].y" 4657.14306640625;
-	setAttr ".tgi[0].ni[349].nvs" 18304;
-	setAttr ".tgi[0].ni[350].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[350].y" 11374.2861328125;
-	setAttr ".tgi[0].ni[350].nvs" 18304;
-	setAttr ".tgi[0].ni[351].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[351].y" 11828.5712890625;
-	setAttr ".tgi[0].ni[351].nvs" 18304;
-	setAttr ".tgi[0].ni[352].x" 571.4285888671875;
-	setAttr ".tgi[0].ni[352].y" 11677.142578125;
-	setAttr ".tgi[0].ni[352].nvs" 18304;
-	setAttr ".tgi[0].ni[353].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[353].y" 11677.142578125;
-	setAttr ".tgi[0].ni[353].nvs" 18304;
-	setAttr ".tgi[0].ni[354].x" 264.28570556640625;
-	setAttr ".tgi[0].ni[354].y" 11828.5712890625;
-	setAttr ".tgi[0].ni[354].nvs" 18304;
-	setAttr ".tgi[0].ni[355].x" -42.857143402099609;
-	setAttr ".tgi[0].ni[355].y" 11828.5712890625;
-	setAttr ".tgi[0].ni[355].nvs" 18304;
 createNode renderLayerManager -n "pasted__renderLayerManager";
 	rename -uid "7E7D8A8B-4DE7-550C-661A-83A16D20718F";
 createNode renderLayer -n "pasted__defaultRenderLayer";
@@ -2904,41 +1830,12 @@ createNode animCurveTA -n "pasted__RightLeg_CTRL_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1.3305574829931972 0;
-createNode animCurveTL -n "joint1_translateX";
-	rename -uid "B578F633-42D6-C9E4-5DCA-F5BC95FBDB9B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -80.397262550643887 201 -80.397262550643887
-		 205 -80.397262550643887;
-createNode animCurveTL -n "joint1_translateY";
-	rename -uid "C127934F-4D89-B90F-97D3-B4886C1E7A0E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -36.188608549393678 201 -36.188608549393678
-		 205 -36.188608549393678;
-createNode animCurveTL -n "joint1_translateZ";
-	rename -uid "565BB8DF-4A8F-AE20-DD9F-888954738D0D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 201 0 205 0;
-createNode animCurveTA -n "joint1_rotateX";
-	rename -uid "B1592BDC-4748-1C70-3F53-85B0F72B2647";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 201 0 205 -0.52518461761312818;
-createNode animCurveTA -n "joint1_rotateY";
-	rename -uid "FC631A49-44E1-D72F-CDE0-3696C6EA9C7E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 201 0 205 -0.41961696001403698;
-createNode animCurveTA -n "joint1_rotateZ";
-	rename -uid "CFC696D6-4236-9457-9481-8D9B69BD6278";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 201 0 205 -4.4046484818791676;
+createNode polyCube -n "polyCube1";
+	rename -uid "89A31A0C-4841-4672-D970-A09A21662814";
+	setAttr ".cuv" 4;
 select -ne :time1;
-	setAttr ".o" 205;
-	setAttr ".unw" 205;
+	setAttr ".o" 198;
+	setAttr ".unw" 198;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -2955,7 +1852,7 @@ select -ne :postProcessList1;
 select -ne :defaultRenderingList1;
 	setAttr -s 4 ".r";
 select -ne :initialShadingGroup;
-	setAttr -s 5 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -2977,105 +1874,100 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "joint1_translateX.o" "GardenerRigRN.phl[1]";
-connectAttr "joint1_translateY.o" "GardenerRigRN.phl[2]";
-connectAttr "joint1_translateZ.o" "GardenerRigRN.phl[3]";
-connectAttr "joint1_rotateX.o" "GardenerRigRN.phl[4]";
-connectAttr "joint1_rotateY.o" "GardenerRigRN.phl[5]";
-connectAttr "joint1_rotateZ.o" "GardenerRigRN.phl[6]";
-connectAttr "Hips_CTRL_rotateX.o" "GardenerRigRN.phl[7]";
-connectAttr "Hips_CTRL_rotateY.o" "GardenerRigRN.phl[8]";
-connectAttr "Hips_CTRL_rotateZ.o" "GardenerRigRN.phl[9]";
-connectAttr "Hips_CTRL_translateX.o" "GardenerRigRN.phl[10]";
-connectAttr "Hips_CTRL_translateY.o" "GardenerRigRN.phl[11]";
-connectAttr "Hips_CTRL_translateZ.o" "GardenerRigRN.phl[12]";
-connectAttr "Spine_CTRL_rotateX.o" "GardenerRigRN.phl[13]";
-connectAttr "Spine_CTRL_rotateY.o" "GardenerRigRN.phl[14]";
-connectAttr "Spine_CTRL_rotateZ.o" "GardenerRigRN.phl[15]";
-connectAttr "Spine_CTRL_translateX.o" "GardenerRigRN.phl[16]";
-connectAttr "Spine_CTRL_translateY.o" "GardenerRigRN.phl[17]";
-connectAttr "Spine_CTRL_translateZ.o" "GardenerRigRN.phl[18]";
-connectAttr "Spine_CTRL_scaleX.o" "GardenerRigRN.phl[19]";
-connectAttr "Spine_CTRL_scaleY.o" "GardenerRigRN.phl[20]";
-connectAttr "Spine_CTRL_scaleZ.o" "GardenerRigRN.phl[21]";
-connectAttr "Spine1_CTRL_rotateX.o" "GardenerRigRN.phl[22]";
-connectAttr "Spine1_CTRL_rotateY.o" "GardenerRigRN.phl[23]";
-connectAttr "Spine1_CTRL_rotateZ.o" "GardenerRigRN.phl[24]";
-connectAttr "Spine1_CTRL_translateX.o" "GardenerRigRN.phl[25]";
-connectAttr "Spine1_CTRL_translateY.o" "GardenerRigRN.phl[26]";
-connectAttr "Spine1_CTRL_translateZ.o" "GardenerRigRN.phl[27]";
-connectAttr "Spine2_CTRL_rotateX.o" "GardenerRigRN.phl[28]";
-connectAttr "Spine2_CTRL_rotateY.o" "GardenerRigRN.phl[29]";
-connectAttr "Spine2_CTRL_rotateZ.o" "GardenerRigRN.phl[30]";
-connectAttr "Spine2_CTRL_translateX.o" "GardenerRigRN.phl[31]";
-connectAttr "Spine2_CTRL_translateY.o" "GardenerRigRN.phl[32]";
-connectAttr "Spine2_CTRL_translateZ.o" "GardenerRigRN.phl[33]";
-connectAttr "LeftShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[34]";
-connectAttr "LeftShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[35]";
-connectAttr "LeftShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[36]";
-connectAttr "LeftShoulder_CTRL_translateX.o" "GardenerRigRN.phl[37]";
-connectAttr "LeftShoulder_CTRL_translateY.o" "GardenerRigRN.phl[38]";
-connectAttr "LeftShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[39]";
-connectAttr "LeftArm_CTRL_rotateY.o" "GardenerRigRN.phl[40]";
-connectAttr "LeftArm_CTRL_rotateX.o" "GardenerRigRN.phl[41]";
-connectAttr "LeftArm_CTRL_rotateZ.o" "GardenerRigRN.phl[42]";
-connectAttr "LeftArm_CTRL_translateX.o" "GardenerRigRN.phl[43]";
-connectAttr "LeftArm_CTRL_translateY.o" "GardenerRigRN.phl[44]";
-connectAttr "LeftArm_CTRL_translateZ.o" "GardenerRigRN.phl[45]";
-connectAttr "LeftForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[46]";
-connectAttr "LeftForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[47]";
-connectAttr "LeftForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[48]";
-connectAttr "LeftForeArm_CTRL_translateX.o" "GardenerRigRN.phl[49]";
-connectAttr "LeftForeArm_CTRL_translateY.o" "GardenerRigRN.phl[50]";
-connectAttr "LeftForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[51]";
-connectAttr "RightShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[52]";
-connectAttr "RightShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[53]";
-connectAttr "RightShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[54]";
-connectAttr "RightShoulder_CTRL_translateX.o" "GardenerRigRN.phl[55]";
-connectAttr "RightShoulder_CTRL_translateY.o" "GardenerRigRN.phl[56]";
-connectAttr "RightShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[57]";
-connectAttr "RightArm_CTRL_rotateX.o" "GardenerRigRN.phl[58]";
-connectAttr "RightArm_CTRL_rotateY.o" "GardenerRigRN.phl[59]";
-connectAttr "RightArm_CTRL_rotateZ.o" "GardenerRigRN.phl[60]";
-connectAttr "RightArm_CTRL_translateX.o" "GardenerRigRN.phl[61]";
-connectAttr "RightArm_CTRL_translateY.o" "GardenerRigRN.phl[62]";
-connectAttr "RightArm_CTRL_translateZ.o" "GardenerRigRN.phl[63]";
-connectAttr "RightForeArm_GRP_rotateX.o" "GardenerRigRN.phl[64]";
-connectAttr "RightForeArm_GRP_rotateY.o" "GardenerRigRN.phl[65]";
-connectAttr "RightForeArm_GRP_rotateZ.o" "GardenerRigRN.phl[66]";
-connectAttr "RightForeArm_GRP_translateX.o" "GardenerRigRN.phl[67]";
-connectAttr "RightForeArm_GRP_translateY.o" "GardenerRigRN.phl[68]";
-connectAttr "RightForeArm_GRP_translateZ.o" "GardenerRigRN.phl[69]";
-connectAttr "RightForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[70]";
-connectAttr "RightForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[71]";
-connectAttr "RightForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[72]";
-connectAttr "RightForeArm_CTRL_translateX.o" "GardenerRigRN.phl[73]";
-connectAttr "RightForeArm_CTRL_translateY.o" "GardenerRigRN.phl[74]";
-connectAttr "RightForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[75]";
-connectAttr "LeftUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[76]";
-connectAttr "LeftUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[77]";
-connectAttr "LeftUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[78]";
-connectAttr "LeftUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[79]";
-connectAttr "LeftUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[80]";
-connectAttr "LeftUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[81]";
-connectAttr "LeftLeg_CTRL_rotateX.o" "GardenerRigRN.phl[82]";
-connectAttr "LeftLeg_CTRL_rotateY.o" "GardenerRigRN.phl[83]";
-connectAttr "LeftLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[84]";
-connectAttr "LeftLeg_CTRL_translateX.o" "GardenerRigRN.phl[85]";
-connectAttr "LeftLeg_CTRL_translateY.o" "GardenerRigRN.phl[86]";
-connectAttr "LeftLeg_CTRL_translateZ.o" "GardenerRigRN.phl[87]";
-connectAttr "RightUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[88]";
-connectAttr "RightUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[89]";
-connectAttr "RightUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[90]";
-connectAttr "RightUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[91]";
-connectAttr "RightUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[92]";
-connectAttr "RightUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[93]";
-connectAttr "RightLeg_CTRL_rotateX.o" "GardenerRigRN.phl[94]";
-connectAttr "RightLeg_CTRL_rotateY.o" "GardenerRigRN.phl[95]";
-connectAttr "RightLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[96]";
-connectAttr "RightLeg_CTRL_translateX.o" "GardenerRigRN.phl[97]";
-connectAttr "RightLeg_CTRL_translateY.o" "GardenerRigRN.phl[98]";
-connectAttr "RightLeg_CTRL_translateZ.o" "GardenerRigRN.phl[99]";
+connectAttr "Hips_CTRL_rotateX.o" "GardenerRigRN.phl[1]";
+connectAttr "Hips_CTRL_rotateY.o" "GardenerRigRN.phl[2]";
+connectAttr "Hips_CTRL_rotateZ.o" "GardenerRigRN.phl[3]";
+connectAttr "Hips_CTRL_translateX.o" "GardenerRigRN.phl[4]";
+connectAttr "Hips_CTRL_translateY.o" "GardenerRigRN.phl[5]";
+connectAttr "Hips_CTRL_translateZ.o" "GardenerRigRN.phl[6]";
+connectAttr "Spine_CTRL_rotateX.o" "GardenerRigRN.phl[7]";
+connectAttr "Spine_CTRL_rotateY.o" "GardenerRigRN.phl[8]";
+connectAttr "Spine_CTRL_rotateZ.o" "GardenerRigRN.phl[9]";
+connectAttr "Spine_CTRL_translateX.o" "GardenerRigRN.phl[10]";
+connectAttr "Spine_CTRL_translateY.o" "GardenerRigRN.phl[11]";
+connectAttr "Spine_CTRL_translateZ.o" "GardenerRigRN.phl[12]";
+connectAttr "Spine_CTRL_scaleX.o" "GardenerRigRN.phl[13]";
+connectAttr "Spine_CTRL_scaleY.o" "GardenerRigRN.phl[14]";
+connectAttr "Spine_CTRL_scaleZ.o" "GardenerRigRN.phl[15]";
+connectAttr "Spine1_CTRL_rotateX.o" "GardenerRigRN.phl[16]";
+connectAttr "Spine1_CTRL_rotateY.o" "GardenerRigRN.phl[17]";
+connectAttr "Spine1_CTRL_rotateZ.o" "GardenerRigRN.phl[18]";
+connectAttr "Spine1_CTRL_translateX.o" "GardenerRigRN.phl[19]";
+connectAttr "Spine1_CTRL_translateY.o" "GardenerRigRN.phl[20]";
+connectAttr "Spine1_CTRL_translateZ.o" "GardenerRigRN.phl[21]";
+connectAttr "Spine2_CTRL_rotateX.o" "GardenerRigRN.phl[22]";
+connectAttr "Spine2_CTRL_rotateY.o" "GardenerRigRN.phl[23]";
+connectAttr "Spine2_CTRL_rotateZ.o" "GardenerRigRN.phl[24]";
+connectAttr "Spine2_CTRL_translateX.o" "GardenerRigRN.phl[25]";
+connectAttr "Spine2_CTRL_translateY.o" "GardenerRigRN.phl[26]";
+connectAttr "Spine2_CTRL_translateZ.o" "GardenerRigRN.phl[27]";
+connectAttr "LeftShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[28]";
+connectAttr "LeftShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[29]";
+connectAttr "LeftShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[30]";
+connectAttr "LeftShoulder_CTRL_translateX.o" "GardenerRigRN.phl[31]";
+connectAttr "LeftShoulder_CTRL_translateY.o" "GardenerRigRN.phl[32]";
+connectAttr "LeftShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[33]";
+connectAttr "LeftArm_CTRL_rotateY.o" "GardenerRigRN.phl[34]";
+connectAttr "LeftArm_CTRL_rotateX.o" "GardenerRigRN.phl[35]";
+connectAttr "LeftArm_CTRL_rotateZ.o" "GardenerRigRN.phl[36]";
+connectAttr "LeftArm_CTRL_translateX.o" "GardenerRigRN.phl[37]";
+connectAttr "LeftArm_CTRL_translateY.o" "GardenerRigRN.phl[38]";
+connectAttr "LeftArm_CTRL_translateZ.o" "GardenerRigRN.phl[39]";
+connectAttr "LeftForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[40]";
+connectAttr "LeftForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[41]";
+connectAttr "LeftForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[42]";
+connectAttr "LeftForeArm_CTRL_translateX.o" "GardenerRigRN.phl[43]";
+connectAttr "LeftForeArm_CTRL_translateY.o" "GardenerRigRN.phl[44]";
+connectAttr "LeftForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[45]";
+connectAttr "RightShoulder_CTRL_rotateZ.o" "GardenerRigRN.phl[46]";
+connectAttr "RightShoulder_CTRL_rotateX.o" "GardenerRigRN.phl[47]";
+connectAttr "RightShoulder_CTRL_rotateY.o" "GardenerRigRN.phl[48]";
+connectAttr "RightShoulder_CTRL_translateX.o" "GardenerRigRN.phl[49]";
+connectAttr "RightShoulder_CTRL_translateY.o" "GardenerRigRN.phl[50]";
+connectAttr "RightShoulder_CTRL_translateZ.o" "GardenerRigRN.phl[51]";
+connectAttr "RightArm_CTRL_rotateX.o" "GardenerRigRN.phl[52]";
+connectAttr "RightArm_CTRL_rotateY.o" "GardenerRigRN.phl[53]";
+connectAttr "RightArm_CTRL_rotateZ.o" "GardenerRigRN.phl[54]";
+connectAttr "RightArm_CTRL_translateX.o" "GardenerRigRN.phl[55]";
+connectAttr "RightArm_CTRL_translateY.o" "GardenerRigRN.phl[56]";
+connectAttr "RightArm_CTRL_translateZ.o" "GardenerRigRN.phl[57]";
+connectAttr "RightForeArm_GRP_rotateX.o" "GardenerRigRN.phl[58]";
+connectAttr "RightForeArm_GRP_rotateY.o" "GardenerRigRN.phl[59]";
+connectAttr "RightForeArm_GRP_rotateZ.o" "GardenerRigRN.phl[60]";
+connectAttr "RightForeArm_GRP_translateX.o" "GardenerRigRN.phl[61]";
+connectAttr "RightForeArm_GRP_translateY.o" "GardenerRigRN.phl[62]";
+connectAttr "RightForeArm_GRP_translateZ.o" "GardenerRigRN.phl[63]";
+connectAttr "RightForeArm_CTRL_rotateY.o" "GardenerRigRN.phl[64]";
+connectAttr "RightForeArm_CTRL_rotateX.o" "GardenerRigRN.phl[65]";
+connectAttr "RightForeArm_CTRL_rotateZ.o" "GardenerRigRN.phl[66]";
+connectAttr "RightForeArm_CTRL_translateX.o" "GardenerRigRN.phl[67]";
+connectAttr "RightForeArm_CTRL_translateY.o" "GardenerRigRN.phl[68]";
+connectAttr "RightForeArm_CTRL_translateZ.o" "GardenerRigRN.phl[69]";
+connectAttr "LeftUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[70]";
+connectAttr "LeftUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[71]";
+connectAttr "LeftUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[72]";
+connectAttr "LeftUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[73]";
+connectAttr "LeftUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[74]";
+connectAttr "LeftUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[75]";
+connectAttr "LeftLeg_CTRL_rotateX.o" "GardenerRigRN.phl[76]";
+connectAttr "LeftLeg_CTRL_rotateY.o" "GardenerRigRN.phl[77]";
+connectAttr "LeftLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[78]";
+connectAttr "LeftLeg_CTRL_translateX.o" "GardenerRigRN.phl[79]";
+connectAttr "LeftLeg_CTRL_translateY.o" "GardenerRigRN.phl[80]";
+connectAttr "LeftLeg_CTRL_translateZ.o" "GardenerRigRN.phl[81]";
+connectAttr "RightUpLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[82]";
+connectAttr "RightUpLeg_CTRL_rotateX.o" "GardenerRigRN.phl[83]";
+connectAttr "RightUpLeg_CTRL_rotateY.o" "GardenerRigRN.phl[84]";
+connectAttr "RightUpLeg_CTRL_translateX.o" "GardenerRigRN.phl[85]";
+connectAttr "RightUpLeg_CTRL_translateY.o" "GardenerRigRN.phl[86]";
+connectAttr "RightUpLeg_CTRL_translateZ.o" "GardenerRigRN.phl[87]";
+connectAttr "RightLeg_CTRL_rotateX.o" "GardenerRigRN.phl[88]";
+connectAttr "RightLeg_CTRL_rotateY.o" "GardenerRigRN.phl[89]";
+connectAttr "RightLeg_CTRL_rotateZ.o" "GardenerRigRN.phl[90]";
+connectAttr "RightLeg_CTRL_translateX.o" "GardenerRigRN.phl[91]";
+connectAttr "RightLeg_CTRL_translateY.o" "GardenerRigRN.phl[92]";
+connectAttr "RightLeg_CTRL_translateZ.o" "GardenerRigRN.phl[93]";
+connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -3220,4 +2112,5 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pasted__defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "GardenerRig:defaultRenderLayer1.msg" ":defaultRenderingList1.r" -na
 		;
+connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of GardenerAnim.ma
